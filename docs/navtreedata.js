@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "VIA University College 4. Semester IoT Drivers", "index.html", [
+    [ "IoT Driver documentation", "index.html", null ],
     [ "Quick start guide for 7-segment Display Driver", "display_7seg_driver_quickstart.html", [
       [ "7-segment Display Driver use cases", "display_7seg_driver_quickstart.html#display_7seg_use_cases", null ],
       [ "Initialise the driver", "display_7seg_driver_quickstart.html#display_7seg_driver_initialise", null ],
@@ -82,7 +83,7 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "group__mh__z19__driver__driver__return__codes.html#gga72f330b3005119adb35edfd8fe0e657ca53267ffd3044454f85ff83c118006861",
-"structlora__payload.html#a631a5dceeddc670089227a685911c5a5"
+"structlora__payload.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
