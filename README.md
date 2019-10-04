@@ -25,5 +25,5 @@ The Websocket output format from the LoRaWAN network server (Loriot)
 
 ## Hardware documentation ##
 ### VIA MEGA 2560 Shield ###
-[Schematic](/docs/documentation/HW%20Doc/VIA%20MEGA2560%Shield/VIA%20Shield%202.0.0%20Schematic.pdf)
+![Schematic](/docs/documentation/HW%20Doc/VIA%20MEGA2560%Shield/VIA%20Shield%202.0.0%20Schematic.pdf)
 
