@@ -3,6 +3,7 @@
 Documentation for used sensors and hardware modules [Datasheets for Sensor and Hardware Modules](DATASHEETS.md)
 
 ## Documentation for the PCBs designed and created at VIA ##
+![VIA Hardware](/docs/resources/IoT-Hardware.jpg)
 ### VIA MEGA 2560 Shield ###
 [Schematic](/docs/documentation/HW%20Doc/VIA%20MEGA2560%20Shield/VIA%20Shield%202.0.0%20Schematic.pdf)
 
