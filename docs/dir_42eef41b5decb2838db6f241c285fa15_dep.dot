@@ -1,0 +1,11 @@
+digraph "rn2483" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_221afbd10570f9ed5449989c5a66cd36 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="LoRaDriver" fontname="Helvetica", fontsize="10", URL="dir_221afbd10570f9ed5449989c5a66cd36.html"]
+  dir_42eef41b5decb2838db6f241c285fa15 [shape=box, label="rn2483", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_42eef41b5decb2838db6f241c285fa15.html"];
+  }
+  dir_40e92f79a91d2b6136c47201877b1bf1 [shape=box label="serial" URL="dir_40e92f79a91d2b6136c47201877b1bf1.html"];
+  dir_42eef41b5decb2838db6f241c285fa15->dir_40e92f79a91d2b6136c47201877b1bf1 [headlabel="1", labeldistance=1.5 headhref="dir_000006_000007.html"];
+}
