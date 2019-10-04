@@ -9,9 +9,19 @@ API Documentation for drivers, library and Quick Start Guides can be found here:
 A overall class-diagram for the IoT-Library can be found here: [IoT-HAL-Class Diagram](/docs/IoT_HAL.svg)
 
 ## LoRaWAN Network Server ##
-The Websocket output format from the LoRaWAN network server (Loriot) can be seen here: 
+The Websocket output format from the LoRaWAN network server (Loriot)
 
-![Loriot Output Overview](/docs/examples/Loriot/Image_001.png)
+### Overview ###
+[Loriot Output Overview](/docs/examples/Loriot/Overview.png)
+
+### Uplink Format ###
+[Loriot Output Uplink](/docs/examples/Loriot/Uplink.png)
+
+### Downlink Format ###
+[Loriot Output Uplink](/docs/examples/Loriot/Downlink.png)
+
+### Gateway Format ###
+[Loriot Output Uplink](/docs/examples/Loriot/Gateway.png)
 
 
 
