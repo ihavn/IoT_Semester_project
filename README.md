@@ -1,4 +1,4 @@
-![VIA Logo](/resources/logo.png)
+![VIA Logo](/docs/resources/logo.png)
 
 # 4. Semester IoT Project #
 This repository includes documentation and needed files for the semester project.
