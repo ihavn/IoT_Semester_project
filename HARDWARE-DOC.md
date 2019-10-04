@@ -1,6 +1,6 @@
 # Hardware documentation #
-## Sensor Datasheets ##
-Documentation for used sensors and hardware modules [Sensor and Hardware Modules Datasheets](DATASHEETS.md)
+## Datasheets for Sensor and Hardware Modules ##
+Documentation for used sensors and hardware modules [Datasheets for Sensor and Hardware Modules](DATASHEETS.md)
 
 ## Documentation for the PCBs designed and created at VIA ##
 ### VIA MEGA 2560 Shield ###
