@@ -6,10 +6,10 @@ This repository includes documentation and needed files for the semester project
 ## API for HAL Drivers ##
 API Documentation for drivers, library and Quick Start Guides can be found here: [API](https://ihavn.github.io/IoT_Semester_project/)
 
-A overall class-diagram for the IoT-Library can be found here: [IoT-HAL-Class Diagram](LORA_NETWORK_SERVER.md)
+A overall class-diagram for the IoT-Library can be found here: [IoT-HAL-Class Diagram](IoT_HAL.svg)
 
 ## LoRaWAN Network Server ##
-[Documentation for the Websocket output format from the LoRaWAN network server (Loriot)](
+[Documentation for the Websocket output format from the LoRaWAN network server (Loriot)](LORA_NETWORK_SERVER.md)
 
 ## Hardware Documentation ##
 [Hardware Documentation](HARDWARE-DOC.md)
