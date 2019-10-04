@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iot_20driver_20documentation',['IoT Driver documentation',['../index.html',1,'']]]
+  ['otaa_20setup_20steps',['OTAA setup steps',['../lora_setup_to__o_t_a_a.html',1,'lora_driver_quickstart']]]
 ];
