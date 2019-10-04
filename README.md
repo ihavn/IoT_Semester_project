@@ -12,16 +12,16 @@ A overall class-diagram for the IoT-Library can be found here: [IoT-HAL-Class Di
 The Websocket output format from the LoRaWAN network server (Loriot)
 
 ### Overview ###
-[Loriot Output Overview](/docs/examples/Loriot/Overview.png)
+![Loriot Output Overview](/docs/examples/Loriot/Overview.png)
 
 ### Uplink Format ###
-[Loriot Output Uplink](/docs/examples/Loriot/Uplink.png)
+![Loriot Output Uplink](/docs/examples/Loriot/Uplink.png)
 
 ### Downlink Format ###
-[Loriot Output Uplink](/docs/examples/Loriot/Downlink.png)
+![Loriot Output Downlink](/docs/examples/Loriot/Downlink.png)
 
 ### Gateway Format ###
-[Loriot Output Uplink](/docs/examples/Loriot/Gateway.png)
+![Loriot Output Gateway](/docs/examples/Loriot/Gateway.png)
 
 
 
