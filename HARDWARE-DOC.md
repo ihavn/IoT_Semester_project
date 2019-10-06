@@ -15,6 +15,16 @@ Documentation for used sensors and hardware modules [Datasheets for Sensor and H
 [Schematic](/docs/documentation/HW%20Doc/Mikro%20Click%20Host%20Board/Mikro%20Click%20Host%20Board%20Schematic.pdf)
 
 [Board Layout](/docs/documentation/HW%20Doc/Mikro%20Click%20Host%20Board/Mikro%20Click%20Host%20Board.pdf)
+#### Jumper Setting ###
+It is very important to check that the jumpers are mounted like shown with red arrows in this picture
+
+![Host Board Jumper Settings](/docs/resources/Host%20Board%20Jumper.jpg)
+
+The *LoRa click* module **MUST** be mounted in the socket marked *3V3!*
+
+JP1 **MUST** be mounted on the two pins to the right marked *3V3*!
+
+JP2 **MUST** be mounted on the two pins to the left marked *5V*! 
 
 ### VIA IoT Sensor Board ###
 [Schematic](/docs/documentation/HW%20Doc/IoT%20Sensor%20Board/Sensor%20connection%20Schematic.pdf)
