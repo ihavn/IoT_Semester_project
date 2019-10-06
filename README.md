@@ -4,7 +4,7 @@
 This repository includes documentation and needed files for the semester project.
 
 ## API for HAL Drivers ##
-API Documentation for drivers, library and Quick Start Guides can be found here: [Drivers API](/docs/)
+API Documentation for drivers, library and Quick Start Guides can be found here: [Drivers API](https://github.com/ihavn/IoT_Semester_project/tree/master/docs)
 
 A overall class-diagram for the IoT-Library can be found here: [IoT-HAL-Class Diagram](/docs/IoT_HAL.svg)
 
