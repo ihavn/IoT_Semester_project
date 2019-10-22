@@ -15,8 +15,6 @@ var files_dup =
     [ "mh_z19.h", "mh__z19_8h.html", "mh__z19_8h" ],
     [ "rcServo.h", "rc_servo_8h.html", "rc_servo_8h" ],
     [ "sen14262.h", "sen14262_8h.html", "sen14262_8h" ],
-    [ "spi_iha.h", "spi__iha_8h.html", "spi__iha_8h" ],
     [ "stdio_driver.h", "stdio__driver_8h.html", "stdio__driver_8h" ],
-    [ "tsl2591.h", "tsl2591_8h.html", "tsl2591_8h" ],
-    [ "twi.h", "twi_8h.html", "twi_8h" ]
+    [ "tsl2591.h", "tsl2591_8h.html", "tsl2591_8h" ]
 ];
