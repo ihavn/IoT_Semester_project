@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -142,6 +142,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga67d33d834fab7ae574b8df2dbce841c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#ga67d33d834fab7ae574b8df2dbce841c8">lora_driver_set_receive_delay</a> (uint16_t rxDelay1)</td></tr>
 <tr class="memdesc:ga67d33d834fab7ae574b8df2dbce841c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the delay between a transmission and the first receiver window.  <a href="#ga67d33d834fab7ae574b8df2dbce841c8">More...</a><br /></td></tr>
 <tr class="separator:ga67d33d834fab7ae574b8df2dbce841c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfa64e8fe97e251f35083a3a60e1dbbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#gadfa64e8fe97e251f35083a3a60e1dbbb">lora_driver_set_automatic_reply</a> (<a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a> ar)</td></tr>
+<tr class="memdesc:gadfa64e8fe97e251f35083a3a60e1dbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set automatic reply on down link messages.  <a href="#gadfa64e8fe97e251f35083a3a60e1dbbb">More...</a><br /></td></tr>
+<tr class="separator:gadfa64e8fe97e251f35083a3a60e1dbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81deec0a5f1bc0148bbd50bbb8b01aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#ga81deec0a5f1bc0148bbd50bbb8b01aed">lora_driver_get_automatic_reply</a> (<a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a> *ar)</td></tr>
+<tr class="memdesc:ga81deec0a5f1bc0148bbd50bbb8b01aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get automatic reply setting for down link messages.  <a href="#ga81deec0a5f1bc0148bbd50bbb8b01aed">More...</a><br /></td></tr>
+<tr class="separator:ga81deec0a5f1bc0148bbd50bbb8b01aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4c60d67c4da637a44165df1cc7cf9b96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#ga4c60d67c4da637a44165df1cc7cf9b96">lora_driver_setLink_check_interval</a> (uint16_t sec)</td></tr>
 <tr class="memdesc:ga4c60d67c4da637a44165df1cc7cf9b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the delay each link check is performed.  <a href="#ga4c60d67c4da637a44165df1cc7cf9b96">More...</a><br /></td></tr>
 <tr class="separator:ga4c60d67c4da637a44165df1cc7cf9b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,6 +217,34 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">state</td><td>the current state of ADR. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>eLoRa_return_code </dd></dl>
+
+</div>
+</div>
+<a id="ga81deec0a5f1bc0148bbd50bbb8b01aed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81deec0a5f1bc0148bbd50bbb8b01aed">&#9670;&nbsp;</a></span>lora_driver_get_automatic_reply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a> lora_driver_get_automatic_reply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a> *&#160;</td>
+          <td class="paramname"><em>ar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get automatic reply setting for down link messages. </p>
+<p>see also <a class="el" href="group__lora__advanced__function.html#gadfa64e8fe97e251f35083a3a60e1dbbb">lora_driver_set_automatic_reply</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">ar</td><td>current state of automatic response. </td></tr>
   </table>
   </dd>
 </dl>
@@ -474,6 +508,34 @@ Only needed when ABP is used.</dd></dl>
 
 </div>
 </div>
+<a id="gadfa64e8fe97e251f35083a3a60e1dbbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadfa64e8fe97e251f35083a3a60e1dbbb">&#9670;&nbsp;</a></span>lora_driver_set_automatic_reply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a> lora_driver_set_automatic_reply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a>&#160;</td>
+          <td class="paramname"><em>ar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set automatic reply on down link messages. </p>
+<p>By enabling the automatic reply, the module will transmit a packet without a payload immediately after a confirmed downlink is received, or when the Frame Pending bit has been set by the server. If set to OFF, no automatic reply will be transmitted.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ar</td><td>new state of automatic response. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>eLoRa_return_code </dd></dl>
+
+</div>
+</div>
 <a id="gae2703ca7b769779bb47412d22a7c9a0e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae2703ca7b769779bb47412d22a7c9a0e">&#9670;&nbsp;</a></span>lora_driver_set_data_rate()</h2>
 
@@ -709,7 +771,7 @@ Only needed when ABP is used.</dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 22 2019 08:03:10 for VIA University College 4. Semester IoT Drivers by
+    <li class="footer">Generated on Sun Feb 16 2020 16:16:32 for VIA University College 4. Semester IoT Drivers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

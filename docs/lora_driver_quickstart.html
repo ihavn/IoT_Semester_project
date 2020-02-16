@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -101,6 +101,7 @@ LoRa Driver use cases</h1>
 <li><a class="el" href="lora_setup_to__o_t_a_a.html">OTAA setup steps</a></li>
 <li><a class="el" href="lora_setup_to__a_b_p.html">ABP setup steps</a></li>
 <li><a class="el" href="lora_send_uplink_message.html">Sent an uplink message</a></li>
+<li><a class="el" href="lora_receive_downlink_message.html">Receive a downlink message</a></li>
 </ul>
 <h1><a class="anchor" id="lora_setup_use_case"></a>
 Initialise the driver</h1>
@@ -108,7 +109,8 @@ Initialise the driver</h1>
 <li><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="ihal_8h.html">ihal.h</a>&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="lora__driver_8h.html">lora_driver.h</a>&gt;</span></div></div><!-- fragment --></li>
 </ul>
 <p>Add to application initialization:</p><ul>
-<li>Initialise the driver: <div class="fragment"><div class="line"><a class="code" href="ihal_8h.html#a37b3d7a714679b24ec5faac8af3b778d">hal_create</a>(<a class="code" href="app__config_8h.html#a929063c46e63eb78271df5b5fd5819e9">LED_TASK_PRIORITY</a>); <span class="comment">// Must be called first!! LED_TASK_PRIORITY must be a high priority in your system</span></div><div class="line"><a class="code" href="group__lora__creation.html#ga042557e8d6c0b46445d56fdff5f1b4c3">lora_driver_create</a>(ser_USART1); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1</span></div></div><!-- fragment --></li>
+<li>Initialise the driver without downlink possibility: <div class="fragment"><div class="line"><a class="code" href="ihal_8h.html#a37b3d7a714679b24ec5faac8af3b778d">hal_create</a>(<a class="code" href="app__config_8h.html#a929063c46e63eb78271df5b5fd5819e9">LED_TASK_PRIORITY</a>); <span class="comment">// Must be called first!! LED_TASK_PRIORITY must be a high priority in your system</span></div><div class="line"><a class="code" href="group__lora__creation.html#gad161c3b9a2c09959834d87548264b4f3">lora_driver_create</a>(ser_USART1, NULL); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div></div><!-- fragment --></li>
+<li>Alternatively initialise the driver with downlink possibility: <div class="fragment"><div class="line"><a class="code" href="ihal_8h.html#a37b3d7a714679b24ec5faac8af3b778d">hal_create</a>(<a class="code" href="app__config_8h.html#a929063c46e63eb78271df5b5fd5819e9">LED_TASK_PRIORITY</a>); <span class="comment">// Must be called first!! LED_TASK_PRIORITY must be a high priority in your system</span></div><div class="line">MessageBufferHandle_t down_link_message_buffer_handle = xMessageBufferCreate(<span class="keyword">sizeof</span>(<a class="code" href="structlora__payload.html">lora_payload_t</a>)*2); <span class="comment">// Here I make room for two downlink messages in the message buffer</span></div><div class="line"><a class="code" href="group__lora__creation.html#gad161c3b9a2c09959834d87548264b4f3">lora_driver_create</a>(ser_USART1, down_link_message_buffer_handle); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div></div><!-- fragment --></li>
 </ul>
 <p>Then the LoRaWAN transceiver needs to be hardware reset. </p><dl class="section note"><dt>Note</dt><dd>This must be done from a FreeRTOS task!! <div class="fragment"><div class="line"><a class="code" href="group__lora__advanced__function.html#ga0663ec45bfcadc5ed9f1c6787a5eab13">lora_driver_reset_rn2483</a>(1); <span class="comment">// Activate reset line</span></div><div class="line">vTaskDelay(2);</div><div class="line"><a class="code" href="group__lora__advanced__function.html#ga0663ec45bfcadc5ed9f1c6787a5eab13">lora_driver_reset_rn2483</a>(0); <span class="comment">// Release reset line</span></div><div class="line">vTaskDelay(150); <span class="comment">// Wait for tranceiver module to wake up after reset</span></div><div class="line"><a class="code" href="group__lora__advanced__function.html#gaf50b3bfa96c77a3b569d22f05ba85534">lora_driver_flush_buffers</a>(); <span class="comment">// get rid of first version string from module after reset!</span></div></div><!-- fragment --></dd></dl>
 <p>Now you are ready to use the LoRaWAN module :) </p>
@@ -117,7 +119,7 @@ Initialise the driver</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 22 2019 08:03:10 for VIA University College 4. Semester IoT Drivers by
+    <li class="footer">Generated on Sun Feb 16 2020 16:16:32 for VIA University College 4. Semester IoT Drivers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

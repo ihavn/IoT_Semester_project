@@ -16,7 +16,7 @@ var group__lora__driver__return__codes =
       [ "LoRa_INVALID_DATA_LEN", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa32b871b0709d033d8ebb43a9f947992", null ],
       [ "LoRa_FRAME_COUNTER_ERR_REJOIN_NEEDED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a3ed2ab33e8fe55fc748fa5ea2a2cb595", null ],
       [ "LoRa_MAC_TX_OK", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a7ede543c065a932d2d61450d74c6efd7", null ],
-      [ "LoRa_MAC_RX_OK", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a631dd935b4d46015791ec9c6750819ed", null ],
+      [ "LoRa_MAC_RX", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a9e7018a839416687204d60e630bf5461", null ],
       [ "LoRa_MAC_ERROR", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a1cdf78f96481f4ef8639a03dc1707de7", null ],
       [ "LoRa_UNKNOWN", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa5b2a766d0449e5356c64b3e3371421e", null ]
     ] ]

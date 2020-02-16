@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -109,15 +109,15 @@ Collaboration diagram for Functions to create and initialize the driver.:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga042557e8d6c0b46445d56fdff5f1b4c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__creation.html#ga042557e8d6c0b46445d56fdff5f1b4c3">lora_driver_create</a> (e_com_port_t com_port)</td></tr>
-<tr class="memdesc:ga042557e8d6c0b46445d56fdff5f1b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the LoRa driver..  <a href="#ga042557e8d6c0b46445d56fdff5f1b4c3">More...</a><br /></td></tr>
-<tr class="separator:ga042557e8d6c0b46445d56fdff5f1b4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad161c3b9a2c09959834d87548264b4f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__creation.html#gad161c3b9a2c09959834d87548264b4f3">lora_driver_create</a> (e_com_port_t com_port, MessageBufferHandle_t downlinkMessageBuffer)</td></tr>
+<tr class="memdesc:gad161c3b9a2c09959834d87548264b4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the LoRa driver..  <a href="#gad161c3b9a2c09959834d87548264b4f3">More...</a><br /></td></tr>
+<tr class="separator:gad161c3b9a2c09959834d87548264b4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>How to create the driver. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga042557e8d6c0b46445d56fdff5f1b4c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga042557e8d6c0b46445d56fdff5f1b4c3">&#9670;&nbsp;</a></span>lora_driver_create()</h2>
+<a id="gad161c3b9a2c09959834d87548264b4f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad161c3b9a2c09959834d87548264b4f3">&#9670;&nbsp;</a></span>lora_driver_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,8 +126,18 @@ Functions</h2></td></tr>
           <td class="memname">void lora_driver_create </td>
           <td>(</td>
           <td class="paramtype">e_com_port_t&#160;</td>
-          <td class="paramname"><em>com_port</em></td><td>)</td>
+          <td class="paramname"><em>com_port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">MessageBufferHandle_t&#160;</td>
+          <td class="paramname"><em>downlinkMessageBuffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -137,9 +147,11 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">com_port</td><td>to be used for communication with the RN2483 module. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">downlinkMessageBuffer</td><td>that will be used to buffer down-link messages received from LoRaWAN.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>If downlinkMessageBuffer is NULL then no down-link messages can be received </dd></dl>
 
 </div>
 </div>
@@ -148,7 +160,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 22 2019 08:03:10 for VIA University College 4. Semester IoT Drivers by
+    <li class="footer">Generated on Sun Feb 16 2020 16:16:32 for VIA University College 4. Semester IoT Drivers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

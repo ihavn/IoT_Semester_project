@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['port2ddr',['PORT2DDR',['../hal__defs_8h.html#aec30454f6cd9e9cbde79dbc9d4b47656',1,'hal_defs.h']]],
-  ['port2pin',['PORT2PIN',['../hal__defs_8h.html#a9e62a16a18c2477fa3f62c607da12d9e',1,'hal_defs.h']]]
+  ['nible_5fto_5fhex_5fchar',['NIBLE_TO_HEX_CHAR',['../lora__driver__utils_8h.html#add85e69e3a2293062774d3c406a09aee',1,'lora_driver_utils.h']]]
 ];

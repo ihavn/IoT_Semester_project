@@ -2,7 +2,6 @@
 \file
 
 \author Ib Havn
-\version 1.0.0
 
 \defgroup lora_driver LoRaWAN Driver using RN2384 Module
 \{
@@ -36,6 +35,8 @@ These functions you will not normally need, it will normally be enough to use th
 #define LORA_DRIVER_H_
 #include <stdbool.h>
 #include <serial.h>
+#include <ATMEGA_FreeRTOS.h>
+#include <message_buffer.h>
 
 //#include <lorawan_config.h>
 
@@ -79,7 +80,7 @@ typedef enum LoRa_driver_return_codes {
 	, LoRa_FRAME_COUNTER_ERR_REJOIN_NEEDED /**< If the frame counter rolled over - a rejoin is needed */
 	, LoRa_MAC_TX_OK /**< If up link transmission was successful and no down link data was
 	received back from the server */
-	, LoRa_MAC_RX_OK /**< If there is a downlink message is received on an uplink transmission */
+	, LoRa_MAC_RX /**< If there is a downlink message is received on an uplink transmission */
 	, LoRa_MAC_ERROR /**< If transmission was unsuccessful, ACK not received back from the
 	server */
 	, LoRa_UNKNOWN /**< An unknown error occurred that is not identified by this driver */
@@ -103,6 +104,15 @@ typedef enum lora_adaptive_data_rate_modes {
 	,LoRa_ON /**< Set ADR to OFF */
 } e_LoRa_adaptive_data_rate_t;
 
+/**
+\ingroup lora_config
+\brief Automatic Reply (AR) modes.
+*/
+typedef enum e_LoRa_automatic_reply_modes {
+	LoRa_AR_ON /**< Set AR to ON */
+	,LoRa_AR_OFF  /**< Set AR to OFF */
+} e_LoRa_automatic_reply_t;
+
 /* ======================================================================================================================= */
 /**
 \ingroup lora_basic_function
@@ -120,8 +130,11 @@ uint8_t lora_driver_get_max_payload_size(void);
 Creates and initialize the LoRa Driver.
 
 \param[in] com_port to be used for communication with the RN2483 module.
+\param[in] downlinkMessageBuffer that will be used to buffer down-link messages received from LoRaWAN.
+
+\note If downlinkMessageBuffer is NULL then no down-link messages can be received
 */
-void lora_driver_create(e_com_port_t com_port);
+void lora_driver_create(e_com_port_t com_port, MessageBufferHandle_t downlinkMessageBuffer);
 
 /* ======================================================================================================================= */
 /**
@@ -139,7 +152,6 @@ This function sets besides the identifiers and keys the following parameters in 
 | LoRaWan Parameter | Value |
 | :---------------- | :----: |
 | Adaptive Data Rate | ON |
-| Spreading Factor | 7 |
 
 \note This must be called before any join is carried out.
 \note These data are being stored in RN2384 module by this function.
@@ -205,7 +217,6 @@ This function sets besides the identifiers and keys the following parameters in 
 | LoRaWan Parameter | Value |
 | :---------------- | :----: |
 | Adaptive Data Rate | ON |
-| Spreading Factor | 7 |
 
 \note This must be called before join with ABP is carried out.
 \note These data are being stored in RN2384 module by this function.
@@ -392,6 +403,31 @@ e_LoRa_return_code_t lora_driver_set_receive_delay(uint16_t rxDelay1);
 /* ======================================================================================================================= */
 /**
 \ingroup lora_advanced_function
+\brief Set automatic reply on down link messages.
+
+By enabling the automatic reply, the module will transmit a packet without a payload immediately after a confirmed 
+downlink is received, or when the Frame Pending bit has been set by the server. If set to OFF, no automatic reply will be transmitted.
+
+\param[in] ar new state of automatic response.
+\return eLoRa_return_code
+*/
+e_LoRa_return_code_t lora_driver_set_automatic_reply(e_LoRa_automatic_reply_t ar);
+
+/* ======================================================================================================================= */
+/**
+\ingroup lora_advanced_function
+\brief Get automatic reply setting for down link messages.
+
+see also \ref lora_driver_set_automatic_reply.
+
+\param[out] ar current state of automatic response.
+\return eLoRa_return_code
+*/
+e_LoRa_return_code_t lora_driver_get_automatic_reply(e_LoRa_automatic_reply_t * ar);
+
+/* ======================================================================================================================= */
+/**
+\ingroup lora_advanced_function
 \brief Set the delay each link check is performed.
 
 This command sets the time interval for the link check process to be triggered
@@ -571,6 +607,7 @@ the steps for usage can be copied into, e.g., the main application function.
 - \subpage lora_setup_to_OTAA
 - \subpage lora_setup_to_ABP
 - \subpage lora_send_uplink_message
+- \subpage lora_receive_downlink_message
 
 \section lora_setup_use_case Initialise the driver
 The following must be added to the project:
@@ -580,10 +617,16 @@ The following must be added to the project:
 \endcode
 
 Add to application initialization:
-- Initialise the driver:
+- Initialise the driver without downlink possibility:
 \code
 hal_create(LED_TASK_PRIORITY); // Must be called first!! LED_TASK_PRIORITY must be a high priority in your system
-lora_driver_create(ser_USART1); // The parameter is the USART port the RN2483 module is connected to - in this case USART1
+lora_driver_create(ser_USART1, NULL); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
+\endcode
+- Alternatively initialise the driver with downlink possibility:
+\code
+hal_create(LED_TASK_PRIORITY); // Must be called first!! LED_TASK_PRIORITY must be a high priority in your system
+MessageBufferHandle_t down_link_message_buffer_handle = xMessageBufferCreate(sizeof(lora_payload_t)*2); // Here I make room for two downlink messages in the message buffer
+lora_driver_create(ser_USART1, down_link_message_buffer_handle); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode
 
 Then the LoRaWAN transceiver needs to be hardware reset.
@@ -634,7 +677,7 @@ if (lora_driver_configure_to_eu868() != LoRA_OK)
 -# Get the RN2483 modules unique devEUI:
 \code
 static char dev_eui[17]; // It is static to avoid it to occupy stack space in the task
-if (lora_driver_get_rn2483_hweui(dev_eui); != LoRA_OK)
+if (lora_driver_get_rn2483_hweui(dev_eui) != LoRA_OK)
 {
 	// Something went wrong
 }
@@ -751,7 +794,7 @@ The following must be added to a FreeRTOS task in the project:
 \code
 	lora_payload_t uplink_payload;
 \endcode
-\subsection lora_send_uplink_message_flow Workflow
+
 -# Populate the payload struct with data
 \code 
 	uplink_payload.len = 4; // Length of the actual payload
@@ -773,6 +816,44 @@ The following must be added to a FreeRTOS task in the project:
 	else if (rc == LoRa_MAC_RX_OK)
 	{
 		// The uplink message is sent and a downlink message is received
+	}
+ \endcode
+ */
+
+ /**
+\page lora_receive_downlink_message Receive a downlink message
+
+In this use case, a downlink link message will be received.
+A downlink message is received in a lora_payload_t variable.
+
+\note The driver must be initialised \ref lora_setup_use_case and must be setup to OTAA \ref lora_setup_to_OTAA or ABP \ref lora_setup_to_OTAA.
+\note To be able to receive any downlink messages you may specify a FreeRTOS message buffer during the initialisation of the driver. In this message buffer the received messages will be delivered by the driver (\ref lora_setup_use_case).
+
+In this example a downlink message with 4 bytes will be received from the LoRaWAN.
+These 4 bytes will in this example represent a maximum humidity setting and a maximum temperature setting that we want to be able to recieve from the LoRaWAN.
+\par
+\code
+	uint16_t max_hum_setting; // Max Humidity
+	int16_t max_temp_setting; // Max Temperature
+\endcode
+
+\subsection lora_receive_downlink_message_setup create a payload variable to receive the downlink message in
+The following must be added to a FreeRTOS tasks for(;;) loop in your application - typical you will have a separate task for handling downlink messages:
+-# Define a payload struct variable
+\code
+	lora_payload_t downlink_payload;
+\endcode
+
+-# Wait for a message to be received
+\code 
+	// this code must be in the loop of a FreeRTOS task!
+	xMessageBufferReceive(down_link_message_buffer_handle, &downlink_payload, sizeof(lora_payload_t), portMAX_DELAY);
+	printf("DOWN LINK: from port: %d with %d bytes received!", down_link_payload.port_no, down_link_payload.len); // Just for Debug
+	if (4 == down_link_payload.len) // Check that we have got the expected 4 bytes
+	{
+		// decode the payload into our variales
+		max_hum_setting = (down_link_payload.bytes[0] << 8) + down_link_payload.bytes[1];
+		max_temp_setting = (down_link_payload.bytes[2] << 8) + down_link_payload.bytes[3];
 	}
  \endcode
 */

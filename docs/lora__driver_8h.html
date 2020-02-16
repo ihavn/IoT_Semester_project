@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -100,6 +100,8 @@ $(document).ready(function(){initNavTree('lora__driver_8h.html','');});
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;serial.h&gt;</code><br />
+<code>#include &lt;ATMEGA_FreeRTOS.h&gt;</code><br />
+<code>#include &lt;message_buffer.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for lora_driver.h:</div>
 <div class="dyncontent">
@@ -133,6 +135,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga38eca1faca0c2bb5735e1863d117087c"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group__lora__config.html#ga9e9d95e9419d751f35ba6e6f7ff3c95d">lora_adaptive_data_rate_modes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__config.html#ga38eca1faca0c2bb5735e1863d117087c">e_LoRa_adaptive_data_rate_t</a></td></tr>
 <tr class="memdesc:ga38eca1faca0c2bb5735e1863d117087c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive data rates (ADR) modes.  <a href="group__lora__config.html#ga38eca1faca0c2bb5735e1863d117087c">More...</a><br /></td></tr>
 <tr class="separator:ga38eca1faca0c2bb5735e1863d117087c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4eaa8a60509189341b13d7ca97fbf4b4"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">e_LoRa_automatic_reply_modes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a></td></tr>
+<tr class="memdesc:ga4eaa8a60509189341b13d7ca97fbf4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic Reply (AR) modes.  <a href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">More...</a><br /></td></tr>
+<tr class="separator:ga4eaa8a60509189341b13d7ca97fbf4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -154,7 +159,7 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a3ed2ab33e8fe55fc748fa5ea2a2cb595">LoRa_FRAME_COUNTER_ERR_REJOIN_NEEDED</a>, 
 <a class="el" href="group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a7ede543c065a932d2d61450d74c6efd7">LoRa_MAC_TX_OK</a>, 
-<a class="el" href="group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a631dd935b4d46015791ec9c6750819ed">LoRa_MAC_RX_OK</a>, 
+<a class="el" href="group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a9e7018a839416687204d60e630bf5461">LoRa_MAC_RX</a>, 
 <a class="el" href="group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a1cdf78f96481f4ef8639a03dc1707de7">LoRa_MAC_ERROR</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa5b2a766d0449e5356c64b3e3371421e">LoRa_UNKNOWN</a>
@@ -172,15 +177,20 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga9e9d95e9419d751f35ba6e6f7ff3c95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive data rates (ADR) modes.  <a href="group__lora__config.html#ga9e9d95e9419d751f35ba6e6f7ff3c95d">More...</a><br /></td></tr>
 <tr class="separator:ga9e9d95e9419d751f35ba6e6f7ff3c95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62ed0af34da024e68fdf0c381ddd143c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">e_LoRa_automatic_reply_modes</a> { <a class="el" href="group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca13ea4716c3b5034afdc63c9a731b42ba">LoRa_AR_ON</a>, 
+<a class="el" href="group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca8fceed89f3859f7d93036cc2d378f9a0">LoRa_AR_OFF</a>
+ }</td></tr>
+<tr class="memdesc:ga62ed0af34da024e68fdf0c381ddd143c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic Reply (AR) modes.  <a href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">More...</a><br /></td></tr>
+<tr class="separator:ga62ed0af34da024e68fdf0c381ddd143c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gaba236eebcdedddae4f051be60fc33f2a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__basic__function.html#gaba236eebcdedddae4f051be60fc33f2a">lora_driver_get_max_payload_size</a> (void)</td></tr>
 <tr class="memdesc:gaba236eebcdedddae4f051be60fc33f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get max payload size in bytes.  <a href="group__lora__basic__function.html#gaba236eebcdedddae4f051be60fc33f2a">More...</a><br /></td></tr>
 <tr class="separator:gaba236eebcdedddae4f051be60fc33f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga042557e8d6c0b46445d56fdff5f1b4c3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__creation.html#ga042557e8d6c0b46445d56fdff5f1b4c3">lora_driver_create</a> (e_com_port_t com_port)</td></tr>
-<tr class="memdesc:ga042557e8d6c0b46445d56fdff5f1b4c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the LoRa driver..  <a href="group__lora__creation.html#ga042557e8d6c0b46445d56fdff5f1b4c3">More...</a><br /></td></tr>
-<tr class="separator:ga042557e8d6c0b46445d56fdff5f1b4c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad161c3b9a2c09959834d87548264b4f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__creation.html#gad161c3b9a2c09959834d87548264b4f3">lora_driver_create</a> (e_com_port_t com_port, MessageBufferHandle_t downlinkMessageBuffer)</td></tr>
+<tr class="memdesc:gad161c3b9a2c09959834d87548264b4f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the LoRa driver..  <a href="group__lora__creation.html#gad161c3b9a2c09959834d87548264b4f3">More...</a><br /></td></tr>
+<tr class="separator:gad161c3b9a2c09959834d87548264b4f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga558c7f15959a8b3b81da75bdff71c74e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__basic__function.html#ga558c7f15959a8b3b81da75bdff71c74e">lora_driver_set_otaa_identity</a> (char appEUI[17], char appKEY[33], char devEUI[17])</td></tr>
 <tr class="memdesc:ga558c7f15959a8b3b81da75bdff71c74e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set identifiers and keys for a OTAA join.  <a href="group__lora__basic__function.html#ga558c7f15959a8b3b81da75bdff71c74e">More...</a><br /></td></tr>
 <tr class="separator:ga558c7f15959a8b3b81da75bdff71c74e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,6 +242,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga67d33d834fab7ae574b8df2dbce841c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#ga67d33d834fab7ae574b8df2dbce841c8">lora_driver_set_receive_delay</a> (uint16_t rxDelay1)</td></tr>
 <tr class="memdesc:ga67d33d834fab7ae574b8df2dbce841c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the delay between a transmission and the first receiver window.  <a href="group__lora__advanced__function.html#ga67d33d834fab7ae574b8df2dbce841c8">More...</a><br /></td></tr>
 <tr class="separator:ga67d33d834fab7ae574b8df2dbce841c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadfa64e8fe97e251f35083a3a60e1dbbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#gadfa64e8fe97e251f35083a3a60e1dbbb">lora_driver_set_automatic_reply</a> (<a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a> ar)</td></tr>
+<tr class="memdesc:gadfa64e8fe97e251f35083a3a60e1dbbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set automatic reply on down link messages.  <a href="group__lora__advanced__function.html#gadfa64e8fe97e251f35083a3a60e1dbbb">More...</a><br /></td></tr>
+<tr class="separator:gadfa64e8fe97e251f35083a3a60e1dbbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81deec0a5f1bc0148bbd50bbb8b01aed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#ga81deec0a5f1bc0148bbd50bbb8b01aed">lora_driver_get_automatic_reply</a> (<a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a> *ar)</td></tr>
+<tr class="memdesc:ga81deec0a5f1bc0148bbd50bbb8b01aed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get automatic reply setting for down link messages.  <a href="group__lora__advanced__function.html#ga81deec0a5f1bc0148bbd50bbb8b01aed">More...</a><br /></td></tr>
+<tr class="separator:ga81deec0a5f1bc0148bbd50bbb8b01aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4c60d67c4da637a44165df1cc7cf9b96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c">e_LoRa_return_code_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__advanced__function.html#ga4c60d67c4da637a44165df1cc7cf9b96">lora_driver_setLink_check_interval</a> (uint16_t sec)</td></tr>
 <tr class="memdesc:ga4c60d67c4da637a44165df1cc7cf9b96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the delay each link check is performed.  <a href="group__lora__advanced__function.html#ga4c60d67c4da637a44165df1cc7cf9b96">More...</a><br /></td></tr>
 <tr class="separator:ga4c60d67c4da637a44165df1cc7cf9b96"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -274,7 +290,6 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Ib Havn </dd></dl>
-<dl class="section version"><dt>Version</dt><dd>1.0.0 </dd></dl>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ae63eac2df0b53ec1bbe312f45854ac47"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae63eac2df0b53ec1bbe312f45854ac47">&#9670;&nbsp;</a></span>LORA_MAX_PAYLOAD_LENGTH</h2>
@@ -296,7 +311,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_c5b59151d6c1325e022e4ba605eb40f8.html">HAL</a></li><li class="navelem"><a class="el" href="dir_221afbd10570f9ed5449989c5a66cd36.html">LoRaDriver</a></li><li class="navelem"><a class="el" href="lora__driver_8h.html">lora_driver.h</a></li>
-    <li class="footer">Generated on Tue Oct 22 2019 08:03:09 for VIA University College 4. Semester IoT Drivers by
+    <li class="footer">Generated on Sun Feb 16 2020 16:16:31 for VIA University College 4. Semester IoT Drivers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>

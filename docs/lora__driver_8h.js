@@ -3,8 +3,13 @@ var lora__driver_8h =
     [ "LORA_MAX_PAYLOAD_LENGTH", "lora__driver_8h.html#ae63eac2df0b53ec1bbe312f45854ac47", null ],
     [ "e_join_mode_t", "group__lora__config.html#ga44aabc817cce9ad1d8a05eec73f547eb", null ],
     [ "e_LoRa_adaptive_data_rate_t", "group__lora__config.html#ga38eca1faca0c2bb5735e1863d117087c", null ],
+    [ "e_LoRa_automatic_reply_t", "group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4", null ],
     [ "e_LoRa_return_code_t", "group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c", null ],
     [ "lora_payload_t", "group__lora__config.html#ga9f402cd6c36574fdaeac6e82342df496", null ],
+    [ "e_LoRa_automatic_reply_modes", "group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c", [
+      [ "LoRa_AR_ON", "group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca13ea4716c3b5034afdc63c9a731b42ba", null ],
+      [ "LoRa_AR_OFF", "group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca8fceed89f3859f7d93036cc2d378f9a0", null ]
+    ] ],
     [ "lora_adaptive_data_rate_modes", "group__lora__config.html#ga9e9d95e9419d751f35ba6e6f7ff3c95d", [
       [ "LoRa_OFF", "group__lora__config.html#gga9e9d95e9419d751f35ba6e6f7ff3c95dab9df25d12eab27565e803d0f7cc606a4", null ],
       [ "LoRa_ON", "group__lora__config.html#gga9e9d95e9419d751f35ba6e6f7ff3c95dae9b705ac434f0f5bbf9ada07693afddf", null ]
@@ -24,7 +29,7 @@ var lora__driver_8h =
       [ "LoRa_INVALID_DATA_LEN", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa32b871b0709d033d8ebb43a9f947992", null ],
       [ "LoRa_FRAME_COUNTER_ERR_REJOIN_NEEDED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a3ed2ab33e8fe55fc748fa5ea2a2cb595", null ],
       [ "LoRa_MAC_TX_OK", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a7ede543c065a932d2d61450d74c6efd7", null ],
-      [ "LoRa_MAC_RX_OK", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a631dd935b4d46015791ec9c6750819ed", null ],
+      [ "LoRa_MAC_RX", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a9e7018a839416687204d60e630bf5461", null ],
       [ "LoRa_MAC_ERROR", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a1cdf78f96481f4ef8639a03dc1707de7", null ],
       [ "LoRa_UNKNOWN", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa5b2a766d0449e5356c64b3e3371421e", null ]
     ] ],
@@ -33,9 +38,10 @@ var lora__driver_8h =
       [ "LoRa_ABP", "group__lora__config.html#ggafa77b1b9c0ed0930a3e2992c177faa54aa338e16dd48354f781e49b5f1fa84ffa", null ]
     ] ],
     [ "lora_driver_configure_to_eu868", "group__lora__basic__function.html#gad689bb72ab6e665ab420342c16912b82", null ],
-    [ "lora_driver_create", "group__lora__creation.html#ga042557e8d6c0b46445d56fdff5f1b4c3", null ],
+    [ "lora_driver_create", "group__lora__creation.html#gad161c3b9a2c09959834d87548264b4f3", null ],
     [ "lora_driver_flush_buffers", "group__lora__advanced__function.html#gaf50b3bfa96c77a3b569d22f05ba85534", null ],
     [ "lora_driver_get_adaptive_data_rate", "group__lora__advanced__function.html#ga4702f49a321d6c5a2ed00300518b2fd4", null ],
+    [ "lora_driver_get_automatic_reply", "group__lora__advanced__function.html#ga81deec0a5f1bc0148bbd50bbb8b01aed", null ],
     [ "lora_driver_get_data_rate", "group__lora__advanced__function.html#gafccde00a87c9dd362d1303100f4844ef", null ],
     [ "lora_driver_get_link_check_result", "group__lora__advanced__function.html#gadc49345d85288391db5c67660dc909ff", null ],
     [ "lora_driver_get_max_payload_size", "group__lora__basic__function.html#gaba236eebcdedddae4f051be60fc33f2a", null ],
@@ -55,6 +61,7 @@ var lora__driver_8h =
     [ "lora_driver_set_application_identifier", "group__lora__advanced__function.html#gafce3881702ae651e40e131f5c1b59fcf", null ],
     [ "lora_driver_set_application_key", "group__lora__advanced__function.html#gaab42c8938f0e549a3cf532eaa39b6e53", null ],
     [ "lora_driver_set_application_session_key", "group__lora__advanced__function.html#ga60f46003d81ca323dcb130d9ab22adc1", null ],
+    [ "lora_driver_set_automatic_reply", "group__lora__advanced__function.html#gadfa64e8fe97e251f35083a3a60e1dbbb", null ],
     [ "lora_driver_set_data_rate", "group__lora__advanced__function.html#gae2703ca7b769779bb47412d22a7c9a0e", null ],
     [ "lora_driver_set_device_address", "group__lora__advanced__function.html#ga4c2403dc3feb930b41b71a4439b7ad67", null ],
     [ "lora_driver_set_device_identifier", "group__lora__advanced__function.html#ga8e5743a077727f54e1d7c1ba1a697225", null ],

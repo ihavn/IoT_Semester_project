@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -126,6 +126,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga38eca1faca0c2bb5735e1863d117087c"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group__lora__config.html#ga9e9d95e9419d751f35ba6e6f7ff3c95d">lora_adaptive_data_rate_modes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__config.html#ga38eca1faca0c2bb5735e1863d117087c">e_LoRa_adaptive_data_rate_t</a></td></tr>
 <tr class="memdesc:ga38eca1faca0c2bb5735e1863d117087c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive data rates (ADR) modes.  <a href="#ga38eca1faca0c2bb5735e1863d117087c">More...</a><br /></td></tr>
 <tr class="separator:ga38eca1faca0c2bb5735e1863d117087c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4eaa8a60509189341b13d7ca97fbf4b4"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">e_LoRa_automatic_reply_modes</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a></td></tr>
+<tr class="memdesc:ga4eaa8a60509189341b13d7ca97fbf4b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic Reply (AR) modes.  <a href="#ga4eaa8a60509189341b13d7ca97fbf4b4">More...</a><br /></td></tr>
+<tr class="separator:ga4eaa8a60509189341b13d7ca97fbf4b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -139,6 +142,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga9e9d95e9419d751f35ba6e6f7ff3c95d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adaptive data rates (ADR) modes.  <a href="group__lora__config.html#ga9e9d95e9419d751f35ba6e6f7ff3c95d">More...</a><br /></td></tr>
 <tr class="separator:ga9e9d95e9419d751f35ba6e6f7ff3c95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62ed0af34da024e68fdf0c381ddd143c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">e_LoRa_automatic_reply_modes</a> { <a class="el" href="group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca13ea4716c3b5034afdc63c9a731b42ba">LoRa_AR_ON</a>, 
+<a class="el" href="group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca8fceed89f3859f7d93036cc2d378f9a0">LoRa_AR_OFF</a>
+ }</td></tr>
+<tr class="memdesc:ga62ed0af34da024e68fdf0c381ddd143c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Automatic Reply (AR) modes.  <a href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">More...</a><br /></td></tr>
+<tr class="separator:ga62ed0af34da024e68fdf0c381ddd143c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>How to configure the LoRaWAN driver. </p>
@@ -175,6 +183,22 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="ga4eaa8a60509189341b13d7ca97fbf4b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4eaa8a60509189341b13d7ca97fbf4b4">&#9670;&nbsp;</a></span>e_LoRa_automatic_reply_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">e_LoRa_automatic_reply_modes</a>  <a class="el" href="group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4">e_LoRa_automatic_reply_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Automatic Reply (AR) modes. </p>
+
+</div>
+</div>
 <a id="ga9f402cd6c36574fdaeac6e82342df496"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9f402cd6c36574fdaeac6e82342df496">&#9670;&nbsp;</a></span>lora_payload_t</h2>
 
@@ -193,6 +217,28 @@ Enumerations</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga62ed0af34da024e68fdf0c381ddd143c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62ed0af34da024e68fdf0c381ddd143c">&#9670;&nbsp;</a></span>e_LoRa_automatic_reply_modes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c">e_LoRa_automatic_reply_modes</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Automatic Reply (AR) modes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga62ed0af34da024e68fdf0c381ddd143ca13ea4716c3b5034afdc63c9a731b42ba"></a>LoRa_AR_ON&#160;</td><td class="fielddoc"><p>Set AR to ON </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga62ed0af34da024e68fdf0c381ddd143ca8fceed89f3859f7d93036cc2d378f9a0"></a>LoRa_AR_OFF&#160;</td><td class="fielddoc"><p>Set AR to OFF </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga9e9d95e9419d751f35ba6e6f7ff3c95d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9e9d95e9419d751f35ba6e6f7ff3c95d">&#9670;&nbsp;</a></span>lora_adaptive_data_rate_modes</h2>
 
@@ -242,7 +288,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Oct 22 2019 08:03:10 for VIA University College 4. Semester IoT Drivers by
+    <li class="footer">Generated on Sun Feb 16 2020 16:16:32 for VIA University College 4. Semester IoT Drivers by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
   </ul>
