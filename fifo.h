@@ -193,7 +193,7 @@ static inline void fifo_push_uint8_nocheck(fifo_desc_t *fifo_desc, uint32_t item
  *
  *  \return Status
  *    \retval FIFO_OK when no error occurred.
- *    \retval FIFO_ERROR_OVERFLOW when the FIFO was full.
+ *    \retval FIFO_ERROR_UNDERFLOW when the FIFO was empty.
  */
 static inline int fifo_push_uint8(fifo_desc_t *fifo_desc, uint32_t item)
 {
@@ -242,7 +242,7 @@ static inline void fifo_push_uint16_nocheck(fifo_desc_t *fifo_desc, uint32_t ite
  *
  *  \return Status
  *    \retval FIFO_OK when no error occurred.
- *    \retval FIFO_ERROR_OVERFLOW when the FIFO was full.
+ *    \retval FIFO_ERROR_UNDERFLOW when the FIFO was empty.
  */
 static inline int fifo_push_uint16(fifo_desc_t *fifo_desc, uint32_t item)
 {
@@ -291,7 +291,7 @@ static inline void fifo_push_uint32_nocheck(fifo_desc_t *fifo_desc, uint32_t ite
  *
  *  \return Status
  *    \retval FIFO_OK when no error occurred.
- *    \retval FIFO_ERROR_OVERFLOW when the FIFO was full.
+ *    \retval FIFO_ERROR_UNDERFLOW when the FIFO was empty.
  */
 static inline int fifo_push_uint32(fifo_desc_t *fifo_desc, uint32_t item)
 {
