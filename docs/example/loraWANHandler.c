@@ -60,8 +60,11 @@ static void _lora_setup(void)
 	// Enable Adaptive Data Rate
 	printf("Set Adaptive Data Rate: ON >%s<\n", lora_driver_map_return_code_to_text(lora_driver_set_adaptive_data_rate(LoRa_ON)));
 
+	// Set receiver window1 delay to 500 ms - this is needed if down-link messages will be used
+	printf("Set Receiver Delay: %d ms >%s<\n", 500, lora_driver_map_return_code_to_text(lora_driver_set_receive_delay(500)));
+
 	// Join the LoRaWAN
-	uint8_t maxJoinTriesLeft = 5;
+	uint8_t maxJoinTriesLeft = 10;
 	do {
 		rc = lora_driver_join(LoRa_OTAA);
 		printf("Join Network TriesLeft:%d >%s<\n", maxJoinTriesLeft, lora_driver_map_return_code_to_text(rc));
@@ -120,7 +123,6 @@ void lora_handler_task( void *pvParameters )
 	_uplink_payload.len = 6;
 	_uplink_payload.port_no = 2;
 
-
 	for(;;)
 	{
 		vTaskDelay(pdMS_TO_TICKS(5000UL));
@@ -138,6 +140,6 @@ void lora_handler_task( void *pvParameters )
 		_uplink_payload.bytes[5] = co2_ppm & 0xFF;
 
 		led_short_puls(led_ST4);  // OPTIONAL
-		printf("Upload Message >%s<\n", lora_driver_map_return_code_to_text(							lora_driver_sent_upload_message(false, &_uplink_payload)));
+		printf("Upload Message >%s<\n", lora_driver_map_return_code_to_text(lora_driver_sent_upload_message(false, &_uplink_payload)));
 	}
 }

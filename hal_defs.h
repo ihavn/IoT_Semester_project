@@ -9,7 +9,7 @@
 #ifndef HAL_DEFS_H_
 #define HAL_DEFS_H_
 
-#include <serial/serial.h>
+#include <serial.h>
 
 // GPIO Macros
 #define PORT2DDR(port)	(*(volatile uint8_t *)((&port)-1))
