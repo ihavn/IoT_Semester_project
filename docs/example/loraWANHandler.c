@@ -107,8 +107,6 @@ static void _lora_setup(void)
 /*-----------------------------------------------------------*/
 void lora_handler_task( void *pvParameters )
 {
-	static e_LoRa_return_code_t rc;
-
 	// Hardware reset of LoRaWAN transceiver
 	lora_driver_reset_rn2483(1);
 	vTaskDelay(2);
