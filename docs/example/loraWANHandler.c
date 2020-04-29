@@ -121,9 +121,13 @@ void lora_handler_task( void *pvParameters )
 	_uplink_payload.len = 6;
 	_uplink_payload.port_no = 2;
 
+	 TickType_t xLastWakeTime;
+	 const TickType_t xFrequency = pdMS_TO_TICKS(300000UL); // Upload message every 5 minutes (300000 ms)
+	 xLastWakeTime = xTaskGetTickCount();
+	 
 	for(;;)
 	{
-		vTaskDelay(pdMS_TO_TICKS(5000UL));
+		vTaskDelayUntil( &xLastWakeTime, xFrequency );
 
 		// Some dummy payload
 		uint16_t hum = 12345; // Dummy humidity
