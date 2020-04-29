@@ -65,6 +65,7 @@ static void _lora_setup(void)
 
 	// Join the LoRaWAN
 	uint8_t maxJoinTriesLeft = 10;
+	
 	do {
 		rc = lora_driver_join(LoRa_OTAA);
 		printf("Join Network TriesLeft:%d >%s<\n", maxJoinTriesLeft, lora_driver_map_return_code_to_text(rc));
@@ -107,6 +108,8 @@ static void _lora_setup(void)
 /*-----------------------------------------------------------*/
 void lora_handler_task( void *pvParameters )
 {
+	static e_LoRa_return_code_t rc;
+
 	// Hardware reset of LoRaWAN transceiver
 	lora_driver_reset_rn2483(1);
 	vTaskDelay(2);
@@ -142,6 +145,6 @@ void lora_handler_task( void *pvParameters )
 		_uplink_payload.bytes[5] = co2_ppm & 0xFF;
 
 		led_short_puls(led_ST4);  // OPTIONAL
-		printf("Upload Message >%s<\n", lora_driver_map_return_code_to_text(lora_driver_sent_upload_message(false, &_uplink_payload)));
+		printf("Upload Message >%s<\n", lora_driver_map_return_code_to_text(							lora_driver_sent_upload_message(false, &_uplink_payload)));
 	}
 }
