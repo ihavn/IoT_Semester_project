@@ -1,3 +1,5 @@
+package websocket_client;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.WebSocket;
@@ -5,12 +7,23 @@ import java.nio.ByteBuffer;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.CompletableFuture;
 
-public class LoRaClient implements WebSocket.Listener {
+public class WebsocketClient implements WebSocket.Listener {
+    private WebSocket server = null;
 
-    public LoRaClient() {
+    // Send down-link message to device
+    // Must be in Json format according to https://github.com/ihavn/IoT_Semester_project/blob/master/LORA_NETWORK_SERVER.md
+    public void sendDownLink(String jsonText) {
+        server.sendText(jsonText,true);
+    }
+
+    // E.g. url: "wss://iotnet.teracom.dk/app?token=??????????????????????????????????????????????="
+    // Substitute ????????????????? with the token you have been given
+    public WebsocketClient(String url) {
         HttpClient client = HttpClient.newHttpClient();
         CompletableFuture<WebSocket> ws = client.newWebSocketBuilder()
-                .buildAsync(URI.create("wss://iotnet.teracom.dk/app?token=??????????????????????????????="), this);
+                .buildAsync(URI.create(url), this);
+
+        server = ws.join();
     }
 	
     //onOpen()
@@ -30,26 +43,26 @@ public class LoRaClient implements WebSocket.Listener {
     public CompletionStage<?> onClose(WebSocket webSocket, int statusCode, String reason) {
         System.out.println("WebSocket closed!");
         System.out.println("Status:" + statusCode + " Reason: " + reason);
-        return null; //new CompletableFuture().completedFuture("onClose() completed.").thenAccept(System.out::println);
+        return new CompletableFuture().completedFuture("onClose() completed.").thenAccept(System.out::println);
     };
     //onPing()
     public CompletionStage<?> onPing​(WebSocket webSocket, ByteBuffer message) {
         webSocket.request(1);
         System.out.println("Ping: Client ---> Server");
         System.out.println(message.asCharBuffer().toString());
-        return null; // new CompletableFuture().completedFuture("Ping completed.").thenAccept(System.out::println);
+        return new CompletableFuture().completedFuture("Ping completed.").thenAccept(System.out::println);
     };
     //onPong()
     public CompletionStage<?> onPong​(WebSocket webSocket, ByteBuffer message) {
         webSocket.request(1);
         System.out.println("Pong: Client ---> Server");
         System.out.println(message.asCharBuffer().toString());
-        return null; // new CompletableFuture().completedFuture("Pong completed.").thenAccept(System.out::println);
+        return new CompletableFuture().completedFuture("Pong completed.").thenAccept(System.out::println);
     };
     //onText()
     public CompletionStage<?> onText​(WebSocket webSocket, CharSequence data, boolean last) {
         System.out.println(data);
         webSocket.request(1);
-        return null; // new CompletableFuture().completedFuture("onText() completed.").thenAccept(System.out::println);
+        return new CompletableFuture().completedFuture("onText() completed.").thenAccept(System.out::println);
     };
 }
