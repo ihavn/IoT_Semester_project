@@ -10,7 +10,7 @@
 #include <avr/io.h>
 #include <avr/sfr_defs.h>
 
-#include <hal_defs.h>
+//#include <hal_defs.h>
 #include <ihal.h>
 
 #include <ATMEGA_FreeRTOS.h>
@@ -117,7 +117,7 @@ void initialiseSystem()
 	// Initialise the trace-driver to be used together with the R2R-Network
 	trace_init();
 	// Make it possible to use stdio on COM port 0 (USB) on Arduino board - Setting 57600,8,N,1
-	stdioCreate(ser_USART0);
+	stdio_create(ser_USART0);
 	// Let's create some tasks
 	create_tasks_and_semaphores();
 
@@ -125,7 +125,7 @@ void initialiseSystem()
 	// Initialise the HAL layer and use 5 for LED driver priority
 	hal_create(5);
 	// Initialise the LoRaWAN driver without down-link buffer
-	lora_driver_create(LORA_USART, NULL);
+	lora_driver_create(1, NULL);
 	// Create LoRaWAN task and start it up with priority 3
 	lora_handler_create(3);
 }
