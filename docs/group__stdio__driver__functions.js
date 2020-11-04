@@ -1,4 +1,4 @@
 var group__stdio__driver__functions =
 [
-    [ "stdioInputWaiting", "group__stdio__driver__functions.html#ga2818ca2812646624db5f50654e0289bf", null ]
+    [ "stdio_inputIsWaiting", "group__stdio__driver__functions.html#gac8009b46973c1a3bd01fa8ab8c7c4f4c", null ]
 ];

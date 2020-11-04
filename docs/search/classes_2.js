@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['tsl2591combineddata_5ft',['tsl2591CombinedData_t',['../structtsl2591_combined_data__t.html',1,'']]]
+  ['lora_5fdriver_5fpayload_413',['lora_driver_payload',['../structlora__driver__payload.html',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['e_5flora_5fautomatic_5freply_5fmodes',['e_LoRa_automatic_reply_modes',['../group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c',1,'lora_driver.h']]],
-  ['eleds_5ft',['eleds_t',['../group__led__driver__basic__function.html#ga96d34a875e358a836e68156cc1664951',1,'iled.h']]]
+  ['hih8120_5fdriverreturncodes_602',['hih8120_driverReturnCodes',['../group__hih8120__driver__return__codes.html#ga12a2e6b676a350164b7671d73bda52ab',1,'hih8120.h']]]
 ];

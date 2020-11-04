@@ -1,7 +1,6 @@
 var sen14262_8h =
 [
-    [ "sen14262Audio", "sen14262_8h.html#a6c81aa7832f021ec0946b43e0bc76214", null ],
-    [ "sen14262Create", "sen14262_8h.html#ab48aa37dfa59b0e16c985cb6a9c108a2", null ],
-    [ "sen14262Envelope", "sen14262_8h.html#ac34a350865a185c37d3df8f539d8c28a", null ],
-    [ "sen14262Gate", "sen14262_8h.html#a39b6dfd8a8046d40442a84c2e7a29687", null ]
+    [ "sen14262_create", "group__sen14262__driver__creation.html#gadf5785bac8bc9da94540222671dc755d", null ],
+    [ "sen14262_envelope", "group__sen14262__driver__basic__function.html#ga1bf180ebe355c6f302a03e080b9d3ef3", null ],
+    [ "sen14262_gate", "group__sen14262__driver__basic__function.html#gae34b4d3b7cf4cc3db1196c7a788ca5ab", null ]
 ];

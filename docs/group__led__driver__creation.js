@@ -1,4 +1,4 @@
 var group__led__driver__creation =
 [
-    [ "led_create", "group__led__driver__creation.html#ga4f1105bce3742829eaace0cd4193ea29", null ]
+    [ "status_leds_create", "group__led__driver__creation.html#ga9c361c8006834a70050daa6db9deeab3", null ]
 ];

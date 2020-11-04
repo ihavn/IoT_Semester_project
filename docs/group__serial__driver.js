@@ -1,10 +1,10 @@
 var group__serial__driver =
 [
-    [ "serial_flush_rx_fifo", "group__serial__driver.html#ga46b98291a5cecb60e87eba41de528c3e", null ],
-    [ "serial_flush_tx_fifo", "group__serial__driver.html#ga1b6d4baeb826a221294deef6b3aa5f64", null ],
-    [ "serial_get_byte", "group__serial__driver.html#gacb3048448121d6e9c336f62d0473bc42", null ],
-    [ "serial_new_instance", "group__serial__driver.html#gafe33d7bc4a0b2bbd0f113a22d72e8f5f", null ],
-    [ "serial_rx_fifo_empty", "group__serial__driver.html#gaf6fcd05fca6ff14184747043c7915354", null ],
-    [ "serial_send_byte", "group__serial__driver.html#gaf16c3e09719efa236b81af58cf1d0599", null ],
-    [ "serial_send_bytes", "group__serial__driver.html#ga87d6cecda95f039c549726fc9179b066", null ]
+    [ "serial_create", "group__serial__driver.html#ga0bfb10e7ab73e807211ee5d0eafa5eb5", null ],
+    [ "serial_emptyRxFifo", "group__serial__driver.html#ga5405889a51828a83af0815511fbb496b", null ],
+    [ "serial_flushRx_Fifo", "group__serial__driver.html#gaf8c020fd724b9ae4f67c3ad3e20220dd", null ],
+    [ "serial_flushTxFifo", "group__serial__driver.html#ga7a7c8a0b75e3751b7c3fd037a91d754a", null ],
+    [ "serial_getByte", "group__serial__driver.html#ga4c1b2d461e98e4cbcd4fb5c32531f53a", null ],
+    [ "serial_sendByte", "group__serial__driver.html#ga3b2919c4c13e982524bd7a8147d94e82", null ],
+    [ "serial_sendBytes", "group__serial__driver.html#gaa9345cd0ea1b6645100b24bd9d2a140d", null ]
 ];

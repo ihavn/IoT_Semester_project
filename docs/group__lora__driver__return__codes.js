@@ -1,23 +1,23 @@
 var group__lora__driver__return__codes =
 [
-    [ "e_LoRa_return_code_t", "group__lora__driver__return__codes.html#ga02127c88224e4f4ddc4150213535829c", null ],
-    [ "LoRa_driver_return_codes", "group__lora__driver__return__codes.html#gae3d2e18f9951939cf15c88ab1ab33ed8", [
-      [ "LoRA_OK", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a4cad2105998ad3d407743eadb7e09ebb", null ],
-      [ "LoRa_ERROR", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a4cc0fa5a63aed7c90787767cece84a42", null ],
-      [ "LoRa_KEYS_NOT_INIT", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a3ab087c5d8cc9875b56b81a7922fa869", null ],
-      [ "LoRa_NO_FREE_CH", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a321a70609510ff16f76ffa43812d121f", null ],
-      [ "LoRa_SILENT", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a48dd94300521a57cb10bf03e73d9aa58", null ],
-      [ "LoRa_BUSY", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a30645cad42d0dac8742cf120b7d5c5d8", null ],
-      [ "LoRa_MAC_PAUSED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a9fcd05dc3f52d8927cb9ff276c77c4da", null ],
-      [ "LoRa_DENIED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8ac8d19e5c07481e5665d8df4975be54df", null ],
-      [ "LoRa_ACCEPTED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a9696ffe63a94b40f7f072a464eca2faa", null ],
-      [ "LoRa_INVALID_PARAM", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a42ee17000082c8aae192ede0d3a6ef24", null ],
-      [ "LoRa_NOT_JOINED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a5b40e560eb2c7f8eb637c4ce993edb26", null ],
-      [ "LoRa_INVALID_DATA_LEN", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa32b871b0709d033d8ebb43a9f947992", null ],
-      [ "LoRa_FRAME_COUNTER_ERR_REJOIN_NEEDED", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a3ed2ab33e8fe55fc748fa5ea2a2cb595", null ],
-      [ "LoRa_MAC_TX_OK", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a7ede543c065a932d2d61450d74c6efd7", null ],
-      [ "LoRa_MAC_RX", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a9e7018a839416687204d60e630bf5461", null ],
-      [ "LoRa_MAC_ERROR", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8a1cdf78f96481f4ef8639a03dc1707de7", null ],
-      [ "LoRa_UNKNOWN", "group__lora__driver__return__codes.html#ggae3d2e18f9951939cf15c88ab1ab33ed8aa5b2a766d0449e5356c64b3e3371421e", null ]
+    [ "lora_driver_returnCode_t", "group__lora__driver__return__codes.html#ga93c05121315dbe0e5e10f4e6efefb083", null ],
+    [ "Lora_driver_returnCodes", "group__lora__driver__return__codes.html#gae8873a4b0283525974b1dcab1a039f15", [
+      [ "LORA_OK", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a4b55d0da89bdc2f9bd3dfb86854f055a", null ],
+      [ "LORA_ERROR", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15abd3ec2bc73477fca9756cd710bae6f8a", null ],
+      [ "LORA_KEYS_NOT_INIT", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15ad73dc37f219a026ce28b67b021f7da42", null ],
+      [ "LORA_NO_FREE_CH", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a138e0e7f16c0bba70f4cf4c7ac9a2b88", null ],
+      [ "LORA_SILENT", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a26d86d5afc5b8ba7e561d6e4806a6607", null ],
+      [ "LORA_BUSY", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15ae5e383057daf991d3c0122af5b382b1d", null ],
+      [ "LORA_MAC_PAUSED", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15aa7b37e7e737b28c53d95622d8639f52e", null ],
+      [ "LORA_DENIED", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15ae9ec8a887c434481cc3faac3f4ed91b8", null ],
+      [ "LORA_ACCEPTED", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a14368da1f090e33d76949cbccb3b94bc", null ],
+      [ "LORA_INVALID_PARAM", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15ab665080c54e68bc29aac0974400649b6", null ],
+      [ "LORA_NOT_JOINED", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a368684885507209348e14e518f7d7712", null ],
+      [ "LORA_INVALID_DATA_LEN", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a4672f71a034549ef8d44a03e2cb2ad15", null ],
+      [ "LORA_FRAME_COUNTER_ERR_REJOIN_NEEDED", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15ae27d3784644ddc1368da2b3c6b3ff4bf", null ],
+      [ "LORA_MAC_TX_OK", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a47c5362e3cf9665901409df8fc07b9a5", null ],
+      [ "LORA_MAC_RX", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a6911ab588ea69777cdeb17e57414d5fb", null ],
+      [ "LORA_MAC_ERROR", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15aefda8774631b3126c8c1960b0bbb2816", null ],
+      [ "LORA_UNKNOWN", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a5545b66ac8a66d09d8c818ac2765dbcb", null ]
     ] ]
 ];

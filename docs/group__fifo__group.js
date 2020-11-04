@@ -1,12 +1,7 @@
 var group__fifo__group =
 [
     [ "fifo_desc", "structfifo__desc.html", [
-      [ "Example code", "lora_setup_to__o_t_a_a.html#lora_basic_use_case_setupOTAA_code", null ],
-      [ "Workflow", "lora_setup_to__o_t_a_a.html#lora_setup_use_case_setup_flow", null ],
-      [ "Example code", "lora_setup_to__a_b_p.html#lora_basic_use_case_setup_ABP_code", null ],
-      [ "create a payload variable", "lora_send_uplink_message.html#lora_send_uplink_message_setup", null ],
-      [ "Workflow", "lora_send_uplink_message.html#lora_send_uplink_message_flow", null ],
-      [ "buffer", "structfifo__desc.html#a0647790a6eafcb71230e303621399cda", null ],
+      [ "buffer", "structfifo__desc.html#ad6f494996dc97143aad9ce99f8eb82ff", null ],
       [ "mask", "structfifo__desc.html#acb5bf0686d569f64ae185f4aeb75b2c3", null ],
       [ "read_index", "structfifo__desc.html#afe39f48471be0057ad6e3688a04b2226", null ],
       [ "size", "structfifo__desc.html#a2bab6539f1633018b8ff6dc41d86c1ad", null ],

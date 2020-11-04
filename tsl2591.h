@@ -59,20 +59,20 @@ Here you you will find the functions you normally will need.
 \ingroup tsl2591_driver_structs
 \brief TSL2591 Gain configuration.
 
-These are the values that must be used to change the gain of the sensor (\ref tsl2591SetGainAndIntegrationTime)
+These are the values that must be used to change the gain of the sensor (\ref tsl2591_setGainAndIntegrationTime)
 */
 typedef enum {
 	TSL2591_GAIN_LOW = 0x00 /**< Low gain (x1) - use in bright light (default) */
 	,TSL2591_GAIN_MED = 0x10 /**< Medium gain (x25) - use in medium light */
 	,TSL2591_GAIN_HIGH = 0x20 /**< High gain (x428) - use in very dimmed light */
 	,TSL2591_GAIN_MAX = 0x30 /**< Maximum gain (x9876) - use in darkness */
-} tsl2591Gain_t;
+} tsl2591_gain_t;
 
 /**
 \ingroup tsl2591_driver_structs
 \brief TSL2591 Integration time configuration.
 
-These are the values that must be used to change the integration time of the sensor (\ref tsl2591SetGainAndIntegrationTime)
+These are the values that must be used to change the integration time of the sensor (\ref tsl2591_setGainAndIntegrationTime)
 The values are self explaining.
 */
 typedef enum {
@@ -82,13 +82,13 @@ typedef enum {
 	,TSL2591_INTEGRATION_TIME_400MS = 0x03 /**< Use in dim light */
 	,TSL2591_INTEGRATION_TIME_500MS = 0x04 /**< Use in dim light */
 	,TSL2591_INTEGRATION_TIME_600MS = 0x05 /**< Use in darkness */
-} tsl2591IntegrationTime_t;
+} tsl2591_integrationTime_t;
 
 /**
 \ingroup tsl2591_driver_structs
 \brief TSL2591 Light measure data struct.
 
-The combined light result (\ref tsl2591GetCombinedDataRaw)
+The combined light result (\ref tsl2591_getCombinedDataRaw)
 
 \note These data are the raw values coming directly from the sensor.
 */
@@ -97,7 +97,7 @@ typedef struct
 	uint16_t fullSpectrumRaw; /**< Full spectrum (Visible and Infrared) */
 	uint16_t infraredRaw; /**< Infrared spectrum */
 	uint16_t visibleRaw; /**< Visible spectrum */
-} tsl2591CombinedData_t;
+} tsl2591_combinedData_t;
 
 /**
 \ingroup tsl2591_driver_return_codes
@@ -108,15 +108,15 @@ These are the codes that can be returned from calls to the driver.
 typedef enum 
 {
 	TSL2591_OK /**< Everything went well */
-	,TSL2591_DATA_READY /**< Data is ready from the last call to \ref tsl2591FetchData */
-	,TSL2591_DEV_ID_READY  /**< Device ID is ready from the last call to \ref tsl2591FetchDeviceId */
+	,TSL2591_DATA_READY /**< Data is ready from the last call to \ref tsl2591_fetchData */
+	,TSL2591_DEV_ID_READY  /**< Device ID is ready from the last call to \ref tsl2591_fetchDeviceId */
 	,TSL2591_OVERFLOW  /**< The last measuring is in overflow - consider a lower gain */
 	,TSL2591_UNDERFLOW  /**< The last measuring is in underflow - consider a higher gain */
 	,TSL2591_BUSY /**< The driver is busy or the TWI-driver is busy */
 	,TSL2591_ERROR /**< A non specified error occurred */
-	,TSL2591_DRIVER_NOT_CREATED /**< The driver is used before it is created \ref tsl2591Create */
+	,TSL2591_DRIVER_NOT_CREATED /**< The driver is used before it is created \ref tsl2591_create */
 	,TSL2591_OUT_OF_HEAP /**< There is not enough HEAP memory to create the driver */
-} tsl2591ReturnCode_t;
+} tsl2591_returnCode_t;
 
 /* ======================================================================================================================= */
 /**
@@ -125,18 +125,18 @@ typedef enum
 
 Creates and initialize the TSL2591 Driver.
 
-\note This function will only create the driver! Be sure to enabled/powered up (\ref tsl2591Enable) the sensor before it can perform measuring's.
+\note This function will only create the driver! Be sure to enabled/powered up (\ref tsl2591_enable) the sensor before it can perform measuring's.
 
 \param[in] callBack function pointer to call back function, or NULL if no call back function is used.
 
 The call back function must have this signature:
 \code
-void function_name(tsl2591ReturnCode_t rc)
+void function_name(tsl2591_returnCode_t rc)
 \endcode
 
 The callback function will be called every time a command involving communication with the sensor is completed.
 */
-tsl2591ReturnCode_t tsl2591Create(void(*callBack)(tsl2591ReturnCode_t));
+tsl2591_returnCode_t tsl2591_create(void(*callBack)(tsl2591_returnCode_t));
 
 /* ======================================================================================================================= */
 /**
@@ -147,11 +147,11 @@ Destroys the driver after use. The HEAP memory used for the driver will be freed
 
 \note The driver should only be destroyed when it is not needed anymore.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The driver is destroyed.
 \retval TSL2591_DRIVER_NOT_CREATED The driver must be created before it can be destroyed.
 */
-tsl2591ReturnCode_t tsl2591Destroy(void);
+tsl2591_returnCode_t tsl2591_destroy(void);
 
 /* ======================================================================================================================= */
 /**
@@ -160,12 +160,12 @@ tsl2591ReturnCode_t tsl2591Destroy(void);
 
 \note The sensor is not ready before the driver calls the call-back function with TSL2591_OK as argument.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The enable sensor/powered up command is send to the sensor.
 \retval TSL2591_BUSY The driver is busy.
 \retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
 */
-tsl2591ReturnCode_t tsl2591Enable(void);
+tsl2591_returnCode_t tsl2591_enable(void);
 
 /* ======================================================================================================================= */
 /**
@@ -174,12 +174,12 @@ tsl2591ReturnCode_t tsl2591Enable(void);
 
 \note The sensor is not powered down before the driver calls the call-back function with TSL2591_OK as argument.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The disable sensor/powered down command is send to the sensor.
 \retval TSL2591_BUSY The driver is busy.
 \retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
 */
-tsl2591ReturnCode_t tsl2591Disable(void);
+tsl2591_returnCode_t tsl2591_disable(void);
 
 /* ======================================================================================================================= */
 /**
@@ -188,12 +188,12 @@ tsl2591ReturnCode_t tsl2591Disable(void);
 
 \note The ID is not available before the driver calls the call-back function with TSL2591_DEV_ID_READY as argument.
 
-\return tsl2591ReturnCode_t
-\retval TSL2591_OK The fetch command is send to the sensor. Await the callback before the ID is retrieved with \ref tsl2591GetDeviceId.
+\return tsl2591_returnCode_t
+\retval TSL2591_OK The fetch command is send to the sensor. Await the callback before the ID is retrieved with \ref tsl2591_getDeviceId.
 \retval TSL2591_BUSY The driver is busy.
 \retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
 */
-tsl2591ReturnCode_t tsl2591FetchDeviceId(void);
+tsl2591_returnCode_t tsl2591_fetchDeviceId(void);
 
 /* ======================================================================================================================= */
 /**
@@ -204,7 +204,7 @@ tsl2591ReturnCode_t tsl2591FetchDeviceId(void);
 
 \return The sensor's latest fetched device ID.
 */
-uint8_t tsl2591GetDeviceId(void);
+uint8_t tsl2591_getDeviceId(void);
 
 /* ======================================================================================================================= */
 /**
@@ -236,15 +236,15 @@ The sensor's gain and integration time are set to TSL2591_GAIN_LOW (x1) and TSL2
 
 \note The gain and integration time is not set before before the driver calls the call-back function with TSL2591_OK as argument.
 
-\param[in] gain the wanted gain \ref tsl2591Gain_t.
-\param[in] integrationTime the wanted integration time \ref tsl2591IntegrationTime_t.
+\param[in] gain the wanted gain \ref tsl2591_gain_t.
+\param[in] integrationTime the wanted integration time \ref tsl2591_integrationTime_t.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The set gain and integration time command is send to the sensor.
 \retval TSL2591_BUSY The driver is busy.
 \retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
 */
-tsl2591ReturnCode_t tsl2591SetGainAndIntegrationTime(tsl2591Gain_t gain, tsl2591IntegrationTime_t integrationTime);
+tsl2591_returnCode_t tsl2591_setGainAndIntegrationTime(tsl2591_gain_t gain, tsl2591_integrationTime_t integrationTime);
 
 /* ======================================================================================================================= */
 /**
@@ -253,7 +253,7 @@ tsl2591ReturnCode_t tsl2591SetGainAndIntegrationTime(tsl2591Gain_t gain, tsl2591
 
 \return The sensor's current gain.
 */
-tsl2591Gain_t tsl2591GetGain(void);
+tsl2591_gain_t tsl2591_getGain(void);
 
 /* ======================================================================================================================= */
 /**
@@ -262,7 +262,7 @@ tsl2591Gain_t tsl2591GetGain(void);
 
 \return The sensor's current integration time.
 */
-tsl2591IntegrationTime_t tsl2591GetIntegrationTime(void);
+tsl2591_integrationTime_t tsl2591_getIntegrationTime(void);
 
 /* ======================================================================================================================= */
 /**
@@ -271,12 +271,12 @@ tsl2591IntegrationTime_t tsl2591GetIntegrationTime(void);
 
 \note The sensors data is not ready before the driver calls the call-back function with TSL2591_DATA_READY as argument.
 
-\return tsl2591ReturnCode_t
-\retval TSL2591_OK The fetch command is send to the sensor. Await the callback before the light data is retrieved with \ref tsl2591GetVisibleRaw, \ref tsl2591GetInfraredRaw, \ref tsl2591GetFullSpectrumRaw, \ref tsl2591GetCombinedDataRaw or \ref tsl2591GetLux.
+\return tsl2591_returnCode_t
+\retval TSL2591_OK The fetch command is send to the sensor. Await the callback before the light data is retrieved with \ref tsl259_getVisibleRaw, \ref tsl2591_getInfraredRaw, \ref tsl2591_getFullSpectrumRaw, \ref tsl2591_getCombinedDataRaw or \ref tsl2591_getLux.
 \retval TSL2591_BUSY The driver is busy.
 \retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
 */
-tsl2591ReturnCode_t tsl2591FetchData(void);
+tsl2591_returnCode_t tsl2591_fetchData(void);
 
 /* ======================================================================================================================= */
 /**
@@ -285,12 +285,12 @@ tsl2591ReturnCode_t tsl2591FetchData(void);
 
 \param[out] *visible pointer to the variable where the data will be stored.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The light data retrieved OK.
 \retval TSL2591_OVERFLOW The last measuring is in overflow - consider a lower gain.
-\retval TSL2591_OVERFLOW The last measuring is in underflow - consider a higher gain.
+\retval TSL2591_UNDERFLOW The last measuring is in underflow - consider a higher gain.
 */
-tsl2591ReturnCode_t tsl2591GetVisibleRaw(uint16_t *visible);
+tsl2591_returnCode_t tsl259_getVisibleRaw(uint16_t *visible);
 
 /* ======================================================================================================================= */
 /**
@@ -299,12 +299,12 @@ tsl2591ReturnCode_t tsl2591GetVisibleRaw(uint16_t *visible);
 
 \param[out] *infrared pointer to the variable where the data will be stored.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The light data retrieved OK.
 \retval TSL2591_OVERFLOW The last measuring is in overflow - consider a lower gain.
-\retval TSL2591_OVERFLOW The last measuring is in underflow - consider a higher gain.
+\retval TSL2591_UNDERFLOW The last measuring is in underflow - consider a higher gain.
 */
-tsl2591ReturnCode_t tsl2591GetInfraredRaw(uint16_t *infrared);
+tsl2591_returnCode_t tsl2591_getInfraredRaw(uint16_t *infrared);
 
 /* ======================================================================================================================= */
 /**
@@ -313,41 +313,41 @@ tsl2591ReturnCode_t tsl2591GetInfraredRaw(uint16_t *infrared);
 
 \param[out] *fullSpectrum pointer to the variable where the data will be stored.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The light data retrieved OK.
 \retval TSL2591_OVERFLOW The last measuring is in overflow - consider a lower gain.
-\retval TSL2591_OVERFLOW The last measuring is in underflow - consider a higher gain.
+\retval TSL2591_UNDERFLOW The last measuring is in underflow - consider a higher gain.
 */
-tsl2591ReturnCode_t tsl2591GetFullSpectrumRaw(uint16_t *fullSpectrum);
+tsl2591_returnCode_t tsl2591_getFullSpectrumRaw(uint16_t *fullSpectrum);
 
 /* ======================================================================================================================= */
 /**
 \ingroup tsl2591_driver_basic_function
 \brief Retrieve the latest combined light spectrum's as raw data fetched from the TSL2591 sensor.
 
-\param[out] *combinedData pointer to the struct variable where the data will be stored \ref tsl2591CombinedData_t.
+\param[out] *combinedData pointer to the struct variable where the data will be stored \ref tsl2591_combinedData_t.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The light data retrieved OK.
 \retval TSL2591_OVERFLOW The last measuring is in overflow - consider a lower gain.
-\retval TSL2591_OVERFLOW The last measuring is in underflow - consider a higher gain.
+\retval TSL2591_UNDERFLOW The last measuring is in underflow - consider a higher gain.
 */
-tsl2591ReturnCode_t tsl2591GetCombinedDataRaw(tsl2591CombinedData_t *combinedData);
+tsl2591_returnCode_t tsl2591_getCombinedDataRaw(tsl2591_combinedData_t *combinedData);
 
 /* ======================================================================================================================= */
 /**
 \ingroup tsl2591_driver_basic_function
 \brief Retrieve the latest visible light spectrum as lux fetched from the TSL2591 sensor.
 
-\note Fetch of the TSL2591 sensor's light data must be performed \ref tsl2591FetchData before this function can be used.
+\note Fetch of the TSL2591 sensor's light data must be performed \ref tsl2591_fetchData before this function can be used.
 
 \param[out] *lux pointer to the variable where the data will be stored.
 
-\return tsl2591ReturnCode_t
+\return tsl2591_returnCode_t
 \retval TSL2591_OK The light data retrieved OK.
 \retval TSL2591_OVERFLOW The last measuring is in overflow - consider a lower gain.
 */
-tsl2591ReturnCode_t tsl2591GetLux(float *lux);
+tsl2591_returnCode_t tsl2591_getLux(float *lux);
 
 /**
 \page tsl2591_driver_quick_start Quick start guide for TSL2591 Light sensor Driver
@@ -367,7 +367,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section tsl2591_setup_use_case Initialise the driver
 The following must be added to the project:
 \code
-#include <tsl2591.h>
+#include <tsl2591/tsl2591.h>
 \endcode
 
 Call back function
@@ -376,14 +376,14 @@ The driver needs a call back function to that it will call to tell the result of
 
 An simple example of a call back function can be seen here:
 \code
-void tsl2591Callback(tsl2591ReturnCode_t rc)
+void tsl2591Callback(tsl2591_returnCode_t rc)
 {
 	uint16_t _tmp;
 	float _lux;
 	switch (rc)
 	{
 	case TSL2591_DATA_READY:
-		if ( TSL2591_OK == (rc = tsl2591GetFullSpectrumRaw(&_tmp)) )
+		if ( TSL2591_OK == (rc = tsl2591_getFullSpectrumRaw(&_tmp)) )
 		{
 			printf("\nFull Raw:%04X\n", _tmp);
 		}
@@ -392,7 +392,7 @@ void tsl2591Callback(tsl2591ReturnCode_t rc)
 			printf("\nFull spectrum overflow - change gain and integration time\n");
 		}
 
-		if ( TSL2591_OK == (rc = tsl2591GetVisibleRaw(&_tmp)) )
+		if ( TSL2591_OK == (rc = tsl259_getVisibleRaw(&_tmp)) )
 		{
 			printf("Visible Raw:%04X\n", _tmp);
 		}
@@ -401,7 +401,7 @@ void tsl2591Callback(tsl2591ReturnCode_t rc)
 			printf("Visible overflow - change gain and integration time\n");
 		}
 
-		if ( TSL2591_OK == (rc = tsl2591GetInfraredRaw(&_tmp)) )
+		if ( TSL2591_OK == (rc = tsl2591_getInfraredRaw(&_tmp)) )
 		{
 			printf("Infrared Raw:%04X\n", _tmp);
 		}
@@ -410,7 +410,7 @@ void tsl2591Callback(tsl2591ReturnCode_t rc)
 			printf("Infrared overflow - change gain and integration time\n");
 		}
 
-		if ( TSL2591_OK == (rc = tsl2591GetLux(&_lux)) )
+		if ( TSL2591_OK == (rc = tsl2591_getLux(&_lux)) )
 		{
 			printf("Lux: %5.4f\n", _lux);
 		}
@@ -438,11 +438,11 @@ Add to application initialization:
 
 Initialise the driver by given it a function pointer to your call back function (in this example: tsl2591Callback):
 \code
-tsl2591Create(tsl2591Callback)
-if ( TSL2591_OK == tsl2591Create(tsl2591Callback) )
+tsl2591_create(tsl2591Callback)
+if ( TSL2591_OK == tsl2591_create(tsl2591Callback) )
 {
 	// Driver created OK
-	// Always check what tsl2591Create() returns
+	// Always check what tsl2591_create() returns
 }
 \endcode
 
@@ -454,19 +454,19 @@ In this use case, the steps to perform a measuring is shown.
 
 The sensor must be powered up before it can be used. This is done with the following command:
 \code
-if ( TSL2591_OK == tsl2591Enable() )
+if ( TSL2591_OK == tsl2591_enable() )
 {
-	// The power up command is now send to the sensor - it can be powered down with a call to tsl2591Disable()
+	// The power up command is now send to the sensor - it can be powered down with a call to tsl2591_disable()
 }
 \endcode
 
 \note The sensor is not powered up before the driver calls the call back function with TSL2591_OK.
-It is only necessary to power up the sensor once - or if it has been powered down with a call to tsl2591Disable()
+It is only necessary to power up the sensor once - or if it has been powered down with a call to tsl2591_disable()
 
 \subsection tsl2591_make_measuring2 Start the measuring
 The following must be added to the application code:
 \code
-	if ( TSL2591_OK != tsl2591FetchData() )
+	if ( TSL2591_OK != tsl2591_fetchData() )
 	{
 		// Something went wrong
 		// Investigate the return code further

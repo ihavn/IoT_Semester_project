@@ -26,7 +26,7 @@ Here you you will find the functions you normally will need.
 #include <stdbool.h>
 
 // Abstract Data Type (ADT)
-typedef struct hcSr501_struct *hcSr501_p;
+typedef struct hcsr501_struct *hcsr501_p;
 
 /* ======================================================================================================================= */
 /**
@@ -35,14 +35,14 @@ typedef struct hcSr501_struct *hcSr501_p;
 
 Creates and initialize the driver.
 
-\note The driver must be destroyed when it is not needed anymore \ref hcSr501Destroy.
+\note The driver must be destroyed when it is not needed anymore \ref hcsr501_destroy.
 
 \param[in] *port pointer to the PORT the PIR sensor is connected to (e.g. &PORTA).
 \param[in] portPin in the PORT the PIR sensor is connected to (e.g. PA3).
 
 \return instance pointer
 */
-hcSr501_p hcSr501Create(volatile uint8_t *port, uint8_t portPin);
+hcsr501_p hcsr501_create(volatile uint8_t *port, uint8_t portPin);
 
 /* ======================================================================================================================= */
 /**
@@ -53,25 +53,25 @@ Destroys the driver after use. The HEAP memory used for the driver will be freed
 
 \note The driver should only be destroyed when it is not needed anymore.
 
-\param[in] instance driver instance to be destroyed \ref hcSr501Create.
+\param[in] instance driver instance to be destroyed \ref hcsr501_create.
 */
-void hcSr501Destroy(hcSr501_p instance);
+void hcsr501_destroy(hcsr501_p instance);
 
 /* ======================================================================================================================= */
 /**
 \ingroup sr501_driver_basic_function
 \brief Tell if the sensor is detecting something.
 
-\param[in] instance driver instance \ref hcSr501Create.
+\param[in] instance driver instance \ref hcsr501_create.
 
 \return detecting status
 \retval true Sensor detects something.
 \retval false nothing is detected.
 */
-bool hcSr501IsDetecting(hcSr501_p instance);
+bool hcsr501_isDetecting(hcsr501_p instance);
 
 /**
-\page sr501_driver_quick_start Quick start guide for HC-SR501 Driver
+\page sr501_driver_quick_start Quick start guide for HC-SR501 PIR-sensor Driver
 
 This is the quick start guide for the \ref sr501_driver, with
 step-by-step instructions on how to configure and use the driver in a
@@ -88,16 +88,16 @@ the steps for usage can be copied into, e.g., the main application function.
 \section sr501_setup_use_case Create and initialise the driver
 The following must be added to the project:
 - \code
-#include <hcSr501.h>
+#include <hcsr501/hcsr501.h>
 
-hcSr501_p hcSr501Inst = NULL;
+hcsr501_p hcsr501Inst = NULL;
 \endcode
 
 Add to application initialization:
 - Initialise the driver:
 \code
-hcSr501Inst = hcSr501Create(&PORTE, PE5);
-if ( NULL != hcSr501Inst )
+hcsr501Inst = hcsr501_create(&PORTE, PE5);
+if ( NULL != hcsr501Inst )
 {
 	// Driver created OK
 	// If NULL is returned the driver is not created!!!
@@ -111,7 +111,7 @@ In this use case, the steps to perform a detection is shown.
 \note The driver must be created \ref sr501_setup_use_case before a detection is possible.
 
 \code
-	if ( hcSr501IsDetecting(hcSr501Inst) )
+	if ( hcsr501_isDetecting(hcsr501Inst) )
 	{
 		// Something is detected
 	}
@@ -120,7 +120,6 @@ In this use case, the steps to perform a detection is shown.
 		// Nothing is detected
 	}
 \endcode
-
 
 */
 

@@ -4,7 +4,7 @@
 \author Ib Havn
 \version 1.0.0
 
-\defgroup hih8120_driver HIH8120 Driver
+\defgroup hih8120_driver HIH8120 Temperature and Humidity Driver
 \{
 \brief Honeywell HumidIcon Digital Humidity/Temperature Sensor HIH8220 driver.
 
@@ -36,12 +36,12 @@ Here you you will find the functions you will need to work with the driver.
 
 These are the codes that can be returned from calls to the driver.
 */
-typedef enum hih8120DriverReturnCodes {
+typedef enum hih8120_driverReturnCodes {
 	HIH8120_OK	/**< Everything went well */
 	,HIH8120_OUT_OF_HEAP /**< Abstract data type can't be instantiated */
 	,HIH8120_DRIVER_NOT_CREATED /**< Driver must be created before use */
 	,HIH8120_TWI_BUSY /**< The two wire/I2C interface is busy */
-} hih8120DriverReturnCode_t;
+} hih8120_driverReturnCode_t;
 
 /* ======================================================================================================================= */
 /**
@@ -50,13 +50,13 @@ typedef enum hih8120DriverReturnCodes {
 
 Creates and initialize the driver.
 
-\note The driver must be destroyed when it is not needed anymore \see hih8120Destroy.
+\note The driver must be destroyed when it is not needed anymore \see hih8120_destroy.
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK The driver is created.
 \retval HIH8120_OUT_OF_HEAP There is not enough HEAP memory to create the driver.
 */
-hih8120DriverReturnCode_t hih8120Create(void); 
+hih8120_driverReturnCode_t hih8120_create(void); 
 
 /* ======================================================================================================================= */
 /**
@@ -71,7 +71,7 @@ Destroys the driver after use. The HEAP memory used for the driver will be freed
 \retval HIH8120_OK The driver is destroyed.
 \retval HIH8120_DRIVER_NOT_CREATED The driver must be created before it can be destroyed.
 */
-hih8120DriverReturnCode_t hih8120Destroy(void);
+hih8120_driverReturnCode_t hih8120_destroy(void);
 
 /* ======================================================================================================================= */
 /**
@@ -82,21 +82,21 @@ hih8120DriverReturnCode_t hih8120Destroy(void);
 \retval true last measuring is finished and the result is ready to be retrieved.
 \retval false the measuring is in progress and the result is not ready yet.
 */
-bool hih8120IsReady(void);
+bool hih8120_isReady(void);
 
 /* ======================================================================================================================= */
 /**
 \ingroup hih8120_driver_function
 \brief Wakes up the HIH8180 sensor.
 
-\note After this call it is necessary to wait minimum 50 ms before a measuring can be done \see hih8120Meassure.
+\note After this call it is necessary to wait minimum 50 ms before a measuring can be done \see hih8120_measure.
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK Wake up command send to the sensor.
 \retval HIH8120_DRIVER_NOT_CREATED The driver must be created before use.
 \retval HIH8120_TWI_BUSY The TWI/I2C bus is busy, try later.
 */
-hih8120DriverReturnCode_t hih8120Wakeup(void);
+hih8120_driverReturnCode_t hih8120_wakeup(void);
 
 /* ======================================================================================================================= */
 /**
@@ -105,17 +105,17 @@ hih8120DriverReturnCode_t hih8120Wakeup(void);
 
 \note
 After this call it is necessary to wait minimum 1 ms before the results can be retrieved with:
-\see hih8120GetHumidityPercent_x10 
-\see hih8120GetTemperature_x10 
-\see hih8120GetHumidity 
-\see hih8120GetTemperature.
+\see hih8120_getHumidityPercent_x10 
+\see hih8120_getTemperature_x10 
+\see hih8120_getHumidity 
+\see hih8120_getTemperature.
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK Fetch command send to the sensor.
 \retval HIH8120_DRIVER_NOT_CREATED The driver must be created before use.
 \retval HIH8120_TWI_BUSY The TWI/I2C bus is busy, try later.
 */
-hih8120DriverReturnCode_t hih8120Meassure(void);
+hih8120_driverReturnCode_t hih8120_measure(void);
 
 /* ======================================================================================================================= */
 /**
@@ -124,7 +124,7 @@ hih8120DriverReturnCode_t hih8120Meassure(void);
 
 \return Relative humidity % [x10]
 */
-uint16_t hih8120GetHumidityPercent_x10(void);
+uint16_t hih8120_getHumidityPercent_x10(void);
 
 /* ======================================================================================================================= */
 /**
@@ -133,7 +133,7 @@ uint16_t hih8120GetHumidityPercent_x10(void);
 
 \return Temperature C [x10]
 */
-int16_t hih8120GetTemperature_x10(void);
+int16_t hih8120_getTemperature_x10(void);
 
 /* ======================================================================================================================= */
 /**
@@ -142,7 +142,7 @@ int16_t hih8120GetTemperature_x10(void);
 
 \return Relative humidity %
 */
-float hih8120GetHumidity(void);
+float hih8120_getHumidity(void);
 
 /* ======================================================================================================================= */
 /**
@@ -151,10 +151,10 @@ float hih8120GetHumidity(void);
 
 \return Temperature C
 */
-float hih8120GetTemperature(void);
+float hih8120_getTemperature(void);
 
 /**
-\page hih8120_driver_quickstart Quick start guide for HIH8120 Driver
+\page hih8120_driver_quickstart Quick start guide for HIH8120 Temperature and Humidity Driver
 
 This is the quick start guide for the \ref hih8120_driver, with
 step-by-step instructions on how to configure and use the driver in a
@@ -171,16 +171,16 @@ the steps for usage can be copied into, e.g., the main application function.
 \section hih8120_setup_use_case Initialise the driver
 The following must be added to the project:
 - \code
-#include <hih8120.h>
+#include <hih8120/hih8120.h>
 \endcode
 
 Add to application initialization:
 - Initialise the driver:
 \code
-if ( HIH8120_OK == hih8120Create() )
+if ( HIH8120_OK == hih8120_create() )
 {
 	// Driver created OK
-	// Always check what hih8120Create() returns
+	// Always check what hih8120_create() returns
 }
 \endcode
 
@@ -201,33 +201,33 @@ In this example these two variables will be used to store the results in
 The following must be added to the application code:
 -# Wake up the sensor from power down:
 \code
-	if ( HIH8120_OK != hih8120Wakeup() )
+	if ( HIH8120_OK != hih8120_wakeup() )
 	{
 		// Something went wrong
 		// Investigate the return code further
 	}
 \endcode
 
- \note After the hih8120Wakeup() call the sensor will need minimum 50 ms to be ready! 
+ \note After the hih8120_wakeup() call the sensor will need minimum 50 ms to be ready! 
 
 -# Poll the sensor for the results:
 \code 
-	if ( HIH8120_OK !=  hih8120Meassure() )
+	if ( HIH8120_OK !=  hih8120_measure() )
 	{
 		// Something went wrong
 		// Investigate the return code further
 	}
 \endcode
 
- \note After the hih8120Meassure() call the two wire inteface (TWI) will need minimum 1 ms to fetch the results from the sensor!  
+ \note After the hih8120_measure() call the two wire inteface (TWI) will need minimum 1 ms to fetch the results from the sensor!  
 
 -# Get the results:
-The result can now be retrieved by calling one of these methods hih8120GetHumidityPercent_x10(), hih8120GetTemperature_x10(), hih8120GetHumidity() or hih8120GetTemperature().
+The result can now be retrieved by calling one of these methods hih8120_getHumidityPercent_x10(), hih8120_getTemperature_x10(), hih8120_getHumidity() or hih8120_getTemperature().
 
 A small example 
 \code 
-	humidity = hih8120GetHumidity();
-	temperature = hih8120GetTemperature();
+	humidity = hih8120_getHumidity();
+	temperature = hih8120_getTemperature();
 \endcode
 */
 #endif /* HIH8120_H_ */

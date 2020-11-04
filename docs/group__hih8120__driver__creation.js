@@ -1,5 +1,5 @@
 var group__hih8120__driver__creation =
 [
-    [ "hih8120Create", "group__hih8120__driver__creation.html#gab6a757861b31e6dafbbdc30a11a29f8c", null ],
-    [ "hih8120Destroy", "group__hih8120__driver__creation.html#ga55c689aef0e3cd43ff8fc6e9f79b2806", null ]
+    [ "hih8120_create", "group__hih8120__driver__creation.html#ga50b6ff76eb5670c29010dd9a6b97888c", null ],
+    [ "hih8120_destroy", "group__hih8120__driver__creation.html#gab2505eb533dc3eccad020726d0b3e260", null ]
 ];

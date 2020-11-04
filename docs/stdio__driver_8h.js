@@ -1,5 +1,5 @@
 var stdio__driver_8h =
 [
-    [ "stdioCreate", "group__stdio__driver__creation.html#ga3c84c17b414f8cbe2b45e0ecd6e7911f", null ],
-    [ "stdioInputWaiting", "group__stdio__driver__functions.html#ga2818ca2812646624db5f50654e0289bf", null ]
+    [ "stdio_create", "group__stdio__driver__creation.html#gade8c10c282441eae6d7c4b8cf150a9cb", null ],
+    [ "stdio_inputIsWaiting", "group__stdio__driver__functions.html#gac8009b46973c1a3bd01fa8ab8c7c4f4c", null ]
 ];

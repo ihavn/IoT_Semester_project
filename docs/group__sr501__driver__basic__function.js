@@ -1,4 +1,4 @@
 var group__sr501__driver__basic__function =
 [
-    [ "hcSr501IsDetecting", "group__sr501__driver__basic__function.html#ga227a4072085aae7d7721d75337ff3bd5", null ]
+    [ "hcsr501_isDetecting", "group__sr501__driver__basic__function.html#gad9d962edf1c5f01c3fd6673f61e336c8", null ]
 ];

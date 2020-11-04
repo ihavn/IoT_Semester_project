@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['hih8120_5fdriver_5fnot_5fcreated',['HIH8120_DRIVER_NOT_CREATED',['../group__hih8120__driver__return__codes.html#gga1504bcbaabb97571c5ccd890af816844a6130b41ffaf532c6552e4d91ec80ba99',1,'hih8120.h']]],
-  ['hih8120_5fok',['HIH8120_OK',['../group__hih8120__driver__return__codes.html#gga1504bcbaabb97571c5ccd890af816844a2d4f6cf2910709802d47079df0425258',1,'hih8120.h']]],
-  ['hih8120_5fout_5fof_5fheap',['HIH8120_OUT_OF_HEAP',['../group__hih8120__driver__return__codes.html#gga1504bcbaabb97571c5ccd890af816844a2a8ffa76271364141ea266661aa75796',1,'hih8120.h']]],
-  ['hih8120_5ftwi_5fbusy',['HIH8120_TWI_BUSY',['../group__hih8120__driver__return__codes.html#gga1504bcbaabb97571c5ccd890af816844a10903cde5f22ead917c66ee64d1a3137',1,'hih8120.h']]]
+  ['fifo_5ferror_624',['FIFO_ERROR',['../group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba4f580d761a3077f81f08f7cef8c2e814',1,'fifo.h']]],
+  ['fifo_5ferror_5foverflow_625',['FIFO_ERROR_OVERFLOW',['../group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5a070aa46880ebd844b2693a70a85a18',1,'fifo.h']]],
+  ['fifo_5ferror_5funderflow_626',['FIFO_ERROR_UNDERFLOW',['../group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2363544136dcbbd1b09f8b47a1d36e40',1,'fifo.h']]],
+  ['fifo_5fok_627',['FIFO_OK',['../group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2d9fad7af67c62cb1b5cde8f9cc448be',1,'fifo.h']]]
 ];

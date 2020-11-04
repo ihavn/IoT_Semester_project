@@ -30,7 +30,7 @@ typedef enum {
 	SERIAL_ILLEGAL_INSTANCE,
 	SERIAL_NO_ROOM_IN_TX_BUFFER,
 	SERIAL_RX_BUFFER_EMPTY
-} e_serial_return_code_t;
+} serial_returnCode_t;
 
 typedef enum
 {
@@ -38,7 +38,7 @@ typedef enum
 	ser_USART1,
 	ser_USART2,
 	ser_USART3
-} e_com_port_t;
+} serial_comPort_t;
 
 typedef enum
 {
@@ -47,13 +47,13 @@ typedef enum
 	ser_EVEN_PARITY,
 	ser_MARK_PARITY,
 	ser_SPACE_PARITY
-} e_parity_t;
+} serial_parity_t;
 
 typedef enum
 {
 	ser_STOP_1,
 	ser_STOP_2
-} e_stop_bit_t;
+} serial_stopBit_t;
 
 typedef enum
 {
@@ -61,7 +61,7 @@ typedef enum
 	ser_BITS_6,
 	ser_BITS_7,
 	ser_BITS_8
-} e_data_bit_t;
+} serial_dataBit_t;
 
 /* ======================================================================================================================= */
 /**
@@ -70,7 +70,7 @@ typedef enum
 @todo Documentation
 
 */
-serial_p serial_new_instance(e_com_port_t com_port, uint32_t baud, e_data_bit_t data_bit, e_stop_bit_t stop_bit, e_parity_t parity, uint8_t rx_fifo_size, uint8_t tx_fifo_size, void(*handler_call_back )(serial_p, uint8_t));
+serial_p serial_create(serial_comPort_t comPort, uint32_t baud, serial_dataBit_t dataBit, serial_stopBit_t stopBit, serial_parity_t parity, uint8_t rxFifoSize, uint8_t txFifoSize, void(*callBack )(serial_p, uint8_t));
 /* ======================================================================================================================= */
 /**
 @ingroup serial_driver
@@ -78,16 +78,7 @@ serial_p serial_new_instance(e_com_port_t com_port, uint32_t baud, e_data_bit_t 
 @todo Documentation
 
 */
-e_serial_return_code_t serial_send_bytes(serial_p handle, const serial_data_t data);
-
-/* ======================================================================================================================= */
-/**
-@ingroup serial_driver
-
-@todo Documentation
-
-*/
-e_serial_return_code_t serial_send_byte(serial_p handle, uint8_t byte);
+serial_returnCode_t serial_sendBytes(serial_p handle, const serial_data_t data);
 
 /* ======================================================================================================================= */
 /**
@@ -96,7 +87,7 @@ e_serial_return_code_t serial_send_byte(serial_p handle, uint8_t byte);
 @todo Documentation
 
 */
-e_serial_return_code_t serial_get_byte(serial_p handle, uint8_t *byte);
+serial_returnCode_t serial_sendByte(serial_p handle, uint8_t byte);
 
 /* ======================================================================================================================= */
 /**
@@ -105,7 +96,7 @@ e_serial_return_code_t serial_get_byte(serial_p handle, uint8_t *byte);
 @todo Documentation
 
 */
-void serial_flush_rx_fifo(serial_p handle);
+serial_returnCode_t serial_getByte(serial_p handle, uint8_t *byte);
 
 /* ======================================================================================================================= */
 /**
@@ -114,7 +105,7 @@ void serial_flush_rx_fifo(serial_p handle);
 @todo Documentation
 
 */
-void serial_flush_tx_fifo(serial_p handle);
+void serial_flushRx_Fifo(serial_p handle);
 
 /* ======================================================================================================================= */
 /**
@@ -123,6 +114,15 @@ void serial_flush_tx_fifo(serial_p handle);
 @todo Documentation
 
 */
-bool serial_rx_fifo_empty(serial_p handle);
+void serial_flushTxFifo(serial_p handle);
+
+/* ======================================================================================================================= */
+/**
+@ingroup serial_driver
+
+@todo Documentation
+
+*/
+bool serial_emptyRxFifo(serial_p handle);
 #endif
 

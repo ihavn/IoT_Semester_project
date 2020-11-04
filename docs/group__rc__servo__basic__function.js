@@ -1,4 +1,4 @@
 var group__rc__servo__basic__function =
 [
-    [ "rcServoSet", "group__rc__servo__basic__function.html#gae20ff34f7edb7c859f33de5322ca2bdc", null ]
+    [ "rc_servo_setPosition", "group__rc__servo__basic__function.html#ga28288ae36b911470197b0554724fa504", null ]
 ];

@@ -1,5 +1,5 @@
 var group__sr501__driver__creation =
 [
-    [ "hcSr501Create", "group__sr501__driver__creation.html#ga8502cb6a883388299bcffedc0c02d3cf", null ],
-    [ "hcSr501Destroy", "group__sr501__driver__creation.html#gaa5cf11427664fbf3a5315f1f79888bac", null ]
+    [ "hcsr501_create", "group__sr501__driver__creation.html#ga6d4e72aa406c9c74b962d144cef23acd", null ],
+    [ "hcsr501_destroy", "group__sr501__driver__creation.html#gaaf72e4d271b0eda59ace15ca307a83e9", null ]
 ];

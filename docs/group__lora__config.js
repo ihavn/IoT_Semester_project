@@ -1,24 +1,24 @@
 var group__lora__config =
 [
-    [ "lora_payload", "structlora__payload.html", [
-      [ "bytes", "structlora__payload.html#afd963946b34c358b97395769311118b8", null ],
-      [ "len", "structlora__payload.html#a9a2876d659f05bbb74f336818cae234c", null ],
-      [ "port_no", "structlora__payload.html#a631a5dceeddc670089227a685911c5a5", null ]
+    [ "lora_driver_payload", "structlora__driver__payload.html", [
+      [ "bytes", "structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0", null ],
+      [ "len", "structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9", null ],
+      [ "port_no", "structlora__driver__payload.html#a200a4cce8b35db4dbc24a6870c80a599", null ]
     ] ],
-    [ "e_join_mode_t", "group__lora__config.html#ga44aabc817cce9ad1d8a05eec73f547eb", null ],
-    [ "e_LoRa_adaptive_data_rate_t", "group__lora__config.html#ga38eca1faca0c2bb5735e1863d117087c", null ],
-    [ "e_LoRa_automatic_reply_t", "group__lora__config.html#ga4eaa8a60509189341b13d7ca97fbf4b4", null ],
-    [ "lora_payload_t", "group__lora__config.html#ga9f402cd6c36574fdaeac6e82342df496", null ],
-    [ "e_LoRa_automatic_reply_modes", "group__lora__config.html#ga62ed0af34da024e68fdf0c381ddd143c", [
-      [ "LoRa_AR_ON", "group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca13ea4716c3b5034afdc63c9a731b42ba", null ],
-      [ "LoRa_AR_OFF", "group__lora__config.html#gga62ed0af34da024e68fdf0c381ddd143ca8fceed89f3859f7d93036cc2d378f9a0", null ]
+    [ "lora_driver_adaptiveDataRate_t", "group__lora__config.html#gab8ae74e4fb6f0f231e5519072ee7439e", null ],
+    [ "lora_driver_automaticReplyMode_t", "group__lora__config.html#gaf32b631c1d62c6ff4232b7b42e0e3f5b", null ],
+    [ "lora_driver_joinMode_t", "group__lora__config.html#ga403e60fd3a92b9f53f3bbe91b00601a3", null ],
+    [ "lora_driver_payload_t", "group__lora__config.html#gaa49c0b4579c6821c2882d4e4b9d13036", null ],
+    [ "lora_driver_adaptiveDataRateModes", "group__lora__config.html#gaa692596fe99eac3ae2781ae212e589c5", [
+      [ "LORA_OFF", "group__lora__config.html#ggaa692596fe99eac3ae2781ae212e589c5ab6dc4659ee2ad923b05ee5a469904030", null ],
+      [ "LORA_ON", "group__lora__config.html#ggaa692596fe99eac3ae2781ae212e589c5a9ca30524c7bff391f30809713ac0691d", null ]
     ] ],
-    [ "lora_adaptive_data_rate_modes", "group__lora__config.html#ga9e9d95e9419d751f35ba6e6f7ff3c95d", [
-      [ "LoRa_OFF", "group__lora__config.html#gga9e9d95e9419d751f35ba6e6f7ff3c95dab9df25d12eab27565e803d0f7cc606a4", null ],
-      [ "LoRa_ON", "group__lora__config.html#gga9e9d95e9419d751f35ba6e6f7ff3c95dae9b705ac434f0f5bbf9ada07693afddf", null ]
+    [ "lora_driver_automaticReplyModes", "group__lora__config.html#gab8b61ef57122b6b69553ba3a78318b6f", [
+      [ "LORA_AR_ON", "group__lora__config.html#ggab8b61ef57122b6b69553ba3a78318b6fa4a38114ae7c8e789b01b4347c406d43f", null ],
+      [ "LORA_AR_OFF", "group__lora__config.html#ggab8b61ef57122b6b69553ba3a78318b6fa4c1e804d66b0a92f39c4c4a34abc892e", null ]
     ] ],
-    [ "lora_join_modes", "group__lora__config.html#gafa77b1b9c0ed0930a3e2992c177faa54", [
-      [ "LoRa_OTAA", "group__lora__config.html#ggafa77b1b9c0ed0930a3e2992c177faa54a1581239ce948a94e0ef4557d35eab3a1", null ],
-      [ "LoRa_ABP", "group__lora__config.html#ggafa77b1b9c0ed0930a3e2992c177faa54aa338e16dd48354f781e49b5f1fa84ffa", null ]
+    [ "lora_driver_joinModes", "group__lora__config.html#ga1496512da4a01e52802d5bab67db26fd", [
+      [ "LORA_OTAA", "group__lora__config.html#gga1496512da4a01e52802d5bab67db26fda293faf6e8359b88e131edcee7c905041", null ],
+      [ "LORA_ABP", "group__lora__config.html#gga1496512da4a01e52802d5bab67db26fda441fc228e29427fb98f524191b8bc07f", null ]
     ] ]
 ];

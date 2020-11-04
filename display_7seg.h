@@ -32,7 +32,7 @@ Creates and initialize the driver.
 
 \note When the driver is created the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
 
-\param[in] display_done_call_back function pointer to call back function, or NULL if no call back function is used.
+\param[in] displayDoneCallBack function pointer to call back function, or NULL if no call back function is used.
 
 The Call back function will be called each time the display driver releases the SPI bus. This allows other drivers to use the driver.
 
@@ -41,7 +41,7 @@ The call back function must have this signature:
 void function_name(void)
 \endcode
 */
-void display_7seg_init(void (*display_done_call_back)(void));
+void display_7seg_init(void (*displayDoneCallBack)(void));
 
 /* ======================================================================================================================= */
 /**
@@ -63,16 +63,16 @@ void display_7seg_display(float value, uint8_t no_of_decimals);
 
 \note When the driver is created the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
 */
-void display_7seg_power_up(void);
+void display_7seg_powerUp(void);
 
 /* ======================================================================================================================= */
 /**
 \ingroup display_7seg_driver_function
 \brief Power down the 7-segment display.
 
-\note When the driver is created the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
+\note When the driver is created the display will be in power-down mode \see display_7seg_powerUp and \see display_7seg_powerDown.
 */
-void display_7seg_power_down(void);
+void display_7seg_powerDown(void);
 
 /**
 \page display_7seg_driver_quickstart Quick start guide for 7-segment Display Driver
@@ -91,7 +91,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section display_7seg_driver_initialise Initialise the driver
 -# The following must be added to the project:
 \code
-#include <display_7seg.h>
+#include <display/display_7seg.h>
 \endcode
 
 -# Add to application initialization:
@@ -101,12 +101,12 @@ Initialise the driver:
 	display_7seg_init(NULL); 
 
 	// Power up the display
-	display_7seg_power_up();
+	display_7seg_powerUp();
 \endcode
 
 \section display_7seg_driver_show_number Show numbers on the display
 
-\note The driver must be initialised \ref display_7seg_driver_initialise and powered up \ref display_7seg_power_up before the display can be used.
+\note The driver must be initialised \ref display_7seg_driver_initialise and powered up \ref display_7seg_powerUp before the display can be used.
 \note 
 
 -# Show &Pi; with two decimals on the display.

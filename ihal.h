@@ -27,7 +27,7 @@ typedef struct {
 	void (* clear_register)(volatile uint8_t * reg);
 	void (* clear_bit)(volatile uint8_t * reg, uint8_t bitno);
 	void (* clear_bits)(volatile uint8_t * reg, uint8_t mask);
-} hal_register_access_t;
+} hal_registerAccess_t;
 
  void hal_create(uint8_t led_task_priority);
 
