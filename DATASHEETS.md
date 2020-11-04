@@ -23,3 +23,6 @@
 [Break-out board Documentation](/docs/documentation/HW%20Doc/Datasheets/Sensors/TSL2591%20Light%20Sensor/Manual%20adafruit-tsl2591.pdf)
 
 [Break-out board Schematic](/docs/documentation/HW%20Doc/Datasheets/Sensors/TSL2591%20Light%20Sensor/sensors_schematic.png)
+
+## Sound-Sensor (TSL2591)
+https://learn.sparkfun.com/tutorials/sound-detector-hookup-guide?_ga=2.165119417.704281120.1553773860-2113010154.1549288517#introduction
