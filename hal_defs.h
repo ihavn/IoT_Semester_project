@@ -9,7 +9,7 @@
 #ifndef HAL_DEFS_H_
 #define HAL_DEFS_H_
 
-#include <serial/serial.h>
+#include <serial.h>
 
 // Lora Transceiver
 #define LORA_USART	ser_USART1

@@ -37,7 +37,7 @@ These functions you will not normally need, it will normally be enough to use th
 #include <ATMEGA_FreeRTOS.h>
 #include <message_buffer.h>
 
-#include <serial/serial.h>
+#include <serial.h>
 
 #define LORA_MAX_PAYLOAD_LENGTH	20 /* bytes - Must newer be changed!!!*/
 
@@ -614,7 +614,7 @@ the steps for usage can be copied into, e.g., the main application function.
 The following must be added to the project:
 - \code
 #include <ihal.h>
-#include <lora_driver/lora_driver.h>
+#include <lora_driver.h>
 \endcode
 
 Add to application initialization:

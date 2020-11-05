@@ -91,7 +91,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section display_7seg_driver_initialise Initialise the driver
 -# The following must be added to the project:
 \code
-#include <display/display_7seg.h>
+#include <display_7seg.h>
 \endcode
 
 -# Add to application initialization:

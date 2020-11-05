@@ -74,7 +74,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section sen14262_initialise Initialise the driver
 -# The following must be added to the project:
 \code
-#include <sen14262/sen14262.h>
+#include <sen14262.h>
 \endcode
 
 -# Add to application initialization:

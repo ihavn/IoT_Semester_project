@@ -38,7 +38,7 @@ These functions will not normally be used, and be very careful to know what you 
 #define MH_Z19_H_
 #include <stdbool.h>
 #include <stdint.h>
-#include <serial/serial.h>
+#include <serial.h>
 
 /**
 \ingroup mh_z19_driver_driver_return_codes
@@ -151,7 +151,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section mh_z19_initialise Initialise the driver
 -# The following must be added to the project:
 \code
-#include <mh_z19/mh_z19.h>
+#include <mh_z19.h>
 \endcode
 
 -# Create a call back function:

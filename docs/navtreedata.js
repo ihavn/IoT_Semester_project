@@ -31,6 +31,8 @@ var NAVTREE =
       [ "Initialise the driver", "display_7seg_driver_quickstart.html#display_7seg_driver_initialise", null ],
       [ "Show numbers on the display", "display_7seg_driver_quickstart.html#display_7seg_driver_show_number", null ]
     ] ],
+    [ "License", "_license.html", null ],
+    [ "Quick start guide for First-In-First-Out Buffer (FIFO)", "fifo_quickstart.html", "fifo_quickstart" ],
     [ "Quick start guide for HC-SR501 PIR-sensor Driver", "sr501_driver_quick_start.html", [
       [ "HC-SR501 Driver use cases", "sr501_driver_quick_start.html#sr501_driver_use_cases", null ],
       [ "Create and initialise the driver", "sr501_driver_quick_start.html#sr501_setup_use_case", null ],
@@ -61,8 +63,6 @@ var NAVTREE =
         [ "Start the measuring", "tsl2591_driver_quick_start.html#tsl2591_make_measuring2", null ]
       ] ]
     ] ],
-    [ "License", "_license.html", null ],
-    [ "Quick start guide for First-In-First-Out Buffer (FIFO)", "fifo_quickstart.html", "fifo_quickstart" ],
     [ "Todo List", "todo.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Data Structures", "annotated.html", [

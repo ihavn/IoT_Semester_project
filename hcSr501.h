@@ -88,7 +88,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section sr501_setup_use_case Create and initialise the driver
 The following must be added to the project:
 - \code
-#include <hcsr501/hcsr501.h>
+#include <hcsr501.h>
 
 hcsr501_p hcsr501Inst = NULL;
 \endcode

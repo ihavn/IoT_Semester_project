@@ -171,7 +171,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section hih8120_setup_use_case Initialise the driver
 The following must be added to the project:
 - \code
-#include <hih8120/hih8120.h>
+#include <hih8120.h>
 \endcode
 
 Add to application initialization:

@@ -5,7 +5,7 @@ var files_dup =
     [ "display_7seg.h", "display__7seg_8h.html", "display__7seg_8h" ],
     [ "fifo.h", "fifo_8h.html", "fifo_8h" ],
     [ "hal_defs.h", "hal__defs_8h.html", "hal__defs_8h" ],
-    [ "hcSr501.h", "hc_sr501_8h.html", "hc_sr501_8h" ],
+    [ "hcsr501.h", "hcsr501_8h.html", "hcsr501_8h" ],
     [ "hih8120.h", "hih8120_8h.html", "hih8120_8h" ],
     [ "ihal.h", "ihal_8h.html", "ihal_8h" ],
     [ "l6203.h", "l6203_8h.html", "l6203_8h" ],

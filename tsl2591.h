@@ -367,7 +367,7 @@ the steps for usage can be copied into, e.g., the main application function.
 \section tsl2591_setup_use_case Initialise the driver
 The following must be added to the project:
 \code
-#include <tsl2591/tsl2591.h>
+#include <tsl2591.h>
 \endcode
 
 Call back function
