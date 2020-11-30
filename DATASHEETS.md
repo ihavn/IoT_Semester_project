@@ -1,6 +1,6 @@
 #  Datasheets for Sensors and Hardware Modules
 ## LoRa Tranciever (RN2483)
-[RN2483 LoRa Technology Module Command Reference User's Guide](/docs/documentation/HW%20Doc/Datasheets/RN2483-LoRa-Technology-Module-Command-Reference-User-Guide-DS40001784G.pdf)
+[RN2483 LoRa Technology Module Command Reference User's Guide](/docs/documentation/HW%20Doc/Datasheets/RN2483%20LoRa/RN2483-LoRa-Technology-Module-Command-Reference-User-Guide-DS40001784G.pdf)
 
 [RN2483 LoRa Technology Transceiver Module Data Sheet](/docs/documentation/HW%20Doc/Datasheets/RN2483%20LoRa/RN2483%20LoRa%20Technology%20Transceiver%20Module%20Data%20Sheet.pdf)
 
