@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.1.1 (A2020)</span>
+   &#160;<span id="projectnumber">v3.1.2 (A2020)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -99,15 +99,15 @@ $(document).ready(function(){initNavTree('lora_send_uplink_message.html',''); in
 <h1><a class="anchor" id="lora_send_uplink_message_setup"></a>
 Uplink Message Setup</h1>
 <p>The following must be added to a FreeRTOS task in the project:</p><ol type="1">
-<li>Define a payload struct variable <div class="fragment"><div class="line">lora_payload_t uplinkPayload;</div>
+<li>Define a payload struct variable <div class="fragment"><div class="line"><a class="code" href="structlora__driver__payload.html">lora_driver_payload_t</a> uplinkPayload;</div>
 </div><!-- fragment --></li>
-<li>Populate the payload struct with data <div class="fragment"><div class="line">uplinkPayload.len = 4; <span class="comment">// Length of the actual payload</span></div>
-<div class="line">uplinkPayload.port_no = 1; <span class="comment">// The LoRaWAN port no to sent the message to</span></div>
+<li>Populate the payload struct with data <div class="fragment"><div class="line">uplinkPayload.<a class="code" href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">len</a> = 4; <span class="comment">// Length of the actual payload</span></div>
+<div class="line">uplinkPayload.<a class="code" href="structlora__driver__payload.html#a200a4cce8b35db4dbc24a6870c80a599">port_no</a> = 1; <span class="comment">// The LoRaWAN port no to sent the message to</span></div>
 <div class="line"> </div>
-<div class="line">uplinkPayload.bytes[0] = hum &gt;&gt; 8;</div>
-<div class="line">uplinkPayload.bytes[1] = hum &amp; 0xFF;</div>
-<div class="line">uplinkPayload.bytes[2] = temp &gt;&gt; 8;</div>
-<div class="line">uplinkPayload.bytes[3] = temp &amp; 0xFF;</div>
+<div class="line">uplinkPayload.<a class="code" href="structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0">bytes</a>[0] = hum &gt;&gt; 8;</div>
+<div class="line">uplinkPayload.<a class="code" href="structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0">bytes</a>[1] = hum &amp; 0xFF;</div>
+<div class="line">uplinkPayload.<a class="code" href="structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0">bytes</a>[2] = temp &gt;&gt; 8;</div>
+<div class="line">uplinkPayload.<a class="code" href="structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0">bytes</a>[3] = temp &amp; 0xFF;</div>
 </div><!-- fragment --></li>
 <li>Send the uplink message: <div class="fragment"><div class="line"><a class="code" href="group__lora__driver__return__codes.html#ga93c05121315dbe0e5e10f4e6efefb083">lora_driver_returnCode_t</a> rc;</div>
 <div class="line"> </div>
@@ -125,13 +125,17 @@ Uplink Message Setup</h1>
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__lora__driver__return__codes_html_ga93c05121315dbe0e5e10f4e6efefb083"><div class="ttname"><a href="group__lora__driver__return__codes.html#ga93c05121315dbe0e5e10f4e6efefb083">lora_driver_returnCode_t</a></div><div class="ttdeci">enum Lora_driver_returnCodes lora_driver_returnCode_t</div><div class="ttdoc">LoRA Driver return codes.</div></div>
+<div class="ttc" id="astructlora__driver__payload_html_af7b0a4019a4701618be70efce3da16e9"><div class="ttname"><a href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">lora_driver_payload::len</a></div><div class="ttdeci">uint8_t len</div><div class="ttdef"><b>Definition:</b> lora_driver.h:52</div></div>
 <div class="ttc" id="agroup__lora__basic__function_html_ga07bec183e844be09ebb385b10187e218"><div class="ttname"><a href="group__lora__basic__function.html#ga07bec183e844be09ebb385b10187e218">lora_driver_sendUploadMessage</a></div><div class="ttdeci">lora_driver_returnCode_t lora_driver_sendUploadMessage(bool confirmed, lora_driver_payload_t *payload)</div><div class="ttdoc">Send a upload message to the LoRaWAN.</div></div>
+<div class="ttc" id="astructlora__driver__payload_html_abe98ec3aa25c1696b5ffc9a22ad1a1e0"><div class="ttname"><a href="structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0">lora_driver_payload::bytes</a></div><div class="ttdeci">uint8_t bytes[LORA_MAX_PAYLOAD_LENGTH]</div><div class="ttdef"><b>Definition:</b> lora_driver.h:53</div></div>
 <div class="ttc" id="agroup__lora__driver__return__codes_html_ggae8873a4b0283525974b1dcab1a039f15a47c5362e3cf9665901409df8fc07b9a5"><div class="ttname"><a href="group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a47c5362e3cf9665901409df8fc07b9a5">LORA_MAC_TX_OK</a></div><div class="ttdeci">@ LORA_MAC_TX_OK</div><div class="ttdef"><b>Definition:</b> lora_driver.h:80</div></div>
+<div class="ttc" id="astructlora__driver__payload_html"><div class="ttname"><a href="structlora__driver__payload.html">lora_driver_payload</a></div><div class="ttdoc">Payload data structure.</div><div class="ttdef"><b>Definition:</b> lora_driver.h:50</div></div>
+<div class="ttc" id="astructlora__driver__payload_html_a200a4cce8b35db4dbc24a6870c80a599"><div class="ttname"><a href="structlora__driver__payload.html#a200a4cce8b35db4dbc24a6870c80a599">lora_driver_payload::port_no</a></div><div class="ttdeci">uint8_t port_no</div><div class="ttdef"><b>Definition:</b> lora_driver.h:51</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="lora_driver_quickstart.html">Quick start guide for RN2483 based LoRa Driver</a></li>
-    <li class="footer">Generated on Thu Nov 5 2020 11:27:20 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Fri Dec 4 2020 14:32:36 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

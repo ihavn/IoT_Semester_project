@@ -794,7 +794,7 @@ In this example these two variables will be send in an uplink message
 The following must be added to a FreeRTOS task in the project:
 -# Define a payload struct variable
 \code
-	lora_payload_t uplinkPayload;
+	lora_driver_payload_t uplinkPayload;
 \endcode
 
 -# Populate the payload struct with data
@@ -845,7 +845,7 @@ The following must be added to a FreeRTOS tasks for(;;) loop in your application
 -# Define a payload struct variable
 Create a payload variable to receive the down-link message in
 \code
-	lora_payload_t downlinkPayload;
+	lora_driver_payload_t downlinkPayload;
 \endcode
 
 -# Wait for a message to be received
