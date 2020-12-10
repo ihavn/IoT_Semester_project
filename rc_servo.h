@@ -8,7 +8,7 @@
 \{
 \brief Driver to control the two RC-Servos that can be connected to the <I>VIA ARDUINO MEGA2560 Shield rev. 2.0</I>.
 
-The RC-Servos can be connected to J13 (Servo#0) and J14 (Servo#1) on the <I>VIA ARDUINO MEGA2560 Shield rev. 2.0</I>.
+The RC-Servos can be connected to J14 (Servo#0) and J13 (Servo#1) on the <I>VIA ARDUINO MEGA2560 Shield rev. 2.0</I>.
 
 <b>J13/J14 to Servo connections</b>
 | J13/J14 pin | Servo Cable Wire Color |
@@ -52,7 +52,7 @@ void rc_servo_create(void);
 
 Percents in between will set the servo accordantly to the percentage.
 
-\param[in] servoNo The servo to set the position for (0:J13 (Servo#0) 1:J14 (Servo#1))
+\param[in] servoNo The servo to set the position for (0:J14 (Servo#0) 1:J13 (Servo#1))
 \param[in] percent The position to set the servo to [-100 .. 100]
 */
 void rc_servo_setPosition(uint8_t servoNo, int8_t percent);
