@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['set_5fbit_580',['set_bit',['../structhal__register_access__t.html#a558d7b00d2e28b9ebf48f6106c34493f',1,'hal_registerAccess_t']]],
-  ['set_5fbits_581',['set_bits',['../structhal__register_access__t.html#a6020de29b3c32a25ab07de337512cdf9',1,'hal_registerAccess_t']]],
-  ['set_5fregister_582',['set_register',['../structhal__register_access__t.html#afe90c5711d447fc81c3348aa34ea404d',1,'hal_registerAccess_t']]],
-  ['size_583',['size',['../structfifo__desc.html#a2bab6539f1633018b8ff6dc41d86c1ad',1,'fifo_desc']]]
+  ['u16ptr_526',['u16ptr',['../structfifo__desc.html#a9399a109dd0cf9d7f426eee9fead1bb0',1,'fifo_desc']]],
+  ['u32ptr_527',['u32ptr',['../structfifo__desc.html#ae685a612ab3d414c6a12033527d52de8',1,'fifo_desc']]],
+  ['u8ptr_528',['u8ptr',['../structfifo__desc.html#a2a889b3cf2daa64e65db35bfbe60a0d5',1,'fifo_desc']]]
 ];

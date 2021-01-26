@@ -613,19 +613,16 @@ the steps for usage can be copied into, e.g., the main application function.
 \section lora_setup_use_case Initialise the driver
 The following must be added to the project:
 - \code
-#include <ihal.h>
 #include <lora_driver.h>
 \endcode
 
 Add to application initialization:
 - Initialise the driver without downlink possibility:
 \code
-hal_create(LED_TASK_PRIORITY); // Must be called first!! LED_TASK_PRIORITY must be a high priority in your system
 lora_driver_create(ser_USART1, NULL); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode
 - Alternatively initialise the driver with downlink possibility:
 \code
-hal_create(LED_TASK_PRIORITY); // Must be called first!! LED_TASK_PRIORITY must be a high priority in your system
 MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(sizeof(lora_payload_t)*2); // Here I make room for two downlink messages in the message buffer
 lora_driver_create(ser_USART1, downLinkMessageBufferHandle); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode

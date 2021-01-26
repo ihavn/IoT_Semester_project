@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fullspectrumraw_571',['fullSpectrumRaw',['../structtsl2591__combined_data__t.html#a36d2aea4f5ca139caaab90906f20a099',1,'tsl2591_combinedData_t']]]
+  ['infraredraw_520',['infraredRaw',['../structtsl2591__combined_data__t.html#a870b6544e50952162c5a3e5a976f9bc0',1,'tsl2591_combinedData_t']]]
 ];

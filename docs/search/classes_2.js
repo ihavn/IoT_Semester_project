@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['lora_5fdriver_5fpayload_413',['lora_driver_payload',['../structlora__driver__payload.html',1,'']]]
+  ['serial_5fdata_5ft_380',['serial_data_t',['../structserial__data__t.html',1,'']]]
 ];

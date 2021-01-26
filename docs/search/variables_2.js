@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['data_570',['data',['../structserial__data__t.html#ac35ad7b8a83ab4065bf73b37ad334d29',1,'serial_data_t']]]
+  ['fullspectrumraw_519',['fullSpectrumRaw',['../structtsl2591__combined_data__t.html#a36d2aea4f5ca139caaab90906f20a099',1,'tsl2591_combinedData_t']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['serial_5fdata_5ft_414',['serial_data_t',['../structserial__data__t.html',1,'']]]
+  ['tsl2591_5fcombineddata_5ft_381',['tsl2591_combinedData_t',['../structtsl2591__combined_data__t.html',1,'']]]
 ];

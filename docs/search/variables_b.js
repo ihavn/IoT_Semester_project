@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['u16ptr_586',['u16ptr',['../structfifo__desc.html#a9399a109dd0cf9d7f426eee9fead1bb0',1,'fifo_desc']]],
-  ['u32ptr_587',['u32ptr',['../structfifo__desc.html#ae685a612ab3d414c6a12033527d52de8',1,'fifo_desc']]],
-  ['u8ptr_588',['u8ptr',['../structfifo__desc.html#a2a889b3cf2daa64e65db35bfbe60a0d5',1,'fifo_desc']]]
+  ['write_5findex_530',['write_index',['../structfifo__desc.html#a07a1f9802350d8a47755427f03809f85',1,'fifo_desc']]]
 ];

@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.1.3 (A2020)</span>
+   &#160;<span id="projectnumber">v3.2.0 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -105,16 +105,13 @@ LoRa Driver use cases</h1>
 <h1><a class="anchor" id="lora_setup_use_case"></a>
 Initialise the driver</h1>
 <p>The following must be added to the project:</p><ul>
-<li><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="ihal_8h.html">ihal.h</a>&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="lora__driver_8h.html">lora_driver.h</a>&gt;</span></div>
+<li><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="lora__driver_8h.html">lora_driver.h</a>&gt;</span></div>
 </div><!-- fragment --></li>
 </ul>
 <p>Add to application initialization:</p><ul>
-<li>Initialise the driver without downlink possibility: <div class="fragment"><div class="line"><a class="code" href="ihal_8h.html#a37b3d7a714679b24ec5faac8af3b778d">hal_create</a>(<a class="code" href="app__config_8h.html#a929063c46e63eb78271df5b5fd5819e9">LED_TASK_PRIORITY</a>); <span class="comment">// Must be called first!! LED_TASK_PRIORITY must be a high priority in your system</span></div>
-<div class="line"><a class="code" href="group__lora__creation.html#ga6a95ec044bb15c41e56d3a1fec316971">lora_driver_create</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a>, NULL); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
+<li>Initialise the driver without downlink possibility: <div class="fragment"><div class="line"><a class="code" href="group__lora__creation.html#ga6a95ec044bb15c41e56d3a1fec316971">lora_driver_create</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a>, NULL); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
 </div><!-- fragment --></li>
-<li>Alternatively initialise the driver with downlink possibility: <div class="fragment"><div class="line"><a class="code" href="ihal_8h.html#a37b3d7a714679b24ec5faac8af3b778d">hal_create</a>(<a class="code" href="app__config_8h.html#a929063c46e63eb78271df5b5fd5819e9">LED_TASK_PRIORITY</a>); <span class="comment">// Must be called first!! LED_TASK_PRIORITY must be a high priority in your system</span></div>
-<div class="line">MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(<span class="keyword">sizeof</span>(lora_payload_t)*2); <span class="comment">// Here I make room for two downlink messages in the message buffer</span></div>
+<li>Alternatively initialise the driver with downlink possibility: <div class="fragment"><div class="line">MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(<span class="keyword">sizeof</span>(lora_payload_t)*2); <span class="comment">// Here I make room for two downlink messages in the message buffer</span></div>
 <div class="line"><a class="code" href="group__lora__creation.html#ga6a95ec044bb15c41e56d3a1fec316971">lora_driver_create</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a>, downLinkMessageBufferHandle); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
 </div><!-- fragment --></li>
 </ul>
@@ -132,14 +129,11 @@ Initialise the driver</h1>
 <div class="ttc" id="agroup__lora__advanced__function_html_ga7563bd23845d66320e0c51010eab2aff"><div class="ttname"><a href="group__lora__advanced__function.html#ga7563bd23845d66320e0c51010eab2aff">lora_driver_flushBuffers</a></div><div class="ttdeci">void lora_driver_flushBuffers(void)</div><div class="ttdoc">Flush the internal buffers in the driver.</div></div>
 <div class="ttc" id="agroup__lora__advanced__function_html_ga3dcb5f264ad78b69425cac41ec8c8821"><div class="ttname"><a href="group__lora__advanced__function.html#ga3dcb5f264ad78b69425cac41ec8c8821">lora_driver_resetRn2483</a></div><div class="ttdeci">void lora_driver_resetRn2483(uint8_t state)</div><div class="ttdoc">Controls the reset pin on the RN2483 Module.</div></div>
 <div class="ttc" id="agroup__lora__creation_html_ga6a95ec044bb15c41e56d3a1fec316971"><div class="ttname"><a href="group__lora__creation.html#ga6a95ec044bb15c41e56d3a1fec316971">lora_driver_create</a></div><div class="ttdeci">void lora_driver_create(serial_comPort_t comPort, MessageBufferHandle_t downlinkMessageBuffer)</div><div class="ttdoc">Create the LoRa driver..</div></div>
-<div class="ttc" id="aihal_8h_html"><div class="ttname"><a href="ihal_8h.html">ihal.h</a></div></div>
-<div class="ttc" id="aapp__config_8h_html_a929063c46e63eb78271df5b5fd5819e9"><div class="ttname"><a href="app__config_8h.html#a929063c46e63eb78271df5b5fd5819e9">LED_TASK_PRIORITY</a></div><div class="ttdeci">#define LED_TASK_PRIORITY</div><div class="ttdef"><b>Definition:</b> app_config.h:19</div></div>
 <div class="ttc" id="aserial_8h_html_a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9"><div class="ttname"><a href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a></div><div class="ttdeci">@ ser_USART1</div><div class="ttdef"><b>Definition:</b> serial.h:38</div></div>
-<div class="ttc" id="aihal_8h_html_a37b3d7a714679b24ec5faac8af3b778d"><div class="ttname"><a href="ihal_8h.html#a37b3d7a714679b24ec5faac8af3b778d">hal_create</a></div><div class="ttdeci">void hal_create(uint8_t led_task_priority)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Dec 10 2020 09:19:49 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Tue Jan 26 2021 14:25:25 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>
