@@ -91,7 +91,7 @@ var NAVTREEINDEX =
 [
 "_license.html",
 "group__lora__config.html#gaf32b631c1d62c6ff4232b7b42e0e3f5b",
-"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da683455e10730d73a73bca144c22ba41b"
+"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da610d9e901943a51c179f3b120a740c33"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

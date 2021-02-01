@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.0 (S2021)</span>
+   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -104,17 +104,22 @@ Initialise the driver</h1>
 <ol type="1">
 <li>The following must be added to the project: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="mh__z19_8h.html">mh_z19.h</a>&gt;</span></div>
 </div><!-- fragment --></li>
-<li><p class="startli">Create a call back function: </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> myCo2CallBack(uint16_t ppm)</div>
+<li>Add to application initialization: Initialise the driver: <div class="fragment"><div class="line"><span class="comment">// The parameter is the USART port the MH-Z19 sensor is connected to - in this case USART3</span></div>
+<div class="line"><a class="code" href="group__mh__z19__driver__creation.html#gaa0b7a630097eb36a89d09d434b147b5c">mh_z19_create</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da">ser_USART3</a>); </div>
+</div><!-- fragment --></li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>If FreeRTOS is used then the create function must be called before <pre>vTaskStartScheduler()</pre> is called.</dd></dl>
+<p>If it is wanted to inject a call-back function, then it must be done like this</p>
+<ol type="1">
+<li>Create a call back function: <div class="fragment"><div class="line"><span class="keywordtype">void</span> myCo2CallBack(uint16_t ppm)</div>
 <div class="line">{</div>
 <div class="line">       <span class="comment">// Here you can use the CO2 ppm value</span></div>
 <div class="line">}</div>
-</div><!-- fragment --><p class="startli">The call back function will be called by the driver when a new CO2 value is returned by the sensor.</p>
-</li>
-<li>Add to application initialization: Initialise the driver: <div class="fragment"><div class="line"><span class="comment">// The first parameter is the USART port the MH-Z19 sensor is connected to - in this case USART3</span></div>
-<div class="line"><span class="comment">// The second parameter is the address of the call back function</span></div>
-<div class="line"><a class="code" href="group__mh__z19__driver__creation.html#gac847b093b9991e4eebf4621ce05a5f3b">mh_z19_create</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da">ser_USART3</a>, myCo2CallBack); </div>
 </div><!-- fragment --></li>
 </ol>
+<p>The call-back function will be called by the driver when a new CO2 value is returned by the sensor.</p>
+<p>The call-back function is injected like this </p><div class="fragment"><div class="line"><a class="code" href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">mh_z19_injectCallBack</a>(myCo2CallBack)</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The call-back function will called from an Interrupt Service Routine (ISR), so it must be very short and efficient!!</dd></dl>
 <h1><a class="anchor" id="mh_z19_perform_co2_meassuring"></a>
 Perform a CO2 measuring</h1>
 <p>In this use case, a CO2 measuring will be performed.</p>
@@ -135,14 +140,15 @@ Perform a CO2 measuring</h1>
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div class="ttc" id="agroup__mh__z19__driver__basic__function_html_ga403a674be4d4dc74691956333bcc14fa"><div class="ttname"><a href="group__mh__z19__driver__basic__function.html#ga403a674be4d4dc74691956333bcc14fa">mh_z19_takeMeassuring</a></div><div class="ttdeci">mh_z19_returnCode_t mh_z19_takeMeassuring(void)</div><div class="ttdoc">Perform a new CO2 meassuring.</div></div>
+<div class="ttc" id="agroup__mh__z19__driver__creation_html_ga45ca59130219621b0933cbce471ea89d"><div class="ttname"><a href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">mh_z19_injectCallBack</a></div><div class="ttdeci">void mh_z19_injectCallBack(void(*mh_z19_callBack)(uint16_t))</div><div class="ttdoc">Create the driver.</div></div>
 <div class="ttc" id="aserial_8h_html_a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da"><div class="ttname"><a href="serial_8h.html#a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da">ser_USART3</a></div><div class="ttdeci">@ ser_USART3</div><div class="ttdef"><b>Definition:</b> serial.h:40</div></div>
 <div class="ttc" id="agroup__mh__z19__driver__driver__return__codes_html_gaf9400fe2eb57edfe1986f5481862f479"><div class="ttname"><a href="group__mh__z19__driver__driver__return__codes.html#gaf9400fe2eb57edfe1986f5481862f479">mh_z19_returnCode_t</a></div><div class="ttdeci">mh_z19_returnCode_t</div><div class="ttdoc">MH-Z19 Driver return codes.</div><div class="ttdef"><b>Definition:</b> mh_z19.h:52</div></div>
-<div class="ttc" id="agroup__mh__z19__driver__creation_html_gac847b093b9991e4eebf4621ce05a5f3b"><div class="ttname"><a href="group__mh__z19__driver__creation.html#gac847b093b9991e4eebf4621ce05a5f3b">mh_z19_create</a></div><div class="ttdeci">void mh_z19_create(serial_comPort_t com_port, void(*mh_z19_callBack)(uint16_t ppm))</div><div class="ttdoc">Create the driver.</div></div>
 <div class="ttc" id="amh__z19_8h_html"><div class="ttname"><a href="mh__z19_8h.html">mh_z19.h</a></div><div class="ttdoc">Driver to CO2 using the Intelligent Infrared CO2 Module MH-Z19.</div></div>
+<div class="ttc" id="agroup__mh__z19__driver__creation_html_gaa0b7a630097eb36a89d09d434b147b5c"><div class="ttname"><a href="group__mh__z19__driver__creation.html#gaa0b7a630097eb36a89d09d434b147b5c">mh_z19_create</a></div><div class="ttdeci">void mh_z19_create(serial_comPort_t com_port)</div><div class="ttdoc">Create the driver.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jan 26 2021 14:25:25 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Feb 1 2021 12:56:12 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

@@ -64,6 +64,19 @@ typedef enum
 Creates and initialize the MH-Z19 Driver.
 
 \param[in] com_port to be used for communication with the RN2483 module.
+\Note Must not be called after <PRE>vTaskStartScheduler()</PRE> is called in case FreeRTOS is used!!
+*/
+void mh_z19_create(serial_comPort_t com_port);
+
+/* ======================================================================================================================= */
+/**
+\ingroup mh_z19_driver_creation
+\brief Create the driver.
+
+Injects a call-back function that will be called each time a new CO2 value is ready.
+
+\note The call-back function is called from an Interrupt Service Routine (ISR) so it must be very short and efficient!!
+
 \param[in] mh_z19_callBack function pointer to call back function, or NULL if no call back function is used.
 
 The call back function must have this signature:
@@ -71,7 +84,7 @@ The call back function must have this signature:
 void functionName(uint16_t ppm)
 \endcode
 */
-void mh_z19_create(serial_comPort_t com_port,void(*mh_z19_callBack )(uint16_t ppm));
+void mh_z19_injectCallBack(void(*mh_z19_callBack )(uint16_t));
 
 /* ======================================================================================================================= */
 /**
@@ -154,23 +167,33 @@ the steps for usage can be copied into, e.g., the main application function.
 #include <mh_z19.h>
 \endcode
 
--# Create a call back function:
-\code
-void myCo2CallBack(uint16_t ppm)
-{
-	// Here you can use the CO2 ppm value
-}
-\endcode
-
- The call back function will be called by the driver when a new CO2 value is returned by the sensor.
-
 -# Add to application initialization:
 Initialise the driver:
 \code
-	// The first parameter is the USART port the MH-Z19 sensor is connected to - in this case USART3
-	// The second parameter is the address of the call back function
-	mh_z19_create(ser_USART3, myCo2CallBack); 
+	// The parameter is the USART port the MH-Z19 sensor is connected to - in this case USART3
+	mh_z19_create(ser_USART3); 
 \endcode
+
+\note If FreeRTOS is used then the create function must be called before <PRE>vTaskStartScheduler()</PRE> is called.
+
+ If it is wanted to inject a call-back function, then it must be done like this
+
+ -# Create a call back function:
+ \code
+ void myCo2CallBack(uint16_t ppm)
+ {
+	 // Here you can use the CO2 ppm value
+ }
+ \endcode
+
+ The call-back function will be called by the driver when a new CO2 value is returned by the sensor.
+
+ The call-back function is injected like this
+ \code
+ mh_z19_injectCallBack(myCo2CallBack)
+ \endcode
+
+ \note The call-back function will called from an Interrupt Service Routine (ISR), so it must be very short and efficient!!
 
 \section mh_z19_perform_co2_meassuring Perform a CO2 measuring
 

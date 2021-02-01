@@ -105,7 +105,7 @@ serial_returnCode_t serial_getByte(serial_p handle, uint8_t *byte);
 @todo Documentation
 
 */
-void serial_flushRx_Fifo(serial_p handle);
+serial_returnCode_t serial_flushRx_Fifo(serial_p handle);
 
 /* ======================================================================================================================= */
 /**
@@ -114,7 +114,7 @@ void serial_flushRx_Fifo(serial_p handle);
 @todo Documentation
 
 */
-void serial_flushTxFifo(serial_p handle);
+serial_returnCode_t serial_flushTxFifo(serial_p handle);
 
 /* ======================================================================================================================= */
 /**
@@ -123,6 +123,6 @@ void serial_flushTxFifo(serial_p handle);
 @todo Documentation
 
 */
-bool serial_emptyRxFifo(serial_p handle);
+serial_returnCode_t serial_emptyRxFifo(serial_p handle, bool *isEmpty);
 #endif
 

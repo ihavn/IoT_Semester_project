@@ -1,13 +1,15 @@
 var NAVTREEINDEX2 =
 {
-"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da683455e10730d73a73bca144c22ba41b":[11,11,2,2,3],
+"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da610d9e901943a51c179f3b120a740c33":[13,0,18,1,4],
+"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da610d9e901943a51c179f3b120a740c33":[11,11,2,2,4],
 "group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da683455e10730d73a73bca144c22ba41b":[13,0,18,1,3],
+"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da683455e10730d73a73bca144c22ba41b":[11,11,2,2,3],
 "group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6dadb8a2f239c85a469b9d139481fe7aa01":[11,11,2,2,2],
 "group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6dadb8a2f239c85a469b9d139481fe7aa01":[13,0,18,1,2],
 "group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6dadd27d391fa0b1bb4a1a3b39e6db54c49":[11,11,2,2,5],
 "group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6dadd27d391fa0b1bb4a1a3b39e6db54c49":[13,0,18,1,5],
-"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6daecafd8cd668f4a69a7e5e02748bfb8a1":[13,0,18,1,0],
 "group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6daecafd8cd668f4a69a7e5e02748bfb8a1":[11,11,2,2,0],
+"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6daecafd8cd668f4a69a7e5e02748bfb8a1":[13,0,18,1,0],
 "hcsr501_8h.html":[13,0,4],
 "hcsr501_8h.html#a73386fdc676d32ed5eed6863048fa7b0":[13,0,4,0],
 "hcsr501_8h_source.html":[13,0,4],
