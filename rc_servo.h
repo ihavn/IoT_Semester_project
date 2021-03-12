@@ -17,8 +17,8 @@ The RC-Servos can be connected to J14 (Servo#0) and J13 (Servo#1) on the <I>VIA 
 | 2 | Red |
 | 3 | Orange |
 
-\defgroup rc_servo_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup rc_servo_creation Functions to initialize the driver.
+\brief How to initialise the driver.
 
 \defgroup rc_servo_basic_function Basic driver functions
 \brief Commonly used functions.
@@ -37,7 +37,7 @@ Creates and initialize the driver.
 
 This should only be called once during initialisation of the application.
 */
-void rc_servo_create(void);
+void rc_servo_initialise(void);
 
 /* ======================================================================================================================= */
 /**

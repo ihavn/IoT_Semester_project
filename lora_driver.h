@@ -13,8 +13,8 @@ The implementation works with interrupt, meaning that there are no busy-waiting 
 
 See \ref lora_driver_quickstart.
 
-\defgroup lora_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup lora_creation Functions to initialise the driver.
+\brief How to initialise the driver.
 
 \defgroup lora_config LoRa driver configuration functions
 \brief How to configure the LoRaWAN driver.
@@ -124,16 +124,16 @@ uint8_t lora_driver_getMaxPayloadSize(void);
 /* ======================================================================================================================= */
 /**
 \ingroup lora_creation
-\brief Create the LoRa driver..
+\brief Initialise the LoRa driver..
 
-Creates and initialize the LoRa Driver.
+Initialise the LoRa Driver.
 
 \param[in] comPort to be used for communication with the RN2483 module.
 \param[in] downlinkMessageBuffer that will be used to buffer down-link messages received from LoRaWAN.
 
 \note If downlinkMessageBuffer is NULL then no down-link messages can be received
 */
-void lora_driver_create(serial_comPort_t comPort, MessageBufferHandle_t downlinkMessageBuffer);
+void lora_driver_initialise(serial_comPort_t comPort, MessageBufferHandle_t downlinkMessageBuffer);
 
 /* ======================================================================================================================= */
 /**
@@ -617,14 +617,14 @@ The following must be added to the project:
 \endcode
 
 Add to application initialization:
-- Initialise the driver without downlink possibility:
+- Initialise the driver without down-link possibility:
 \code
-lora_driver_create(ser_USART1, NULL); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
+lora_driver_(ser_USART1, NULL); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode
-- Alternatively initialise the driver with downlink possibility:
+- Alternatively initialise the driver with down-link possibility:
 \code
 MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(sizeof(lora_payload_t)*2); // Here I make room for two downlink messages in the message buffer
-lora_driver_create(ser_USART1, downLinkMessageBufferHandle); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
+lora_driver_initialise(ser_USART1, downLinkMessageBufferHandle); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode
 
 Then the LoRaWAN transceiver needs to be hardware reset.
@@ -665,7 +665,7 @@ if (lora_driver_rn2483FactoryReset() != LORA_OK)
 }
 \endcode
 
--# Configure the module to use the EU868 frequence plan and settings:
+-# Configure the module to use the EU868 frequency plan and settings:
 \code 
 if (lora_driver_configureToEu868() != LORA_OK)
 {
@@ -736,7 +736,7 @@ if (lora_driver_join(LORA_OTAA) == LORA_ACCEPTED)
  }
  \endcode
 
- -# Configure the module to use the EU868 frequence plan and settings:
+ -# Configure the module to use the EU868 frequency plan and settings:
  \code
  if (lora_driver_configureToEu868() != LORA_OK)
  {

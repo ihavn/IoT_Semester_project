@@ -14,8 +14,8 @@ The implementation works with interrupt, meaning that there are no busy-waiting 
 
 See \ref hih8120_driver_quickstart.
 
-\defgroup hih8120_driver_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup hih8120_driver_creation Functions to initialize the driver.
+\brief How to initialise the driver.
 
 \defgroup hih8120_driver_function HIH8120 driver functions
 \brief Commonly used driver functions.
@@ -38,25 +38,25 @@ These are the codes that can be returned from calls to the driver.
 */
 typedef enum hih8120_driverReturnCodes {
 	HIH8120_OK	/**< Everything went well */
-	,HIH8120_OUT_OF_HEAP /**< Abstract data type can't be instantiated */
-	,HIH8120_DRIVER_NOT_CREATED /**< Driver must be created before use */
+	,HIH8120_OUT_OF_HEAP /**< Not enough heap to initialise the driver */
+	,HIH8120_DRIVER_NOT_INITIALISED /**< Driver must be initialise before use */
 	,HIH8120_TWI_BUSY /**< The two wire/I2C interface is busy */
 } hih8120_driverReturnCode_t;
 
 /* ======================================================================================================================= */
 /**
 \ingroup hih8120_driver_creation
-\brief Create the HIH8120 driver.
+\brief Initialise the HIH8120 driver.
 
-Creates and initialize the driver.
+Initialise the driver.
 
 \note The driver must be destroyed when it is not needed anymore \see hih8120_destroy.
 
 \return hih8120DriverReturnCode_t
-\retval HIH8120_OK The driver is created.
-\retval HIH8120_OUT_OF_HEAP There is not enough HEAP memory to create the driver.
+\retval HIH8120_OK The driver is initialised.
+\retval HIH8120_OUT_OF_HEAP There is not enough HEAP memory to initialise the driver.
 */
-hih8120_driverReturnCode_t hih8120_create(void); 
+hih8120_driverReturnCode_t hih8120_initialise(void); 
 
 /* ======================================================================================================================= */
 /**
@@ -69,7 +69,7 @@ Destroys the driver after use. The HEAP memory used for the driver will be freed
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK The driver is destroyed.
-\retval HIH8120_DRIVER_NOT_CREATED The driver must be created before it can be destroyed.
+\retval HIH8120_DRIVER_NOT_INITIALISED The driver must be initialised before it can be destroyed.
 */
 hih8120_driverReturnCode_t hih8120_destroy(void);
 
@@ -93,7 +93,7 @@ bool hih8120_isReady(void);
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK Wake up command send to the sensor.
-\retval HIH8120_DRIVER_NOT_CREATED The driver must be created before use.
+\retval HIH8120_DRIVER_NOT_INITIALISED The driver must be initialised before use.
 \retval HIH8120_TWI_BUSY The TWI/I2C bus is busy, try later.
 */
 hih8120_driverReturnCode_t hih8120_wakeup(void);
@@ -112,7 +112,7 @@ After this call it is necessary to wait minimum 1 ms before the results can be r
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK Fetch command send to the sensor.
-\retval HIH8120_DRIVER_NOT_CREATED The driver must be created before use.
+\retval HIH8120_DRIVER_NOT_INITIALISED The driver must be initialised before use.
 \retval HIH8120_TWI_BUSY The TWI/I2C bus is busy, try later.
 */
 hih8120_driverReturnCode_t hih8120_measure(void);
@@ -177,18 +177,20 @@ The following must be added to the project:
 Add to application initialization:
 - Initialise the driver:
 \code
-if ( HIH8120_OK == hih8120_create() )
+if ( HIH8120_OK == hih8120_initialise() )
 {
 	// Driver created OK
-	// Always check what hih8120_create() returns
+	// Always check what hih8120_initialise() returns
 }
 \endcode
+
+\note If used from FreeRTOS: The driver must be initialised \ref hih8120_initialise before the FreeRTOS sheduler is started!!
 
 \section hih8120_make_measuring How to perform a new measuring with the sensor 
 
 In this use case, the steps to perform a measuring is shown.
 
-\note The driver must be created \ref hih8120_setup_use_case before a measuring is possible.
+\note The driver must be initialised \ref hih8120_setup_use_case before a measuring is possible.
 
 In this example these two variables will be used to store the results in
 

@@ -10,8 +10,8 @@
 \{
 \brief Driver to control the four status leds on the <I>VIA ARDUINO MEGA2560 Shield rev. 2.0</I>.
 
-\defgroup led_driver_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup led_driver_creation Functions to initialize the driver.
+\brief How to initialise the driver.
 
 \defgroup led_driver_basic_function Basic driver functions
 \brief Commonly used functions.
@@ -37,15 +37,15 @@ typedef enum {
 /* ======================================================================================================================= */
 /**
 \ingroup led_driver_creation
-\brief Create the led driver.
+\brief Initialise the led driver.
 
-Creates and initialize the driver.
+Initialise the driver.
 
 \note The priority must be pretty high to make the LEDs behave smoothly.
 
 \param[in] ledTaskPriority the priority the drivers internal task will be using.
 */
-void status_leds_create(UBaseType_t ledTaskPriority);
+void status_leds_initialise(UBaseType_t ledTaskPriority);
 
 /* ======================================================================================================================= */
 /**

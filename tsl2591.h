@@ -34,8 +34,8 @@ It is described in the individual functions documentation if the function will c
 
 See \ref tsl2591_driver_quick_start.
 
-\defgroup tsl2591_driver_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup tsl2591_driver_creation Functions to initialize the driver.
+\brief How to initialise the driver.
 
 \defgroup tsl2591_driver_basic_function Basic TSL2591 driver functions
 \brief Commonly used functions.
@@ -114,8 +114,8 @@ typedef enum
 	,TSL2591_UNDERFLOW  /**< The last measuring is in underflow - consider a higher gain */
 	,TSL2591_BUSY /**< The driver is busy or the TWI-driver is busy */
 	,TSL2591_ERROR /**< A non specified error occurred */
-	,TSL2591_DRIVER_NOT_CREATED /**< The driver is used before it is created \ref tsl2591_create */
-	,TSL2591_OUT_OF_HEAP /**< There is not enough HEAP memory to create the driver */
+	,TSL2591_DRIVER_NOT_INITIALISED /**< The driver is used before it is initialised \ref tsl2591_initialise */
+	,TSL2591_OUT_OF_HEAP /**< There is not enough HEAP memory to initialise the driver */
 } tsl2591_returnCode_t;
 
 /* ======================================================================================================================= */
@@ -123,9 +123,9 @@ typedef enum
 \ingroup tsl2591_driver_creation
 \brief Create the driver.
 
-Creates and initialize the TSL2591 Driver.
+Initialize the TSL2591 Driver.
 
-\note This function will only create the driver! Be sure to enabled/powered up (\ref tsl2591_enable) the sensor before it can perform measuring's.
+\note This function will only initialise the driver! Be sure to enabled/powered up (\ref tsl2591_enable) the sensor before it can perform measuring's.
 
 \param[in] callBack function pointer to call back function, or NULL if no call back function is used.
 
@@ -136,7 +136,7 @@ void function_name(tsl2591_returnCode_t rc)
 
 The callback function will be called every time a command involving communication with the sensor is completed.
 */
-tsl2591_returnCode_t tsl2591_create(void(*callBack)(tsl2591_returnCode_t));
+tsl2591_returnCode_t tsl2591_initialise(void(*callBack)(tsl2591_returnCode_t));
 
 /* ======================================================================================================================= */
 /**
@@ -149,7 +149,7 @@ Destroys the driver after use. The HEAP memory used for the driver will be freed
 
 \return tsl2591_returnCode_t
 \retval TSL2591_OK The driver is destroyed.
-\retval TSL2591_DRIVER_NOT_CREATED The driver must be created before it can be destroyed.
+\retval TSL2591_DRIVER_NOT_INITIALISED The driver must be initialised before it can be destroyed.
 */
 tsl2591_returnCode_t tsl2591_destroy(void);
 
@@ -163,7 +163,7 @@ tsl2591_returnCode_t tsl2591_destroy(void);
 \return tsl2591_returnCode_t
 \retval TSL2591_OK The enable sensor/powered up command is send to the sensor.
 \retval TSL2591_BUSY The driver is busy.
-\retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
+\retval TSL2591_DRIVER_NOT_INITIALISED The driver is not initialised - and can not be used!!
 */
 tsl2591_returnCode_t tsl2591_enable(void);
 
@@ -177,7 +177,7 @@ tsl2591_returnCode_t tsl2591_enable(void);
 \return tsl2591_returnCode_t
 \retval TSL2591_OK The disable sensor/powered down command is send to the sensor.
 \retval TSL2591_BUSY The driver is busy.
-\retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
+\retval TSL2591_DRIVER_NOT_INITIALISED The driver is not initialised - and can not be used!!
 */
 tsl2591_returnCode_t tsl2591_disable(void);
 
@@ -191,7 +191,7 @@ tsl2591_returnCode_t tsl2591_disable(void);
 \return tsl2591_returnCode_t
 \retval TSL2591_OK The fetch command is send to the sensor. Await the callback before the ID is retrieved with \ref tsl2591_getDeviceId.
 \retval TSL2591_BUSY The driver is busy.
-\retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
+\retval TSL2591_DRIVER_NOT_INITIALISED The driver is not initialised - and can not be used!!
 */
 tsl2591_returnCode_t tsl2591_fetchDeviceId(void);
 
@@ -242,7 +242,7 @@ The sensor's gain and integration time are set to TSL2591_GAIN_LOW (x1) and TSL2
 \return tsl2591_returnCode_t
 \retval TSL2591_OK The set gain and integration time command is send to the sensor.
 \retval TSL2591_BUSY The driver is busy.
-\retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
+\retval TSL2591_DRIVER_NOT_INITIALISED The driver is not initialised - and can not be used!!
 */
 tsl2591_returnCode_t tsl2591_setGainAndIntegrationTime(tsl2591_gain_t gain, tsl2591_integrationTime_t integrationTime);
 
@@ -274,7 +274,7 @@ tsl2591_integrationTime_t tsl2591_getIntegrationTime(void);
 \return tsl2591_returnCode_t
 \retval TSL2591_OK The fetch command is send to the sensor. Await the callback before the light data is retrieved with \ref tsl259_getVisibleRaw, \ref tsl2591_getInfraredRaw, \ref tsl2591_getFullSpectrumRaw, \ref tsl2591_getCombinedDataRaw or \ref tsl2591_getLux.
 \retval TSL2591_BUSY The driver is busy.
-\retval TSL2591_DRIVER_NOT_CREATED The driver is not created - and can not be used!!
+\retval TSL2591_DRIVER_NOT_INITIALISED The driver is not initialised - and can not be used!!
 */
 tsl2591_returnCode_t tsl2591_fetchData(void);
 
@@ -438,11 +438,10 @@ Add to application initialization:
 
 Initialise the driver by given it a function pointer to your call back function (in this example: tsl2591Callback):
 \code
-tsl2591_create(tsl2591Callback)
-if ( TSL2591_OK == tsl2591_create(tsl2591Callback) )
+if ( TSL2591_OK == tsl2591_initialise(tsl2591Callback) )
 {
-	// Driver created OK
-	// Always check what tsl2591_create() returns
+	// Driver initilised OK
+	// Always check what tsl2591_initialise() returns
 }
 \endcode
 
@@ -450,7 +449,7 @@ if ( TSL2591_OK == tsl2591_create(tsl2591Callback) )
 
 In this use case, the steps to perform a measuring is shown.
 
-\note The driver must be created (see \ref tsl2591_setup_use_case) before a measuring is possible.
+\note The driver must be initialised (see \ref tsl2591_setup_use_case) before a measuring is possible.
 
 The sensor must be powered up before it can be used. This is done with the following command:
 \code
