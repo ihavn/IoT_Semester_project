@@ -59,14 +59,14 @@ typedef enum
 /* ======================================================================================================================= */
 /**
 \ingroup mh_z19_driver_creation
-\brief Create the driver.
+\brief Initialise the driver.
 
-Creates and initialize the MH-Z19 Driver.
+Creates and initialise the MH-Z19 Driver.
 
 \param[in] com_port to be used for communication with the RN2483 module.
 \Note Must not be called after <PRE>vTaskStartScheduler()</PRE> is called in case FreeRTOS is used!!
 */
-void mh_z19_create(serial_comPort_t com_port);
+void mh_z19_initialise(serial_comPort_t com_port);
 
 /* ======================================================================================================================= */
 /**
@@ -171,10 +171,10 @@ the steps for usage can be copied into, e.g., the main application function.
 Initialise the driver:
 \code
 	// The parameter is the USART port the MH-Z19 sensor is connected to - in this case USART3
-	mh_z19_create(ser_USART3); 
+	mh_z19_initialise(ser_USART3); 
 \endcode
 
-\note If FreeRTOS is used then the create function must be called before <PRE>vTaskStartScheduler()</PRE> is called.
+\note If FreeRTOS is used then the initialise function \ref mh_z19_initialise must be called before <PRE>vTaskStartScheduler()</PRE> is called.
 
  If it is wanted to inject a call-back function, then it must be done like this
 

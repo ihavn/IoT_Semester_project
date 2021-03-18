@@ -14,8 +14,8 @@ The implementation works with interrupt, meaning that there are no busy-waiting 
 
 See \ref sen14262_driver_quick_start.
 
-\defgroup sen14262_driver_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup sen14262_driver_creation Functions to initialize the driver.
+\brief How to initialise the driver.
 
 \defgroup sen14262_driver_basic_function Basic driver functions
 \brief Commonly used functions.
@@ -37,7 +37,7 @@ Creates and initialize the driver.
 
 This should only be called once during initialisation of the application.
 */
-void sen14262_create(void);
+void sen14262_initialise(void);
 
 /* ======================================================================================================================= */
 /**
@@ -80,7 +80,7 @@ the steps for usage can be copied into, e.g., the main application function.
 -# Add to application initialization:
 Initialise the driver:
 \code
-	sen14262_create(); 
+	sen14262_initialise(); 
 \endcode
 
 As soon as the driver is initialised it will automatically start measuring the envelope sound signal from the sensor.

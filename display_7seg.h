@@ -28,11 +28,12 @@ Here you you will find the functions you will need to work with the driver.
 /* ======================================================================================================================= */
 /**
 \ingroup display_7seg_driver_creation
-\brief Create the 7-segment Display driver.
+\brief Initialise the 7-segment Display driver.
 
-Creates and initialize the driver.
+Initialize the driver.
 
 \note When the driver is created the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
+\note For use with FreeRTOS: The driver \b must \b be initialised \ref display_7seg_init before the scheduler in FreeRTOS is started!!
 
 \param[in] displayDoneCallBack function pointer to call back function, or NULL if no call back function is used.
 
@@ -51,7 +52,7 @@ void display_7seg_init(void (*displayDoneCallBack)(void));
 \brief Display value on the 7-segment Display.
 
 
-\note When the driver is created the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
+\note When the driver is initialised the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
 
 \param[in] value the value to shown on the display.
 \param[in] no_of_decimals The number of digits after the decimal point.
@@ -63,7 +64,7 @@ void display_7seg_display(float value, uint8_t no_of_decimals);
 \ingroup display_7seg_driver_function
 \brief Power up the 7-segment display.
 
-\note When the driver is created the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
+\note When the driver is initialised the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
 */
 void display_7seg_powerUp(void);
 
@@ -72,7 +73,7 @@ void display_7seg_powerUp(void);
 \ingroup display_7seg_driver_function
 \brief Power down the 7-segment display.
 
-\note When the driver is created the display will be in power-down mode \see display_7seg_powerUp and \see display_7seg_powerDown.
+\note When the driver is initialised the display will be in power-down mode \see display_7seg_powerUp and \see display_7seg_powerDown.
 */
 void display_7seg_powerDown(void);
 
