@@ -31,9 +31,9 @@ Here you you will find the functions you normally will need.
 /* ======================================================================================================================= */
 /**
 \ingroup sen14262_driver_creation
-\brief Create the sound sensor driver.
+\brief Initialise the sound sensor driver.
 
-Creates and initialize the driver.
+Initialise the driver.
 
 This should only be called once during initialisation of the application.
 */
@@ -87,7 +87,7 @@ As soon as the driver is initialised it will automatically start measuring the e
 
 \section sen14262_perform_measurings Perform a Sound measuring
 
-In this use case, the latest envelope sound measuring will be retreived from the driver.
+In this use case, the latest envelope sound measuring will be retrieved from the driver.
 
 \note The driver must be initialised \ref sen14262_initialise before a measuring can be performed.
 

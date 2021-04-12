@@ -18,8 +18,8 @@ The implementation works with interrupt, meaning that there are no busy-waiting 
 
 See \ref mh_z19_driver_quick_start.
 
-\defgroup mh_z19_driver_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\defgroup mh_z19_driver_creation Functions to initialize the driver.
+\brief How to initialise the driver.
 
 \defgroup mh_z19_driver_basic_function Basic MH-Z19 driver functions
 \brief Commonly used functions.
@@ -61,17 +61,18 @@ typedef enum
 \ingroup mh_z19_driver_creation
 \brief Initialise the driver.
 
-Creates and initialise the MH-Z19 Driver.
+Initialise the MH-Z19 Driver.
 
 \param[in] com_port to be used for communication with the RN2483 module.
-\Note Must not be called after <PRE>vTaskStartScheduler()</PRE> is called in case FreeRTOS is used!!
+
+\note Must not be called after <PRE>vTaskStartScheduler()</PRE> is called in case FreeRTOS is used!!
 */
 void mh_z19_initialise(serial_comPort_t com_port);
 
 /* ======================================================================================================================= */
 /**
 \ingroup mh_z19_driver_creation
-\brief Create the driver.
+\brief Inject a call-back function to the driver.
 
 Injects a call-back function that will be called each time a new CO2 value is ready.
 

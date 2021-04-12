@@ -31,9 +31,9 @@ Here you you will find the functions you normally will need.
 /* ======================================================================================================================= */
 /**
 \ingroup rc_servo_creation
-\brief Create the RC-Servo driver.
+\brief Initialise the RC-Servo driver.
 
-Creates and initialize the driver.
+Initialise the driver.
 
 This should only be called once during initialisation of the application.
 */

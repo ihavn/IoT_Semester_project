@@ -121,9 +121,9 @@ typedef enum
 /* ======================================================================================================================= */
 /**
 \ingroup tsl2591_driver_creation
-\brief Create the driver.
+\brief Initialise the driver.
 
-Initialize the TSL2591 Driver.
+Initialise the TSL2591 Driver.
 
 \note This function will only initialise the driver! Be sure to enabled/powered up (\ref tsl2591_enable) the sensor before it can perform measuring's.
 

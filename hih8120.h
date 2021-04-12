@@ -179,7 +179,7 @@ Add to application initialization:
 \code
 if ( HIH8120_OK == hih8120_initialise() )
 {
-	// Driver created OK
+	// Driver initialised OK
 	// Always check what hih8120_initialise() returns
 }
 \endcode

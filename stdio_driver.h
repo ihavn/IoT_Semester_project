@@ -9,7 +9,7 @@
 \brief Driver to connect a USART to standard IO.
 
 \defgroup stdio_driver_creation Functions to create and initialize the driver.
-\brief How to create the driver.
+\brief How to initialise the driver.
 
 \defgroup stdio_driver_functions Stdio driver common functions.
 \brief Normally used functions.
@@ -23,9 +23,9 @@
 /* ======================================================================================================================= */
 /**
 \ingroup stdio_driver_creation
-\brief Creates the stdio driver.
+\brief Initialise the stdio driver.
 
-Creates and initialize the driver.
+Initialise the driver.
 
 Connects stdin and stdout to the usartNo given. 
 
@@ -35,11 +35,11 @@ The USART are setup like this:  57600 baud,
 After this function is called, it is possible to use printf(), scanf etc.
 
 \note This function must be called before using printf(), scanf etc.
-\note Remember to enable global interrupt by calling sei() after the driver is created.
+\note Remember to enable global interrupt by calling sei() after the driver is initialised.
 
 \param[in] usartNo no of the USART to setup and connect to stdin and stdout [0..3].
 */
-void stdio_create(uint8_t usartNo);
+void stdio_initialise(uint8_t usartNo);
 
 /* ======================================================================================================================= */
 /**
