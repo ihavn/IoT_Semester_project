@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['uxsemaphoregetcount',['uxSemaphoreGetCount',['../semphr_8h.html#aa26a3d7cf9b5595a652daeb7f81229f3',1,'semphr.h']]]
+  ['taskevent_5flist_5fitem_5fvalue_5fin_5fuse_1473',['taskEVENT_LIST_ITEM_VALUE_IN_USE',['../tasks_8c.html#a3e36f3eda563e810a24ab36ee7c978d4',1,'tasks.c']]],
+  ['tasknot_5fwaiting_5fnotification_1474',['taskNOT_WAITING_NOTIFICATION',['../tasks_8c.html#a4f2f023143b2cd2367a441e104f8cf2c',1,'tasks.c']]],
+  ['tasknotification_5freceived_1475',['taskNOTIFICATION_RECEIVED',['../tasks_8c.html#aa62ac91d5f644c98b5459c28ae4f689e',1,'tasks.c']]],
+  ['taskrecord_5fready_5fpriority_1476',['taskRECORD_READY_PRIORITY',['../tasks_8c.html#a80c883536b1faef436fcd47b16a10f98',1,'tasks.c']]],
+  ['taskreset_5fready_5fpriority_1477',['taskRESET_READY_PRIORITY',['../tasks_8c.html#a9517fc40d713aff9dd8182223948f9c8',1,'tasks.c']]],
+  ['taskselect_5fhighest_5fpriority_5ftask_1478',['taskSELECT_HIGHEST_PRIORITY_TASK',['../tasks_8c.html#adace394d56a7fe7a8f8ee83edba3537c',1,'tasks.c']]],
+  ['taskswitch_5fdelayed_5flists_1479',['taskSWITCH_DELAYED_LISTS',['../tasks_8c.html#aa604b7713b82e63154a290e21ecf700c',1,'tasks.c']]],
+  ['taskwaiting_5fnotification_1480',['taskWAITING_NOTIFICATION',['../tasks_8c.html#acee66205293e253c13626e74798a0cf0',1,'tasks.c']]],
+  ['taskyield_5fif_5fusing_5fpreemption_1481',['taskYIELD_IF_USING_PREEMPTION',['../tasks_8c.html#acd0c920e40647de517ac633965b52273',1,'tasks.c']]],
+  ['tskblocked_5fchar_1482',['tskBLOCKED_CHAR',['../tasks_8c.html#a4cd87df39bdffff557d06f4ff15a30b0',1,'tasks.c']]],
+  ['tskdeleted_5fchar_1483',['tskDELETED_CHAR',['../tasks_8c.html#a9aba572191d065741f5a3e94c416d455',1,'tasks.c']]],
+  ['tskdynamically_5fallocated_5fstack_5fand_5ftcb_1484',['tskDYNAMICALLY_ALLOCATED_STACK_AND_TCB',['../tasks_8c.html#af06a1633d2fb92f67712e62f3d1c3777',1,'tasks.c']]],
+  ['tskready_5fchar_1485',['tskREADY_CHAR',['../tasks_8c.html#a2fd6c7a58ad28dd1f2c1e322b1ab3fcb',1,'tasks.c']]],
+  ['tskrunning_5fchar_1486',['tskRUNNING_CHAR',['../tasks_8c.html#a13f2f32dab5dee7a9b2c848c88ef9bcc',1,'tasks.c']]],
+  ['tskset_5fnew_5fstacks_5fto_5fknown_5fvalue_1487',['tskSET_NEW_STACKS_TO_KNOWN_VALUE',['../tasks_8c.html#a95d95c8702f95db8a8a446e1d083245a',1,'tasks.c']]],
+  ['tskstack_5ffill_5fbyte_1488',['tskSTACK_FILL_BYTE',['../tasks_8c.html#ad3b1c99066f14855be098ccca1685fac',1,'tasks.c']]],
+  ['tskstatically_5fallocated_5fstack_5fand_5ftcb_1489',['tskSTATICALLY_ALLOCATED_STACK_AND_TCB',['../tasks_8c.html#a9851e50775136d536fed623e1ac598aa',1,'tasks.c']]],
+  ['tskstatically_5fallocated_5fstack_5fonly_1490',['tskSTATICALLY_ALLOCATED_STACK_ONLY',['../tasks_8c.html#ad65be2320d426aca4e0e72d29ccd04de',1,'tasks.c']]],
+  ['tsksuspended_5fchar_1491',['tskSUSPENDED_CHAR',['../tasks_8c.html#a3613b4b66406c8f6cc73e5c3e9f208db',1,'tasks.c']]],
+  ['twi_5fbuffer_5fsize_1492',['TWI_BUFFER_SIZE',['../twi_8c.html#aedbc086d662a6ccf36438e255217a9e2',1,'twi.c']]],
+  ['twi_5fread_5fbit_1493',['TWI_READ_BIT',['../twi_8c.html#a67c0f91739433360f513b097acf11946',1,'twi.c']]],
+  ['twi_5fwrite_5fbit_1494',['TWI_WRITE_BIT',['../twi_8c.html#a3d32fa46af06bacf55f6136968508a6b',1,'twi.c']]]
 ];

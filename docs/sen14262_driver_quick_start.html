@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Quick start guide for SEN14262 Sound Sensor Driver</title>
+<title>IoT: Quick start guide for SEN14262 Sound Sensor Driver</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -104,13 +104,13 @@ Initialise the driver</h1>
 <ol type="1">
 <li>The following must be added to the project: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sen14262_8h.html">sen14262.h</a>&gt;</span></div>
 </div><!-- fragment --></li>
-<li>Add to application initialization: Initialise the driver: <div class="fragment"><div class="line"><a class="code" href="group__sen14262__driver__creation.html#gadf5785bac8bc9da94540222671dc755d">sen14262_create</a>(); </div>
+<li>Add to application initialization: Initialise the driver: <div class="fragment"><div class="line"><a class="code" href="group__sen14262__driver__creation.html#ga36b035fc6da30239733b835208a7c63c">sen14262_initialise</a>(); </div>
 </div><!-- fragment --></li>
 </ol>
 <p>As soon as the driver is initialised it will automatically start measuring the envelope sound signal from the sensor.</p>
 <h1><a class="anchor" id="sen14262_perform_measurings"></a>
 Perform a Sound measuring</h1>
-<p>In this use case, the latest envelope sound measuring will be retreived from the driver.</p>
+<p>In this use case, the latest envelope sound measuring will be retrieved from the driver.</p>
 <dl class="section note"><dt>Note</dt><dd>The driver must be initialised <a class="el" href="sen14262_driver_quick_start.html#sen14262_initialise">Initialise the driver</a> before a measuring can be performed.</dd></dl>
 <ol type="1">
 <li>Define a variable to store the sound value into. <div class="fragment"><div class="line">uint16_t lastSoundValue;</div>
@@ -122,12 +122,12 @@ Perform a Sound measuring</h1>
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div class="ttc" id="asen14262_8h_html"><div class="ttname"><a href="sen14262_8h.html">sen14262.h</a></div></div>
-<div class="ttc" id="agroup__sen14262__driver__basic__function_html_ga1bf180ebe355c6f302a03e080b9d3ef3"><div class="ttname"><a href="group__sen14262__driver__basic__function.html#ga1bf180ebe355c6f302a03e080b9d3ef3">sen14262_envelope</a></div><div class="ttdeci">uint16_t sen14262_envelope(void)</div><div class="ttdoc">Gives the latest measured envelope value from the sensor.</div></div>
-<div class="ttc" id="agroup__sen14262__driver__creation_html_gadf5785bac8bc9da94540222671dc755d"><div class="ttname"><a href="group__sen14262__driver__creation.html#gadf5785bac8bc9da94540222671dc755d">sen14262_create</a></div><div class="ttdeci">void sen14262_create(void)</div><div class="ttdoc">Create the sound sensor driver.</div></div>
+<div class="ttc" id="agroup__sen14262__driver__basic__function_html_ga1bf180ebe355c6f302a03e080b9d3ef3"><div class="ttname"><a href="group__sen14262__driver__basic__function.html#ga1bf180ebe355c6f302a03e080b9d3ef3">sen14262_envelope</a></div><div class="ttdeci">uint16_t sen14262_envelope(void)</div><div class="ttdoc">Gives the latest measured envelope value from the sensor.</div><div class="ttdef"><b>Definition:</b> sen14262.c:46</div></div>
+<div class="ttc" id="agroup__sen14262__driver__creation_html_ga36b035fc6da30239733b835208a7c63c"><div class="ttname"><a href="group__sen14262__driver__creation.html#ga36b035fc6da30239733b835208a7c63c">sen14262_initialise</a></div><div class="ttdeci">void sen14262_initialise(void)</div><div class="ttdoc">Initialise the sound sensor driver.</div><div class="ttdef"><b>Definition:</b> sen14262.c:29</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:12 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['vnh7100as_5finit_515',['vnh7100as_init',['../group___v_n_h7100_a_s__driver__creation.html#gab847f327be7aaa0eddee27e21ec4dd83',1,'vnh7100as.h']]],
-  ['vnh7100as_5fsetbrake_516',['vnh7100as_setBrake',['../group___v_n_h7100_a_s__driver__basic__function.html#ga1a87ced342046fb13982d60ef2e10f5a',1,'vnh7100as.h']]],
-  ['vnh7100as_5fsetspeed_517',['vnh7100as_setSpeed',['../group___v_n_h7100_a_s__driver__basic__function.html#gaa2e4690142a6d80c092759de1d2d1f40',1,'vnh7100as.h']]]
+  ['pctaskgetname_932',['pcTaskGetName',['../tasks_8c.html#a2ee63040e19e7c0cd7dbd070b8e1bca5',1,'tasks.c']]],
+  ['prvblinkmainled_933',['prvBlinkMainLed',['../variant_hooks_8c.html#a336abd47fb3f92730dab2fc9b2ddd39b',1,'variantHooks.c']]],
+  ['prvsetmainledon_934',['prvSetMainLedOn',['../variant_hooks_8c.html#ae4c379a5a3e1b9439d5cac8f986baaa2',1,'variantHooks.c']]],
+  ['pvtaskincrementmutexheldcount_935',['pvTaskIncrementMutexHeldCount',['../tasks_8c.html#a9ccf2385d919ea110e39b7b3420bec0d',1,'tasks.c']]],
+  ['pxportinitialisestack_936',['pxPortInitialiseStack',['../port_8c.html#a474fbbb58ea661a1557f05adc41120c1',1,'port.c']]]
 ];

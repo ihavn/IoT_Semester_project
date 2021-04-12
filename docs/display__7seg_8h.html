@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: display_7seg.h File Reference</title>
+<title>IoT: display_7seg.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -93,17 +93,31 @@ $(document).ready(function(){initNavTree('display__7seg_8h.html',''); initResiza
 <div class="title">display_7seg.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="display__7seg_8h__dep__incl.png" border="0" usemap="#adisplay__7seg_8hdep" alt=""/></div>
+<map name="display__7seg_8hdep" id="adisplay__7seg_8hdep">
+<area shape="rect" title=" " alt="" coords="194,5,303,32"/>
+<area shape="rect" href="main__ab__encoder__test_8c.html" title=" " alt="" coords="5,80,169,107"/>
+<area shape="rect" href="display__7seg_8c.html" title=" " alt="" coords="194,80,303,107"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="327,80,389,107"/>
+</map>
+</div>
+</div>
 <p><a href="display__7seg_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga6f2610ddb054f96e8b96d77482237a46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">display_7seg_init</a> (void(*displayDoneCallBack)(void))</td></tr>
-<tr class="memdesc:ga6f2610ddb054f96e8b96d77482237a46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the 7-segment Display driver.  <a href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">More...</a><br /></td></tr>
-<tr class="separator:ga6f2610ddb054f96e8b96d77482237a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf91408af52fc0db4b857005e535b36a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__creation.html#gaf91408af52fc0db4b857005e535b36a0">display_7seg_initialise</a> (void(*displayDoneCallBack)(void))</td></tr>
+<tr class="memdesc:gaf91408af52fc0db4b857005e535b36a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the 7-segment Display driver.  <a href="group__display__7seg__driver__creation.html#gaf91408af52fc0db4b857005e535b36a0">More...</a><br /></td></tr>
+<tr class="separator:gaf91408af52fc0db4b857005e535b36a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2762c76d88c7f42e384f693d58674a7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a> (float value, uint8_t no_of_decimals)</td></tr>
 <tr class="memdesc:ga2762c76d88c7f42e384f693d58674a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display value on the 7-segment Display.  <a href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">More...</a><br /></td></tr>
 <tr class="separator:ga2762c76d88c7f42e384f693d58674a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8e099d068509d4649f3400156965061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">display_7seg_displayHex</a> (char *hexString)</td></tr>
+<tr class="memdesc:gae8e099d068509d4649f3400156965061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a HEX value on the 7-segment Display.  <a href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">More...</a><br /></td></tr>
+<tr class="separator:gae8e099d068509d4649f3400156965061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga69970dcfab87c3bbb7318ac98d4aa243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a> (void)</td></tr>
 <tr class="memdesc:ga69970dcfab87c3bbb7318ac98d4aa243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power up the 7-segment display.  <a href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">More...</a><br /></td></tr>
 <tr class="separator:ga69970dcfab87c3bbb7318ac98d4aa243"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -120,7 +134,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_6dff7e51a7506716a97b97d6dc5c6ea1.html">include</a></li><li class="navelem"><a class="el" href="display__7seg_8h.html">display_7seg.h</a></li>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:11 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:25 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

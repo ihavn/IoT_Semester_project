@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['otaa_20setup_20steps_745',['OTAA setup steps',['../lora_setup_to__o_t_a_a.html',1,'lora_driver_quickstart']]]
+  ['mega2560_2dserial_1558',['MEGA2560-Serial',['../md_hal_serial__r_e_a_d_m_e.html',1,'']]]
 ];

@@ -24,12 +24,14 @@
 */
 var NAVTREE =
 [
-  [ "VIA University College 4. Semester IoT Drivers", "index.html", [
+  [ "IoT", "index.html", [
     [ "IoT Driver documentation", "index.html", null ],
+    [ "VIA_FreeRTOS_ATMEGA", "md__free_r_t_o_s_readme.html", null ],
     [ "Quick start guide for 7-segment Display Driver", "display_7seg_driver_quickstart.html", [
       [ "7-segment Display Driver use cases", "display_7seg_driver_quickstart.html#display_7seg_use_cases", null ],
       [ "Initialise the driver", "display_7seg_driver_quickstart.html#display_7seg_driver_initialise", null ],
-      [ "Show numbers on the display", "display_7seg_driver_quickstart.html#display_7seg_driver_show_number", null ]
+      [ "Show numbers on the display", "display_7seg_driver_quickstart.html#display_7seg_driver_show_number", null ],
+      [ "Show HEX string on the display", "display_7seg_driver_quickstart.html#display_7seg_driver_show_hex_string", null ]
     ] ],
     [ "Quick start guide for HC-SR501 PIR-sensor Driver", "sr501_driver_quick_start.html", [
       [ "HC-SR501 Driver use cases", "sr501_driver_quick_start.html#sr501_driver_use_cases", null ],
@@ -61,6 +63,7 @@ var NAVTREE =
         [ "Start the measuring", "tsl2591_driver_quick_start.html#tsl2591_make_measuring2", null ]
       ] ]
     ] ],
+    [ "MEGA2560-Serial", "md_hal_serial__r_e_a_d_m_e.html", null ],
     [ "License", "_license.html", null ],
     [ "Quick start guide for First-In-First-Out Buffer (FIFO)", "fifo_quickstart.html", "fifo_quickstart" ],
     [ "Todo List", "todo.html", null ],
@@ -77,7 +80,8 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", null ],
@@ -89,9 +93,12 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_license.html",
-"group__lora__config.html#gaf32b631c1d62c6ff4232b7b42e0e3f5b",
-"group__tsl2591__driver__structs.html#gga47ca24c44b2cd4b477486d82ce99fb6da610d9e901943a51c179f3b120a740c33"
+"_8git.html",
+"group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba6f0447eb58c7358f85b61985a3e5f200",
+"group__lora__config.html#ggaa692596fe99eac3ae2781ae212e589c5a9ca30524c7bff391f30809713ac0691d",
+"group__tsl2591__driver__creation.html#ga53d9464785629739d3e2be59a8818f97",
+"rc__servo_8h.html",
+"tsl2591_8c.html#adf764cbdea00d65edcd07bb9953ad2b7a61e4e19dcfdee654feb85e81a37ce4f4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

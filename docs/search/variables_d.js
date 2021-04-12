@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['write_5findex_590',['write_index',['../structfifo__desc.html#a07a1f9802350d8a47755427f03809f85',1,'fifo_desc']]]
+  ['ticksremaininginsec_1119',['ticksRemainingInSec',['../port_8c.html#a8a210f6cb1043f728bca16b5cd0488ab',1,'port.c']]]
 ];

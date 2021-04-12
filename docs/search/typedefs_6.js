@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['memoryregion_5ft',['MemoryRegion_t',['../task_8h.html#af609504de4d78ff6f71477ae47c66e51',1,'task.h']]],
-  ['messagebufferhandle_5ft',['MessageBufferHandle_t',['../message__buffer_8h.html#ae8442d50f3b62d237c40b02742f0209a',1,'message_buffer.h']]],
-  ['minilistitem_5ft',['MiniListItem_t',['../list_8h.html#a542a8d55e98bc407593979e61f83cd02',1,'list.h']]]
+  ['semaphoredata_5ft_1140',['SemaphoreData_t',['../queue_8c.html#a8806dcfc511df585a0b4daf54a9a909a',1,'queue.c']]],
+  ['serial_5fp_1141',['serial_p',['../serial_8h.html#a31948a0e180ca38b04738d742ec50418',1,'serial.h']]],
+  ['spi_5fp_1142',['spi_p',['../spi__iha_8h.html#a69e66b598837db4d3adf8eac0e655662',1,'spi_iha.h']]],
+  ['streambuffer_5ft_1143',['StreamBuffer_t',['../stream__buffer_8c.html#ac30372f81bb381115f91d7daa384db2d',1,'stream_buffer.c']]]
 ];

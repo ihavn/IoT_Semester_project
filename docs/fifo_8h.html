@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: fifo.h File Reference</title>
+<title>IoT: fifo.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -115,9 +115,13 @@ Include dependency graph for fifo.h:</div>
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="fifo_8h__dep__incl.png" border="0" usemap="#afifo_8hdep" alt=""/></div>
-<map name="fifo_8hdep" id="fifo_8hdep">
-<area shape="rect" title="This file controls the software FIFO management." alt="" coords="18,5,67,32"/>
-<area shape="rect" href="spi__iha_8h.html" title="Driver for SPI communication." alt="" coords="5,80,80,107"/>
+<map name="fifo_8hdep" id="afifo_8hdep">
+<area shape="rect" title="This file controls the software FIFO management." alt="" coords="186,5,235,32"/>
+<area shape="rect" href="spi__iha_8h.html" title="Driver for SPI communication." alt="" coords="80,80,155,107"/>
+<area shape="rect" href="serial_8c.html" title=" " alt="" coords="179,80,243,107"/>
+<area shape="rect" href="fifo_8c.html" title="This file controls the software FIFO management." alt="" coords="267,80,317,107"/>
+<area shape="rect" href="display__7seg_8c.html" title=" " alt="" coords="5,155,115,181"/>
+<area shape="rect" href="spi__iha_8c.html" title=" " alt="" coords="139,155,213,181"/>
 </map>
 </div>
 </div>
@@ -136,10 +140,47 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2d9fad7af67c62cb1b5cde8f9cc448be">FIFO_OK</a> = 0, 
+<tr class="memitem:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5a440eb2305fad120d18d26c8f505159">GET_DEV_ID</a> = 1, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba917aee4228fcfb733636f9ded488b581">GET_DEV_ID_RESULT</a>, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55baf493c6fed9d10982e7b47f30be2dead2">GET_MEASURING</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55baf33a31f2a69b76ffd39080309739f60c">GET_MEASURING_RESULT</a>, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba0fc97723167cf90034974e1f2541d433">TWI_START</a> = 0x08, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba6967226ea0f7a65665e97847a69164ad">TWI_REP_START</a> = 0x10, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba6f0447eb58c7358f85b61985a3e5f200">TWI_ARB_LOST</a> = 0x38, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bab45f23705567099a3023711e3ae1771c">TWI_MTX_ADR_ACK</a> = 0x18, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bae61edc5dafc4247d27548f917bcd1d4c">TWI_MTX_DATA_ACK</a> = 0x28, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba11b5f5e13de75ce97695abfd592b37a1">TWI_MRX_ADR_ACK</a> = 0x40, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba66a82cc46d81ac4ea9e472374f3398c2">TWI_MRX_DATA_ACK</a> = 0x50, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba61b321ec5c8c88842b5de2d64c67e39d">TWI_MRX_DATA_NACK</a> = 0x58, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bab69c37fb248b9e334981cd2990410548">TWI_STX_ADR_ACK</a> = 0xA8, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5e7f23993b588ace6c5134113d4ddbff">TWI_STX_ADR_ACK_M_ARB_LOST</a> = 0xB0, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba9178c4719aa85ffc84f8c66e8e61c857">TWI_STX_DATA_ACK</a> = 0xB8, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55babb27d5179b96778dc5eba5c161fe8cfe">TWI_STX_DATA_NACK</a> = 0xC0, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba97ff973ed0cda2f424da129cf1913e41">TWI_STX_DATA_ACK_LAST_BYTE</a> = 0xC8, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba089494b6faad704f8b418749b48dfe01">TWI_SRX_ADR_ACK</a> = 0x60, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba00f21eed2b8d551fcd38b162d05b602f">TWI_SRX_ADR_ACK_M_ARB_LOST</a> = 0x68, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba7d19b8ccac117c75fa1dbfce311d39dd">TWI_SRX_GEN_ACK</a> = 0x70, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba08a451aeb613693ed5ba81e2c43d38eb">TWI_SRX_GEN_ACK_M_ARB_LOST</a> = 0x78, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bae9c43bf65942edbfabbf0d41ebdc8ed2">TWI_SRX_ADR_DATA_ACK</a> = 0x80, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba098156d853f9e2f58b8eae7dff4bbd65">TWI_SRX_ADR_DATA_NACK</a> = 0x88, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba65005373978f163c15dfcd227a5702a0">TWI_SRX_GEN_DATA_ACK</a> = 0x90, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bafc11d8d985e4ee2022840e416e882564">TWI_SRX_GEN_DATA_NACK</a> = 0x98, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba4699ecaaa30c172e906ac0dc0f5bb70d">TWI_SRX_STOP_RESTART</a> = 0xA0, 
+<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba581c7d25f8003886848e4d14b42ea4e7">TWI_NO_RELEVANT_STATE</a> = 0xF8, 
+<br />
+&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2d9fad7af67c62cb1b5cde8f9cc448be">FIFO_OK</a> = 0, 
 <a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5a070aa46880ebd844b2693a70a85a18">FIFO_ERROR_OVERFLOW</a>, 
 <a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2363544136dcbbd1b09f8b47a1d36e40">FIFO_ERROR_UNDERFLOW</a>, 
 <a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba4f580d761a3077f81f08f7cef8c2e814">FIFO_ERROR</a>
+<br />
  }</td></tr>
 <tr class="memdesc:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error codes used by FIFO driver.  <a href="group__fifo__group.html#ga06fc87d81c62e9abb8790b6e5713c55b">More...</a><br /></td></tr>
 <tr class="separator:ga06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,7 +201,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="dir_8484729e8a9db60f0bdd9dbad97aaadb.html">fifo</a></li><li class="navelem"><a class="el" href="fifo_8h.html">fifo.h</a></li>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:11 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:25 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

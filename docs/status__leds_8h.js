@@ -6,8 +6,8 @@ var status__leds_8h =
       [ "led_ST3", "group__led__driver__basic__function.html#gga8b5077022e46480b3cb1badb723601feaa0032d87e8f8352df24bd4229875410e", null ],
       [ "led_ST4", "group__led__driver__basic__function.html#gga8b5077022e46480b3cb1badb723601fea52aae7e9ee274c777cb42c1a2ba201dc", null ]
     ] ],
-    [ "status_leds_create", "group__led__driver__creation.html#ga9c361c8006834a70050daa6db9deeab3", null ],
     [ "status_leds_fastBlink", "group__led__driver__basic__function.html#gadc5a132e8f5c2723d99100e6ccf1631a", null ],
+    [ "status_leds_initialise", "group__led__driver__creation.html#ga60574e379de34aebe930df502364bd42", null ],
     [ "status_leds_ledOff", "group__led__driver__basic__function.html#gadeeee2ea052a34399367d8c073f0b067", null ],
     [ "status_leds_ledOn", "group__led__driver__basic__function.html#ga3c939113c1fbe777656189c940fe092d", null ],
     [ "status_leds_longPuls", "group__led__driver__basic__function.html#ga654a580e9e1dfa4c5228c9744791a35d", null ],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['sent_20an_20uplink_20message_756',['Sent an uplink message',['../lora_send_uplink_message.html',1,'lora_driver_quickstart']]]
+  ['receive_20a_20downlink_20message_1569',['Receive a downlink message',['../lora_receive_downlink_message.html',1,'lora_driver_quickstart']]]
 ];

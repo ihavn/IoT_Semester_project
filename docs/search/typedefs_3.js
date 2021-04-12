@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['serial_5fp_541',['serial_p',['../serial_8h.html#a31948a0e180ca38b04738d742ec50418',1,'serial.h']]],
-  ['spi_5fp_542',['spi_p',['../spi__iha_8h.html#a69e66b598837db4d3adf8eac0e655662',1,'spi_iha.h']]]
+  ['hcsr501_5fp_1131',['hcsr501_p',['../hcsr501_8h.html#a73386fdc676d32ed5eed6863048fa7b0',1,'hcsr501.h']]],
+  ['hih8120_5fdriverreturncode_5ft_1132',['hih8120_driverReturnCode_t',['../group__hih8120__driver__return__codes.html#ga431a184b91e88584df8159743c29f9ea',1,'hih8120.h']]]
 ];

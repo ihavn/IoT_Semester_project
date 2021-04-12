@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Globals</title>
+<title>IoT: Globals</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -90,14 +90,41 @@ $(document).ready(function(){initNavTree('globals_s.html',''); initResizable(); 
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a id="index_s"></a>- s -</h3><ul>
-<li>sen14262_create()
-: <a class="el" href="group__sen14262__driver__creation.html#gadf5785bac8bc9da94540222671dc755d">sen14262.h</a>
+<li>sbBYTES_TO_STORE_MESSAGE_LENGTH
+: <a class="el" href="stream__buffer_8c.html#aaa21967227eb06d02cdd038047b836f6">stream_buffer.c</a>
+</li>
+<li>sbFLAGS_IS_MESSAGE_BUFFER
+: <a class="el" href="stream__buffer_8c.html#a4954c04e3f9f6b0d4a98b9441b35d896">stream_buffer.c</a>
+</li>
+<li>sbFLAGS_IS_STATICALLY_ALLOCATED
+: <a class="el" href="stream__buffer_8c.html#a80943e49aae8a493f02d78527b3fc01e">stream_buffer.c</a>
+</li>
+<li>sbRECEIVE_COMPLETED
+: <a class="el" href="stream__buffer_8c.html#a4d6a29d283acfa2d4ef576476eedc789">stream_buffer.c</a>
+</li>
+<li>sbRECEIVE_COMPLETED_FROM_ISR
+: <a class="el" href="stream__buffer_8c.html#ab72c363566113705c021596f90c6eb5a">stream_buffer.c</a>
+</li>
+<li>sbSEND_COMPLETE_FROM_ISR
+: <a class="el" href="stream__buffer_8c.html#aadd3cf567c5086402552c463c55dda7c">stream_buffer.c</a>
+</li>
+<li>sbSEND_COMPLETED
+: <a class="el" href="stream__buffer_8c.html#aa75273dfbcd92710254df0165ae1da5d">stream_buffer.c</a>
+</li>
+<li>SemaphoreData_t
+: <a class="el" href="queue_8c.html#a8806dcfc511df585a0b4daf54a9a909a">queue.c</a>
 </li>
 <li>sen14262_envelope()
 : <a class="el" href="group__sen14262__driver__basic__function.html#ga1bf180ebe355c6f302a03e080b9d3ef3">sen14262.h</a>
+, <a class="el" href="group__sen14262__driver__basic__function.html#ga1bf180ebe355c6f302a03e080b9d3ef3">sen14262.c</a>
 </li>
 <li>sen14262_gate()
 : <a class="el" href="group__sen14262__driver__basic__function.html#gae34b4d3b7cf4cc3db1196c7a788ca5ab">sen14262.h</a>
+, <a class="el" href="group__sen14262__driver__basic__function.html#gae34b4d3b7cf4cc3db1196c7a788ca5ab">sen14262.c</a>
+</li>
+<li>sen14262_initialise()
+: <a class="el" href="group__sen14262__driver__creation.html#ga36b035fc6da30239733b835208a7c63c">sen14262.h</a>
+, <a class="el" href="group__sen14262__driver__creation.html#ga36b035fc6da30239733b835208a7c63c">sen14262.c</a>
 </li>
 <li>ser_BITS_5
 : <a class="el" href="serial_8h.html#a2df249c3bb822163061f29b8034d9b42ae429b8bd4bd51dabfce0e0e973012319">serial.h</a>
@@ -144,26 +171,37 @@ $(document).ready(function(){initNavTree('globals_s.html',''); initResizable(); 
 <li>ser_USART3
 : <a class="el" href="serial_8h.html#a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da">serial.h</a>
 </li>
+<li>serBAUD_DIV_CONSTANT
+: <a class="el" href="serial_8c.html#aa4f05a8fa7b9cfb3ea3384c062759792">serial.c</a>
+</li>
+<li>serEIGHT_DATA_BITS
+: <a class="el" href="serial_8c.html#a005e6cf99a6586ee19e615040c24204a">serial.c</a>
+</li>
 <li>serial_comPort_t
 : <a class="el" href="serial_8h.html#a449a2f5483250f481f4f40126713e547">serial.h</a>
 </li>
 <li>serial_create()
-: <a class="el" href="group__serial__driver.html#ga0bfb10e7ab73e807211ee5d0eafa5eb5">serial.h</a>
+: <a class="el" href="group__serial__driver.html#ga0bfb10e7ab73e807211ee5d0eafa5eb5">serial.c</a>
+, <a class="el" href="group__serial__driver.html#ga0bfb10e7ab73e807211ee5d0eafa5eb5">serial.h</a>
 </li>
 <li>serial_dataBit_t
 : <a class="el" href="serial_8h.html#a2df249c3bb822163061f29b8034d9b42">serial.h</a>
 </li>
 <li>serial_emptyRxFifo()
-: <a class="el" href="group__serial__driver.html#ga292f26063ceb5db5553122faabfac0b1">serial.h</a>
+: <a class="el" href="group__serial__driver.html#ga292f26063ceb5db5553122faabfac0b1">serial.c</a>
+, <a class="el" href="group__serial__driver.html#ga292f26063ceb5db5553122faabfac0b1">serial.h</a>
 </li>
 <li>serial_flushRx_Fifo()
-: <a class="el" href="group__serial__driver.html#ga78a22b4be939cfa6229c8e04f8b40c3c">serial.h</a>
+: <a class="el" href="group__serial__driver.html#ga78a22b4be939cfa6229c8e04f8b40c3c">serial.c</a>
+, <a class="el" href="group__serial__driver.html#ga78a22b4be939cfa6229c8e04f8b40c3c">serial.h</a>
 </li>
 <li>serial_flushTxFifo()
-: <a class="el" href="group__serial__driver.html#gafe5e833b06718218e832ab673ec88428">serial.h</a>
+: <a class="el" href="group__serial__driver.html#gafe5e833b06718218e832ab673ec88428">serial.c</a>
+, <a class="el" href="group__serial__driver.html#gafe5e833b06718218e832ab673ec88428">serial.h</a>
 </li>
 <li>serial_getByte()
-: <a class="el" href="group__serial__driver.html#ga4c1b2d461e98e4cbcd4fb5c32531f53a">serial.h</a>
+: <a class="el" href="group__serial__driver.html#ga4c1b2d461e98e4cbcd4fb5c32531f53a">serial.c</a>
+, <a class="el" href="group__serial__driver.html#ga4c1b2d461e98e4cbcd4fb5c32531f53a">serial.h</a>
 </li>
 <li>SERIAL_ILLEGAL_INSTANCE
 : <a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4afa6fcb824480bd24f7dca6096282d7828b">serial.h</a>
@@ -187,13 +225,48 @@ $(document).ready(function(){initNavTree('globals_s.html',''); initResizable(); 
 : <a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4afa5297ca589ee5bdabb2f45b8b5c8ec848">serial.h</a>
 </li>
 <li>serial_sendByte()
-: <a class="el" href="group__serial__driver.html#ga3b2919c4c13e982524bd7a8147d94e82">serial.h</a>
+: <a class="el" href="group__serial__driver.html#ga3b2919c4c13e982524bd7a8147d94e82">serial.c</a>
+, <a class="el" href="group__serial__driver.html#ga3b2919c4c13e982524bd7a8147d94e82">serial.h</a>
 </li>
 <li>serial_sendBytes()
-: <a class="el" href="group__serial__driver.html#gaa9345cd0ea1b6645100b24bd9d2a140d">serial.h</a>
+: <a class="el" href="group__serial__driver.html#gaa9345cd0ea1b6645100b24bd9d2a140d">serial.c</a>
+, <a class="el" href="group__serial__driver.html#gaa9345cd0ea1b6645100b24bd9d2a140d">serial.h</a>
 </li>
 <li>serial_stopBit_t
 : <a class="el" href="serial_8h.html#a3aa596b9f4d8bb66a6db844075b4a5b4">serial.h</a>
+</li>
+<li>SERIAL_TX_INT_OFF
+: <a class="el" href="serial_8c.html#a4d86ca5f57b33bc58328eac897694024">serial.c</a>
+</li>
+<li>serRX_ENABLE
+: <a class="el" href="serial_8c.html#acc62ee43ac7fd928af64028509883db8">serial.c</a>
+</li>
+<li>serRX_INT_ENABLE
+: <a class="el" href="serial_8c.html#aea8d7dae4eaf09afdf30a1a5b1765838">serial.c</a>
+</li>
+<li>serTX_ENABLE
+: <a class="el" href="serial_8c.html#a4b885aceaa1d7b7f8e875f4a1bf349e2">serial.c</a>
+</li>
+<li>serTX_INT_ENABLE
+: <a class="el" href="serial_8c.html#a397f2744494d75f951dd762497d49a2e">serial.c</a>
+</li>
+<li>serU2X_ENABLE
+: <a class="el" href="serial_8c.html#a392a350dd6cf30f8c22ba7dfd3a6a7d9">serial.c</a>
+</li>
+<li>serUCSRC_SELECT
+: <a class="el" href="serial_8c.html#a9e03500aad4378dac06315c56a9645b7">serial.c</a>
+</li>
+<li>setup_downlink()
+: <a class="el" href="main_8c.html#af38f9e34e7ccb267bc26555257fcd856">main.c</a>
+</li>
+<li>setup_hcsr501()
+: <a class="el" href="main_8c.html#ac02f4b940208f60e540d3f8419e7b54f">main.c</a>
+</li>
+<li>setup_hih8120()
+: <a class="el" href="main_8c.html#aecc6bac05d46cf0e6e41c6279a18f89e">main.c</a>
+</li>
+<li>setup_system()
+: <a class="el" href="main_8c.html#a4660d01c7db5ab4876d529eee7f95966">main.c</a>
 </li>
 <li>SPI_BUSY
 : <a class="el" href="spi__iha_8h.html#a920bbb4ba7f514fa2da46ca4eab1d4eda77af10511cd7c60df95c66e904a13643">spi_iha.h</a>
@@ -224,6 +297,7 @@ $(document).ready(function(){initNavTree('globals_s.html',''); initResizable(); 
 </li>
 <li>spi_create()
 : <a class="el" href="group__spi__function.html#ga6d33c6a7055ac5645cc7e62d010c8ed0">spi_iha.h</a>
+, <a class="el" href="group__spi__function.html#ga6d33c6a7055ac5645cc7e62d010c8ed0">spi_iha.c</a>
 </li>
 <li>SPI_DATA_ORDER_LSB
 : <a class="el" href="group__spi__config.html#gga39d5f3b4bcc8ea962e77a329f1f1925cab016ca9032d6e9418d834514cc95b7d3">spi_iha.h</a>
@@ -275,39 +349,89 @@ $(document).ready(function(){initNavTree('globals_s.html',''); initResizable(); 
 </li>
 <li>spi_sendByte()
 : <a class="el" href="group__spi__function.html#ga15a55ad258b78779bbf49b5382d37373">spi_iha.h</a>
+, <a class="el" href="group__spi__function.html#ga15a55ad258b78779bbf49b5382d37373">spi_iha.c</a>
 </li>
 <li>spi_sendBytes()
 : <a class="el" href="group__spi__function.html#ga9e9121ef3ad83d982fc771502b9a63f3">spi_iha.h</a>
+, <a class="el" href="group__spi__function.html#ga9e9121ef3ad83d982fc771502b9a63f3">spi_iha.c</a>
 </li>
-<li>status_leds_create()
-: <a class="el" href="group__led__driver__creation.html#ga9c361c8006834a70050daa6db9deeab3">status_leds.h</a>
+<li>ST1_LED_ACTIVE_LEVEL
+: <a class="el" href="status__leds_8c.html#a058684a068991a1cf92d06911927dbb4">status_leds.c</a>
+</li>
+<li>ST1_LED_PIN
+: <a class="el" href="status__leds_8c.html#ad1414fc03ce0e85572815db34bff638e">status_leds.c</a>
+</li>
+<li>ST1_LED_PORT
+: <a class="el" href="status__leds_8c.html#ac2dee0bea42b5905a46260a5cce98eb4">status_leds.c</a>
+</li>
+<li>ST2_LED_ACTIVE_LEVEL
+: <a class="el" href="status__leds_8c.html#a5ab01a3cf4884cc7fe763cd932b02071">status_leds.c</a>
+</li>
+<li>ST2_LED_PIN
+: <a class="el" href="status__leds_8c.html#a8df8a77d07d2933e0703a238139d13cc">status_leds.c</a>
+</li>
+<li>ST2_LED_PORT
+: <a class="el" href="status__leds_8c.html#ac3716c0641a0f6f2786a7ce938964907">status_leds.c</a>
+</li>
+<li>ST3_LED_ACTIVE_LEVEL
+: <a class="el" href="status__leds_8c.html#a5e0c758e8328459364d25abb6e425ea8">status_leds.c</a>
+</li>
+<li>ST3_LED_PIN
+: <a class="el" href="status__leds_8c.html#ae6d8352b9fc5f1e1807aeb1966738787">status_leds.c</a>
+</li>
+<li>ST3_LED_PORT
+: <a class="el" href="status__leds_8c.html#adc3234d7d8d7832b740cc2ae269a6a44">status_leds.c</a>
+</li>
+<li>ST4_LED_ACTIVE_LEVEL
+: <a class="el" href="status__leds_8c.html#abd3dcc612108768213f6976d2c5b1220">status_leds.c</a>
+</li>
+<li>ST4_LED_PIN
+: <a class="el" href="status__leds_8c.html#a08452722df0f9b2093665aabfb4cd88d">status_leds.c</a>
+</li>
+<li>ST4_LED_PORT
+: <a class="el" href="status__leds_8c.html#a3acf2088f5c34e0bfd90ea59eeac6140">status_leds.c</a>
 </li>
 <li>status_leds_fastBlink()
-: <a class="el" href="group__led__driver__basic__function.html#gadc5a132e8f5c2723d99100e6ccf1631a">status_leds.h</a>
+: <a class="el" href="group__led__driver__basic__function.html#gadc5a132e8f5c2723d99100e6ccf1631a">status_leds.c</a>
+, <a class="el" href="group__led__driver__basic__function.html#gadc5a132e8f5c2723d99100e6ccf1631a">status_leds.h</a>
+</li>
+<li>status_leds_initialise()
+: <a class="el" href="group__led__driver__creation.html#ga60574e379de34aebe930df502364bd42">status_leds.c</a>
+, <a class="el" href="group__led__driver__creation.html#ga60574e379de34aebe930df502364bd42">status_leds.h</a>
 </li>
 <li>status_leds_ledOff()
-: <a class="el" href="group__led__driver__basic__function.html#gadeeee2ea052a34399367d8c073f0b067">status_leds.h</a>
+: <a class="el" href="group__led__driver__basic__function.html#gadeeee2ea052a34399367d8c073f0b067">status_leds.c</a>
+, <a class="el" href="group__led__driver__basic__function.html#gadeeee2ea052a34399367d8c073f0b067">status_leds.h</a>
 </li>
 <li>status_leds_ledOn()
 : <a class="el" href="group__led__driver__basic__function.html#ga3c939113c1fbe777656189c940fe092d">status_leds.h</a>
+, <a class="el" href="group__led__driver__basic__function.html#ga3c939113c1fbe777656189c940fe092d">status_leds.c</a>
 </li>
 <li>status_leds_longPuls()
-: <a class="el" href="group__led__driver__basic__function.html#ga654a580e9e1dfa4c5228c9744791a35d">status_leds.h</a>
+: <a class="el" href="group__led__driver__basic__function.html#ga654a580e9e1dfa4c5228c9744791a35d">status_leds.c</a>
+, <a class="el" href="group__led__driver__basic__function.html#ga654a580e9e1dfa4c5228c9744791a35d">status_leds.h</a>
 </li>
 <li>status_leds_shortPuls()
-: <a class="el" href="group__led__driver__basic__function.html#gaee3ea14eb8325ba79a3c506a4e179e88">status_leds.h</a>
+: <a class="el" href="group__led__driver__basic__function.html#gaee3ea14eb8325ba79a3c506a4e179e88">status_leds.c</a>
+, <a class="el" href="group__led__driver__basic__function.html#gaee3ea14eb8325ba79a3c506a4e179e88">status_leds.h</a>
 </li>
 <li>status_leds_slowBlink()
-: <a class="el" href="group__led__driver__basic__function.html#ga41515063f9b493bfd78690371e37496b">status_leds.h</a>
+: <a class="el" href="group__led__driver__basic__function.html#ga41515063f9b493bfd78690371e37496b">status_leds.c</a>
+, <a class="el" href="group__led__driver__basic__function.html#ga41515063f9b493bfd78690371e37496b">status_leds.h</a>
 </li>
 <li>status_leds_t
 : <a class="el" href="group__led__driver__basic__function.html#ga8b5077022e46480b3cb1badb723601fe">status_leds.h</a>
 </li>
-<li>stdio_create()
-: <a class="el" href="group__stdio__driver__creation.html#gade8c10c282441eae6d7c4b8cf150a9cb">stdio_driver.h</a>
+<li>stdio_initialise()
+: <a class="el" href="group__stdio__driver__creation.html#ga44c8618d9947d1b842d0744a0a29503c">stdio_driver.h</a>
+, <a class="el" href="group__stdio__driver__creation.html#ga44c8618d9947d1b842d0744a0a29503c">stdio_driver.c</a>
 </li>
 <li>stdio_inputIsWaiting()
-: <a class="el" href="group__stdio__driver__functions.html#gac8009b46973c1a3bd01fa8ab8c7c4f4c">stdio_driver.h</a>
+: <a class="el" href="group__stdio__driver__functions.html#gac8009b46973c1a3bd01fa8ab8c7c4f4c">stdio_driver.c</a>
+, <a class="el" href="group__stdio__driver__functions.html#gac8009b46973c1a3bd01fa8ab8c7c4f4c">stdio_driver.h</a>
+</li>
+<li>StreamBuffer_t
+: <a class="el" href="stream__buffer_8c.html#ac30372f81bb381115f91d7daa384db2d">stream_buffer.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -315,7 +439,7 @@ $(document).ready(function(){initNavTree('globals_s.html',''); initResizable(); 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:15 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:27 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: fifo.h Source File</title>
+<title>IoT: fifo.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -124,7 +124,7 @@ $(document).ready(function(){initNavTree('fifo_8h_source.html',''); initResizabl
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structfifo__desc.html">fifo_desc</a> <a class="code" href="structfifo__desc.html">fifo_desc_t</a>;</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="group__fifo__group.html#ga8357ca33d58ffc0807d5d3041f3947f1">  111</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__fifo__group.html#ga8357ca33d58ffc0807d5d3041f3947f1">fifo_init</a>(<a class="code" href="structfifo__desc.html">fifo_desc_t</a> *<a class="code" href="structfifo__desc.html">fifo_desc</a>, <span class="keywordtype">void</span> *<a class="code" href="structfifo__desc.html#ad6f494996dc97143aad9ce99f8eb82ff">buffer</a>, uint8_t <a class="code" href="structfifo__desc.html#a2bab6539f1633018b8ff6dc41d86c1ad">size</a>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keywordtype">int</span> <a class="code" href="group__fifo__group.html#ga8357ca33d58ffc0807d5d3041f3947f1">fifo_init</a>(<a class="code" href="structfifo__desc.html">fifo_desc_t</a> *<a class="code" href="structfifo__desc.html">fifo_desc</a>, <span class="keywordtype">void</span> *<a class="code" href="structfifo__desc.html#ad6f494996dc97143aad9ce99f8eb82ff">buffer</a>, uint8_t <a class="code" href="structfifo__desc.html#a2bab6539f1633018b8ff6dc41d86c1ad">size</a>);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> uint8_t fifo_get_used_size(<a class="code" href="structfifo__desc.html">fifo_desc_t</a> *<a class="code" href="structfifo__desc.html">fifo_desc</a>)</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
@@ -380,7 +380,7 @@ $(document).ready(function(){initNavTree('fifo_8h_source.html',''); initResizabl
 <div class="ttc" id="astructfifo__desc_html_a9399a109dd0cf9d7f426eee9fead1bb0"><div class="ttname"><a href="structfifo__desc.html#a9399a109dd0cf9d7f426eee9fead1bb0">fifo_desc::u16ptr</a></div><div class="ttdeci">uint16_t * u16ptr</div><div class="ttdoc">Pointer to unsigned-16 bits location.</div><div class="ttdef"><b>Definition:</b> fifo.h:86</div></div>
 <div class="ttc" id="astructfifo__desc_html_afe39f48471be0057ad6e3688a04b2226"><div class="ttname"><a href="structfifo__desc.html#afe39f48471be0057ad6e3688a04b2226">fifo_desc::read_index</a></div><div class="ttdeci">volatile uint8_t read_index</div><div class="ttdoc">Read index.</div><div class="ttdef"><b>Definition:</b> fifo.h:89</div></div>
 <div class="ttc" id="astructfifo__desc_html_ad6f494996dc97143aad9ce99f8eb82ff"><div class="ttname"><a href="structfifo__desc.html#ad6f494996dc97143aad9ce99f8eb82ff">fifo_desc::buffer</a></div><div class="ttdeci">union fifo_desc::@1 buffer</div></div>
-<div class="ttc" id="agroup__fifo__group_html_ga8357ca33d58ffc0807d5d3041f3947f1"><div class="ttname"><a href="group__fifo__group.html#ga8357ca33d58ffc0807d5d3041f3947f1">fifo_init</a></div><div class="ttdeci">int fifo_init(fifo_desc_t *fifo_desc, void *buffer, uint8_t size)</div><div class="ttdoc">Initializes a new software FIFO for a certain 'size'.</div></div>
+<div class="ttc" id="agroup__fifo__group_html_ga8357ca33d58ffc0807d5d3041f3947f1"><div class="ttname"><a href="group__fifo__group.html#ga8357ca33d58ffc0807d5d3041f3947f1">fifo_init</a></div><div class="ttdeci">int fifo_init(fifo_desc_t *fifo_desc, void *buffer, uint8_t size)</div><div class="ttdoc">Initializes a new software FIFO for a certain 'size'.</div><div class="ttdef"><b>Definition:</b> fifo.c:57</div></div>
 <div class="ttc" id="astructfifo__desc_html"><div class="ttname"><a href="structfifo__desc.html">fifo_desc</a></div><div class="ttdoc">FIFO descriptor used by FIFO driver.</div><div class="ttdef"><b>Definition:</b> fifo.h:82</div></div>
 <div class="ttc" id="agroup__fifo__group_html_gga06fc87d81c62e9abb8790b6e5713c55ba4f580d761a3077f81f08f7cef8c2e814"><div class="ttname"><a href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba4f580d761a3077f81f08f7cef8c2e814">FIFO_ERROR</a></div><div class="ttdeci">@ FIFO_ERROR</div><div class="ttdoc">Error condition during FIFO initialization.</div><div class="ttdef"><b>Definition:</b> fifo.h:78</div></div>
 <div class="ttc" id="astructfifo__desc_html_ae685a612ab3d414c6a12033527d52de8"><div class="ttname"><a href="structfifo__desc.html#ae685a612ab3d414c6a12033527d52de8">fifo_desc::u32ptr</a></div><div class="ttdeci">uint32_t * u32ptr</div><div class="ttdoc">Pointer to unsigned-32 bits location.</div><div class="ttdef"><b>Definition:</b> fifo.h:85</div></div>
@@ -389,7 +389,7 @@ $(document).ready(function(){initNavTree('fifo_8h_source.html',''); initResizabl
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_cbdb8362360e11eafe2fa3bc74cf0ffd.html">utils</a></li><li class="navelem"><a class="el" href="dir_8484729e8a9db60f0bdd9dbad97aaadb.html">fifo</a></li><li class="navelem"><a class="el" href="fifo_8h.html">fifo.h</a></li>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:10 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:25 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

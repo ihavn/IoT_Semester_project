@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Basic TSL2591 driver functions</title>
+<title>IoT: Basic TSL2591 driver functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -175,7 +175,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">TSL2591_OK</td><td>The disable sensor/powered down command is send to the sensor. </td></tr>
     <tr><td class="paramname">TSL2591_BUSY</td><td>The driver is busy. </td></tr>
-    <tr><td class="paramname">TSL2591_DRIVER_NOT_CREATED</td><td>The driver is not created - and can not be used!! </td></tr>
+    <tr><td class="paramname">TSL2591_DRIVER_NOT_INITIALISED</td><td>The driver is not initialised - and can not be used!! </td></tr>
   </table>
   </dd>
 </dl>
@@ -205,7 +205,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">TSL2591_OK</td><td>The enable sensor/powered up command is send to the sensor. </td></tr>
     <tr><td class="paramname">TSL2591_BUSY</td><td>The driver is busy. </td></tr>
-    <tr><td class="paramname">TSL2591_DRIVER_NOT_CREATED</td><td>The driver is not created - and can not be used!! </td></tr>
+    <tr><td class="paramname">TSL2591_DRIVER_NOT_INITIALISED</td><td>The driver is not initialised - and can not be used!! </td></tr>
   </table>
   </dd>
 </dl>
@@ -235,7 +235,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">TSL2591_OK</td><td>The fetch command is send to the sensor. Await the callback before the light data is retrieved with <a class="el" href="group__tsl2591__driver__basic__function.html#gac6d37354e1865df7527809221e2b43e7">tsl259_getVisibleRaw</a>, <a class="el" href="group__tsl2591__driver__basic__function.html#ga4e535e7b77497dcd80c7452f037a5e80">tsl2591_getInfraredRaw</a>, <a class="el" href="group__tsl2591__driver__basic__function.html#gad34fe2c4912f88a8c07adc3253e79311">tsl2591_getFullSpectrumRaw</a>, <a class="el" href="group__tsl2591__driver__basic__function.html#ga2a431d3401d3606e7dca318dba34d90b">tsl2591_getCombinedDataRaw</a> or <a class="el" href="group__tsl2591__driver__basic__function.html#ga1d73e10db0ebce74d1bd1e90bd76f24d">tsl2591_getLux</a>. </td></tr>
     <tr><td class="paramname">TSL2591_BUSY</td><td>The driver is busy. </td></tr>
-    <tr><td class="paramname">TSL2591_DRIVER_NOT_CREATED</td><td>The driver is not created - and can not be used!! </td></tr>
+    <tr><td class="paramname">TSL2591_DRIVER_NOT_INITIALISED</td><td>The driver is not initialised - and can not be used!! </td></tr>
   </table>
   </dd>
 </dl>
@@ -265,7 +265,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">TSL2591_OK</td><td>The fetch command is send to the sensor. Await the callback before the ID is retrieved with <a class="el" href="group__tsl2591__driver__basic__function.html#ga23f141a75c19d09089110d5e60ed23a8">tsl2591_getDeviceId</a>. </td></tr>
     <tr><td class="paramname">TSL2591_BUSY</td><td>The driver is busy. </td></tr>
-    <tr><td class="paramname">TSL2591_DRIVER_NOT_CREATED</td><td>The driver is not created - and can not be used!! </td></tr>
+    <tr><td class="paramname">TSL2591_DRIVER_NOT_INITIALISED</td><td>The driver is not initialised - and can not be used!! </td></tr>
   </table>
   </dd>
 </dl>
@@ -550,7 +550,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">TSL2591_OK</td><td>The set gain and integration time command is send to the sensor. </td></tr>
     <tr><td class="paramname">TSL2591_BUSY</td><td>The driver is busy. </td></tr>
-    <tr><td class="paramname">TSL2591_DRIVER_NOT_CREATED</td><td>The driver is not created - and can not be used!! </td></tr>
+    <tr><td class="paramname">TSL2591_DRIVER_NOT_INITIALISED</td><td>The driver is not initialised - and can not be used!! </td></tr>
   </table>
   </dd>
 </dl>
@@ -597,7 +597,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:14 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:27 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

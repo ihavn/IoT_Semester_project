@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: 7-segment Display driver functions</title>
+<title>IoT: 7-segment Display driver functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -111,6 +111,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga2762c76d88c7f42e384f693d58674a7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a> (float value, uint8_t no_of_decimals)</td></tr>
 <tr class="memdesc:ga2762c76d88c7f42e384f693d58674a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display value on the 7-segment Display.  <a href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">More...</a><br /></td></tr>
 <tr class="separator:ga2762c76d88c7f42e384f693d58674a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8e099d068509d4649f3400156965061"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">display_7seg_displayHex</a> (char *hexString)</td></tr>
+<tr class="memdesc:gae8e099d068509d4649f3400156965061"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display a HEX value on the 7-segment Display.  <a href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">More...</a><br /></td></tr>
+<tr class="separator:gae8e099d068509d4649f3400156965061"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga69970dcfab87c3bbb7318ac98d4aa243"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a> (void)</td></tr>
 <tr class="memdesc:ga69970dcfab87c3bbb7318ac98d4aa243"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power up the 7-segment display.  <a href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">More...</a><br /></td></tr>
 <tr class="separator:ga69970dcfab87c3bbb7318ac98d4aa243"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -148,7 +151,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Display value on the 7-segment Display. </p>
-<dl class="section note"><dt>Note</dt><dd>When the driver is created the display will be in power-down mode </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When the driver is initialised the display will be in power-down mode </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>display_7seg_power_up and </dd>
 <dd>
 display_7seg_power_down.</dd></dl>
@@ -156,6 +159,39 @@ display_7seg_power_down.</dd></dl>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>the value to shown on the display. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">no_of_decimals</td><td>The number of digits after the decimal point. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae8e099d068509d4649f3400156965061"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae8e099d068509d4649f3400156965061">&#9670;&nbsp;</a></span>display_7seg_displayHex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void display_7seg_displayHex </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>hexString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Display a HEX value on the 7-segment Display. </p>
+<p>Will display a HEX string on the display. If the HEX string has more than four hex bytes the display will scroll.</p>
+<dl class="section note"><dt>Note</dt><dd>hexString will be converted to uppercase and truncated to 32 characters if longer!</dd>
+<dd>
+When the driver is initialised the display will be in power-down mode </dd></dl>
+<dl class="section see"><dt>See also</dt><dd>display_7seg_power_up and </dd>
+<dd>
+display_7seg_power_down.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">hexString</td><td>to be shown on the display. </td></tr>
   </table>
   </dd>
 </dl>
@@ -179,7 +215,7 @@ display_7seg_power_down.</dd></dl>
 </div><div class="memdoc">
 
 <p>Power down the 7-segment display. </p>
-<dl class="section note"><dt>Note</dt><dd>When the driver is created the display will be in power-down mode </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When the driver is initialised the display will be in power-down mode </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243" title="Power up the 7-segment display.">display_7seg_powerUp</a> and </dd>
 <dd>
 <a class="el" href="group__display__7seg__driver__function.html#ga9a64fb8bd8e18688abdc3574604c7d50" title="Power down the 7-segment display.">display_7seg_powerDown</a>. </dd></dl>
@@ -203,7 +239,7 @@ display_7seg_power_down.</dd></dl>
 </div><div class="memdoc">
 
 <p>Power up the 7-segment display. </p>
-<dl class="section note"><dt>Note</dt><dd>When the driver is created the display will be in power-down mode </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>When the driver is initialised the display will be in power-down mode </dd></dl>
 <dl class="section see"><dt>See also</dt><dd>display_7seg_power_up and </dd>
 <dd>
 display_7seg_power_down. </dd></dl>
@@ -215,7 +251,7 @@ display_7seg_power_down. </dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:12 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

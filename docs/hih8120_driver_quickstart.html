@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Quick start guide for HIH8120 Temperature and Humidity Driver</title>
+<title>IoT: Quick start guide for HIH8120 Temperature and Humidity Driver</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -106,17 +106,18 @@ Initialise the driver</h1>
 </div><!-- fragment --></li>
 </ul>
 <p>Add to application initialization:</p><ul>
-<li>Initialise the driver: <div class="fragment"><div class="line"><span class="keywordflow">if</span> ( <a class="code" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2d4f6cf2910709802d47079df0425258">HIH8120_OK</a> == <a class="code" href="group__hih8120__driver__creation.html#ga50b6ff76eb5670c29010dd9a6b97888c">hih8120_create</a>() )</div>
+<li>Initialise the driver: <div class="fragment"><div class="line"><span class="keywordflow">if</span> ( <a class="code" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2d4f6cf2910709802d47079df0425258">HIH8120_OK</a> == <a class="code" href="group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960">hih8120_initialise</a>() )</div>
 <div class="line">{</div>
-<div class="line">       <span class="comment">// Driver created OK</span></div>
-<div class="line">       <span class="comment">// Always check what hih8120_create() returns</span></div>
+<div class="line">       <span class="comment">// Driver initialised OK</span></div>
+<div class="line">       <span class="comment">// Always check what hih8120_initialise() returns</span></div>
 <div class="line">}</div>
 </div><!-- fragment --></li>
 </ul>
+<dl class="section note"><dt>Note</dt><dd>If used from FreeRTOS: The driver must be initialised <a class="el" href="group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960">hih8120_initialise</a> before the FreeRTOS sheduler is started!!</dd></dl>
 <h1><a class="anchor" id="hih8120_make_measuring"></a>
 How to perform a new measuring with the sensor</h1>
 <p>In this use case, the steps to perform a measuring is shown.</p>
-<dl class="section note"><dt>Note</dt><dd>The driver must be created <a class="el" href="hih8120_driver_quickstart.html#hih8120_setup_use_case">Initialise the driver</a> before a measuring is possible.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The driver must be initialised <a class="el" href="hih8120_driver_quickstart.html#hih8120_setup_use_case">Initialise the driver</a> before a measuring is possible.</dd></dl>
 <p>In this example these two variables will be used to store the results in</p>
 <div class="fragment"><div class="line"><span class="keywordtype">float</span> humidity = 0.0;</div>
 <div class="line"><span class="keywordtype">float</span> temperature = 0.0;</div>
@@ -145,17 +146,17 @@ Perform the measuring</h2>
 </div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__hih8120__driver__function_html_gae3ccc620cf44d799ac33c3baacdaf874"><div class="ttname"><a href="group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874">hih8120_getHumidity</a></div><div class="ttdeci">float hih8120_getHumidity(void)</div><div class="ttdoc">Get latest measured relative humidity percent.</div></div>
-<div class="ttc" id="agroup__hih8120__driver__function_html_gad554fb5be46cf8b41c8fa5d954324e35"><div class="ttname"><a href="group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35">hih8120_getTemperature</a></div><div class="ttdeci">float hih8120_getTemperature(void)</div><div class="ttdoc">Get latest measured temperature in C.</div></div>
-<div class="ttc" id="agroup__hih8120__driver__function_html_gac68ddcf3008e7ec487e1c75c14817f2f"><div class="ttname"><a href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f">hih8120_measure</a></div><div class="ttdeci">hih8120_driverReturnCode_t hih8120_measure(void)</div><div class="ttdoc">Fetch the latest results from the HIH8180 sensor.</div></div>
+<div class="ttc" id="agroup__hih8120__driver__function_html_gae3ccc620cf44d799ac33c3baacdaf874"><div class="ttname"><a href="group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874">hih8120_getHumidity</a></div><div class="ttdeci">float hih8120_getHumidity(void)</div><div class="ttdoc">Get latest measured relative humidity percent.</div><div class="ttdef"><b>Definition:</b> hih8120.c:123</div></div>
+<div class="ttc" id="agroup__hih8120__driver__function_html_gad554fb5be46cf8b41c8fa5d954324e35"><div class="ttname"><a href="group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35">hih8120_getTemperature</a></div><div class="ttdeci">float hih8120_getTemperature(void)</div><div class="ttdoc">Get latest measured temperature in C.</div><div class="ttdef"><b>Definition:</b> hih8120.c:129</div></div>
+<div class="ttc" id="agroup__hih8120__driver__function_html_gac68ddcf3008e7ec487e1c75c14817f2f"><div class="ttname"><a href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f">hih8120_measure</a></div><div class="ttdeci">hih8120_driverReturnCode_t hih8120_measure(void)</div><div class="ttdoc">Fetch the latest results from the HIH8180 sensor.</div><div class="ttdef"><b>Definition:</b> hih8120.c:95</div></div>
+<div class="ttc" id="agroup__hih8120__driver__creation_html_ga1cc535a1c62ff6adc53a0de7a1bc6960"><div class="ttname"><a href="group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960">hih8120_initialise</a></div><div class="ttdeci">hih8120_driverReturnCode_t hih8120_initialise(void)</div><div class="ttdoc">Initialise the HIH8120 driver.</div><div class="ttdef"><b>Definition:</b> hih8120.c:46</div></div>
 <div class="ttc" id="ahih8120_8h_html"><div class="ttname"><a href="hih8120_8h.html">hih8120.h</a></div></div>
 <div class="ttc" id="agroup__hih8120__driver__return__codes_html_gga12a2e6b676a350164b7671d73bda52aba2d4f6cf2910709802d47079df0425258"><div class="ttname"><a href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2d4f6cf2910709802d47079df0425258">HIH8120_OK</a></div><div class="ttdeci">@ HIH8120_OK</div><div class="ttdef"><b>Definition:</b> hih8120.h:40</div></div>
-<div class="ttc" id="agroup__hih8120__driver__function_html_ga2095308e78f6535311301f28a3a26a16"><div class="ttname"><a href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16">hih8120_wakeup</a></div><div class="ttdeci">hih8120_driverReturnCode_t hih8120_wakeup(void)</div><div class="ttdoc">Wakes up the HIH8180 sensor.</div></div>
-<div class="ttc" id="agroup__hih8120__driver__creation_html_ga50b6ff76eb5670c29010dd9a6b97888c"><div class="ttname"><a href="group__hih8120__driver__creation.html#ga50b6ff76eb5670c29010dd9a6b97888c">hih8120_create</a></div><div class="ttdeci">hih8120_driverReturnCode_t hih8120_create(void)</div><div class="ttdoc">Create the HIH8120 driver.</div></div>
+<div class="ttc" id="agroup__hih8120__driver__function_html_ga2095308e78f6535311301f28a3a26a16"><div class="ttname"><a href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16">hih8120_wakeup</a></div><div class="ttdeci">hih8120_driverReturnCode_t hih8120_wakeup(void)</div><div class="ttdoc">Wakes up the HIH8180 sensor.</div><div class="ttdef"><b>Definition:</b> hih8120.c:78</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:12 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

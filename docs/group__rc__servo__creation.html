@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Functions to create and initialize the driver.</title>
+<title>IoT: Functions to initialize the driver.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -90,39 +90,39 @@ $(document).ready(function(){initNavTree('group__rc__servo__creation.html',''); 
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Functions to create and initialize the driver.<div class="ingroups"><a class="el" href="group__rc__servo__driver.html">Driver for RC-Servos</a></div></div>  </div>
+<div class="title">Functions to initialize the driver.<div class="ingroups"><a class="el" href="group__rc__servo__driver.html">Driver for RC-Servos</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>How to create the driver.  
+<p>How to initialise the driver.  
 <a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for Functions to create and initialize the driver.:</div>
+Collaboration diagram for Functions to initialize the driver.:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__rc__servo__creation.png" border="0" usemap="#agroup____rc____servo____creation" alt=""/></div>
-<map name="group____rc____servo____creation" id="group____rc____servo____creation">
-<area shape="rect" href="group__rc__servo__driver.html" title="Driver to control the two RC&#45;Servos that can be connected to the VIA ARDUINO MEGA2560 Shield rev...." alt="" coords="5,20,143,45"/>
-<area shape="rect" title="How to create the driver." alt="" coords="191,5,325,60"/>
+<map name="group____rc____servo____creation" id="agroup____rc____servo____creation">
+<area shape="rect" href="group__rc__servo__driver.html" title="Driver to control the two RC&#45;Servos that can be connected to the VIA ARDUINO MEGA2560 Shield rev...." alt="" coords="5,13,143,38"/>
+<area shape="rect" title="How to initialise the driver." alt="" coords="191,5,336,45"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga89398b6a7d4e286b05fb383ba7cb1437"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rc__servo__creation.html#ga89398b6a7d4e286b05fb383ba7cb1437">rc_servo_create</a> (void)</td></tr>
-<tr class="memdesc:ga89398b6a7d4e286b05fb383ba7cb1437"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the RC-Servo driver.  <a href="group__rc__servo__creation.html#ga89398b6a7d4e286b05fb383ba7cb1437">More...</a><br /></td></tr>
-<tr class="separator:ga89398b6a7d4e286b05fb383ba7cb1437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19831fb3e1aa25e955b7f12df276fa51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rc__servo__creation.html#ga19831fb3e1aa25e955b7f12df276fa51">rc_servo_initialise</a> (void)</td></tr>
+<tr class="memdesc:ga19831fb3e1aa25e955b7f12df276fa51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the RC-Servo driver.  <a href="group__rc__servo__creation.html#ga19831fb3e1aa25e955b7f12df276fa51">More...</a><br /></td></tr>
+<tr class="separator:ga19831fb3e1aa25e955b7f12df276fa51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>How to create the driver. </p>
+<p>How to initialise the driver. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga89398b6a7d4e286b05fb383ba7cb1437"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga89398b6a7d4e286b05fb383ba7cb1437">&#9670;&nbsp;</a></span>rc_servo_create()</h2>
+<a id="ga19831fb3e1aa25e955b7f12df276fa51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19831fb3e1aa25e955b7f12df276fa51">&#9670;&nbsp;</a></span>rc_servo_initialise()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void rc_servo_create </td>
+          <td class="memname">void rc_servo_initialise </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -131,8 +131,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create the RC-Servo driver. </p>
-<p>Creates and initialize the driver.</p>
+<p>Initialise the RC-Servo driver. </p>
+<p>Initialise the driver.</p>
 <p>This should only be called once during initialisation of the application. </p>
 
 </div>
@@ -142,7 +142,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:13 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

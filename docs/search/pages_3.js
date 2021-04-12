@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['push_20and_20flush_746',['Push and flush',['../fifo_use_case_1.html',1,'fifo_quickstart']]]
+  ['otaa_20setup_20steps_1559',['OTAA setup steps',['../lora_setup_to__o_t_a_a.html',1,'lora_driver_quickstart']]]
 ];

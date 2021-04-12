@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: mh_z19.h File Reference</title>
+<title>IoT: mh_z19.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -111,6 +111,18 @@ Include dependency graph for mh_z19.h:</div>
 <area shape="rect" href="serial_8h.html" title=" " alt="" coords="69,80,133,107"/>
 </map>
 </div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="mh__z19_8h__dep__incl.png" border="0" usemap="#amh__z19_8hdep" alt=""/></div>
+<map name="mh__z19_8hdep" id="amh__z19_8hdep">
+<area shape="rect" title="Driver to CO2 using the Intelligent Infrared CO2 Module MH&#45;Z19." alt="" coords="213,5,292,32"/>
+<area shape="rect" href="mh__z19_8c.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="rect" href="mh__z19__test__main_8c.html" title=" " alt="" coords="108,80,251,107"/>
+<area shape="rect" href="lora__handler_8c.html" title=" " alt="" coords="275,80,377,107"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="402,80,463,107"/>
+</map>
+</div>
 </div>
 <p><a href="mh__z19_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -126,11 +138,11 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa0b7a630097eb36a89d09d434b147b5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mh__z19__driver__creation.html#gaa0b7a630097eb36a89d09d434b147b5c">mh_z19_create</a> (<a class="el" href="serial_8h.html#a449a2f5483250f481f4f40126713e547">serial_comPort_t</a> com_port)</td></tr>
-<tr class="memdesc:gaa0b7a630097eb36a89d09d434b147b5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the driver.  <a href="group__mh__z19__driver__creation.html#gaa0b7a630097eb36a89d09d434b147b5c">More...</a><br /></td></tr>
-<tr class="separator:gaa0b7a630097eb36a89d09d434b147b5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac1c9c9bdb753a193ea3762fb13455959"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mh__z19__driver__creation.html#gac1c9c9bdb753a193ea3762fb13455959">mh_z19_initialise</a> (<a class="el" href="serial_8h.html#a449a2f5483250f481f4f40126713e547">serial_comPort_t</a> com_port)</td></tr>
+<tr class="memdesc:gac1c9c9bdb753a193ea3762fb13455959"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the driver.  <a href="group__mh__z19__driver__creation.html#gac1c9c9bdb753a193ea3762fb13455959">More...</a><br /></td></tr>
+<tr class="separator:gac1c9c9bdb753a193ea3762fb13455959"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga45ca59130219621b0933cbce471ea89d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">mh_z19_injectCallBack</a> (void(*mh_z19_callBack)(uint16_t))</td></tr>
-<tr class="memdesc:ga45ca59130219621b0933cbce471ea89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the driver.  <a href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">More...</a><br /></td></tr>
+<tr class="memdesc:ga45ca59130219621b0933cbce471ea89d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inject a call-back function to the driver.  <a href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">More...</a><br /></td></tr>
 <tr class="separator:ga45ca59130219621b0933cbce471ea89d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga403a674be4d4dc74691956333bcc14fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__mh__z19__driver__driver__return__codes.html#gaf9400fe2eb57edfe1986f5481862f479">mh_z19_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mh__z19__driver__basic__function.html#ga403a674be4d4dc74691956333bcc14fa">mh_z19_takeMeassuring</a> (void)</td></tr>
 <tr class="memdesc:ga403a674be4d4dc74691956333bcc14fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a new CO2 meassuring.  <a href="group__mh__z19__driver__basic__function.html#ga403a674be4d4dc74691956333bcc14fa">More...</a><br /></td></tr>
@@ -158,7 +170,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_6dff7e51a7506716a97b97d6dc5c6ea1.html">include</a></li><li class="navelem"><a class="el" href="mh__z19_8h.html">mh_z19.h</a></li>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:11 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

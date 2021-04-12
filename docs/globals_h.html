@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Globals</title>
+<title>IoT: Globals</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -90,29 +90,51 @@ $(document).ready(function(){initNavTree('globals_h.html',''); initResizable(); 
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a id="index_h"></a>- h -</h3><ul>
+<li>HART
+: <a class="el" href="history_8txt.html#a2052823a7e178dfb25faec9e9f40e5ff">history.txt</a>
+</li>
+<li>hcSr501
+: <a class="el" href="main_8c.html#a47508686697e8cadd35dbfc0ebec6e4e">main.c</a>
+</li>
 <li>hcsr501_create()
 : <a class="el" href="group__sr501__driver__creation.html#ga6d4e72aa406c9c74b962d144cef23acd">hcsr501.h</a>
+, <a class="el" href="group__sr501__driver__creation.html#ga6d4e72aa406c9c74b962d144cef23acd">hcsr501.c</a>
 </li>
 <li>hcsr501_destroy()
-: <a class="el" href="group__sr501__driver__creation.html#gaaf72e4d271b0eda59ace15ca307a83e9">hcsr501.h</a>
+: <a class="el" href="group__sr501__driver__creation.html#gaaf72e4d271b0eda59ace15ca307a83e9">hcsr501.c</a>
+, <a class="el" href="group__sr501__driver__creation.html#gaaf72e4d271b0eda59ace15ca307a83e9">hcsr501.h</a>
 </li>
 <li>hcsr501_isDetecting()
 : <a class="el" href="group__sr501__driver__basic__function.html#gad9d962edf1c5f01c3fd6673f61e336c8">hcsr501.h</a>
+, <a class="el" href="group__sr501__driver__basic__function.html#gad9d962edf1c5f01c3fd6673f61e336c8">hcsr501.c</a>
 </li>
 <li>hcsr501_p
 : <a class="el" href="hcsr501_8h.html#a73386fdc676d32ed5eed6863048fa7b0">hcsr501.h</a>
 </li>
+<li>hcsr501_task()
+: <a class="el" href="main_8c.html#a03f3d099213a2341f265467e4e222a68">main.c</a>
+</li>
 <li>HCSR501_TASK_PRIORITY
 : <a class="el" href="app__config_8h.html#a537e9b97068cc30137b9f91862f4865e">app_config.h</a>
 </li>
-<li>hih8120_create()
-: <a class="el" href="group__hih8120__driver__creation.html#ga50b6ff76eb5670c29010dd9a6b97888c">hih8120.h</a>
+<li>heapBITS_PER_BYTE
+: <a class="el" href="heap__4_8c.html#adcef0c4245ebe20ca2b08a574c1caac9">heap_4.c</a>
+</li>
+<li>heapMINIMUM_BLOCK_SIZE
+: <a class="el" href="heap__4_8c.html#ab71bae5a95671265c828339d44c44b25">heap_4.c</a>
+</li>
+<li>HEX_CHAR_TO_NIBBLE
+: <a class="el" href="lora__driver__utils_8c.html#aefa8de62c7717737c09884392ab1e7a4">lora_driver_utils.c</a>
+</li>
+<li>HEX_PAIR_TO_BYTE
+: <a class="el" href="lora__driver__utils_8c.html#a76de7190eb08b529fc968dc2f2f2c89c">lora_driver_utils.c</a>
 </li>
 <li>hih8120_destroy()
-: <a class="el" href="group__hih8120__driver__creation.html#gab2505eb533dc3eccad020726d0b3e260">hih8120.h</a>
+: <a class="el" href="group__hih8120__driver__creation.html#gab2505eb533dc3eccad020726d0b3e260">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__creation.html#gab2505eb533dc3eccad020726d0b3e260">hih8120.h</a>
 </li>
-<li>HIH8120_DRIVER_NOT_CREATED
-: <a class="el" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba6130b41ffaf532c6552e4d91ec80ba99">hih8120.h</a>
+<li>HIH8120_DRIVER_NOT_INITIALISED
+: <a class="el" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52ababb31f4e1afe44c69800db49579836de6">hih8120.h</a>
 </li>
 <li>hih8120_driverReturnCode_t
 : <a class="el" href="group__hih8120__driver__return__codes.html#ga431a184b91e88584df8159743c29f9ea">hih8120.h</a>
@@ -121,28 +143,41 @@ $(document).ready(function(){initNavTree('globals_h.html',''); initResizable(); 
 : <a class="el" href="group__hih8120__driver__return__codes.html#ga12a2e6b676a350164b7671d73bda52ab">hih8120.h</a>
 </li>
 <li>hih8120_getHumidity()
-: <a class="el" href="group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874">hih8120.h</a>
+: <a class="el" href="group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874">hih8120.h</a>
 </li>
 <li>hih8120_getHumidityPercent_x10()
-: <a class="el" href="group__hih8120__driver__function.html#ga696062be73ccf137af64e8d0f81f4949">hih8120.h</a>
+: <a class="el" href="group__hih8120__driver__function.html#ga696062be73ccf137af64e8d0f81f4949">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__function.html#ga696062be73ccf137af64e8d0f81f4949">hih8120.h</a>
 </li>
 <li>hih8120_getTemperature()
-: <a class="el" href="group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35">hih8120.h</a>
+: <a class="el" href="group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35">hih8120.h</a>
 </li>
 <li>hih8120_getTemperature_x10()
-: <a class="el" href="group__hih8120__driver__function.html#ga7deedd6c326f5f18c7f410dab45c293d">hih8120.h</a>
+: <a class="el" href="group__hih8120__driver__function.html#ga7deedd6c326f5f18c7f410dab45c293d">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__function.html#ga7deedd6c326f5f18c7f410dab45c293d">hih8120.h</a>
+</li>
+<li>hih8120_initialise()
+: <a class="el" href="group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960">hih8120.h</a>
 </li>
 <li>hih8120_isReady()
 : <a class="el" href="group__hih8120__driver__function.html#ga85402bb6763eaa6264444d13bd36511c">hih8120.h</a>
+, <a class="el" href="group__hih8120__driver__function.html#ga85402bb6763eaa6264444d13bd36511c">hih8120.c</a>
 </li>
 <li>hih8120_measure()
 : <a class="el" href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f">hih8120.h</a>
+, <a class="el" href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f">hih8120.c</a>
 </li>
 <li>HIH8120_OK
 : <a class="el" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2d4f6cf2910709802d47079df0425258">hih8120.h</a>
 </li>
 <li>HIH8120_OUT_OF_HEAP
 : <a class="el" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2a8ffa76271364141ea266661aa75796">hih8120.h</a>
+</li>
+<li>hih8120_task()
+: <a class="el" href="main_8c.html#a32d278240091c7a0013e5774db4fbdc2">main.c</a>
 </li>
 <li>HIH8120_TASK_PRIORITY
 : <a class="el" href="app__config_8h.html#a6b8bd35f7a29d6f1629256d32eca1137">app_config.h</a>
@@ -151,7 +186,11 @@ $(document).ready(function(){initNavTree('globals_h.html',''); initResizable(); 
 : <a class="el" href="group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba10903cde5f22ead917c66ee64d1a3137">hih8120.h</a>
 </li>
 <li>hih8120_wakeup()
-: <a class="el" href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16">hih8120.h</a>
+: <a class="el" href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16">hih8120.c</a>
+, <a class="el" href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16">hih8120.h</a>
+</li>
+<li>https
+: <a class="el" href="history_8txt.html#a1c274a6fc06cced6feedf0cd1124681f">history.txt</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -159,7 +198,7 @@ $(document).ready(function(){initNavTree('globals_h.html',''); initResizable(); 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:15 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:27 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

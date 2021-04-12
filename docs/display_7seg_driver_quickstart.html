@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Quick start guide for 7-segment Display Driver</title>
+<title>IoT: Quick start guide for 7-segment Display Driver</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('display_7seg_driver_quickstart.html','
 <ul>
 <li><a class="el" href="display_7seg_driver_quickstart.html#display_7seg_driver_initialise">Initialise the driver</a></li>
 <li><a class="el" href="display_7seg_driver_quickstart.html#display_7seg_driver_show_number">Show numbers on the display</a></li>
+<li><a class="el" href="display_7seg_driver_quickstart.html#display_7seg_driver_show_hex_string">Show HEX string on the display</a></li>
 </ul>
 <h1><a class="anchor" id="display_7seg_driver_initialise"></a>
 Initialise the driver</h1>
@@ -105,7 +106,7 @@ Initialise the driver</h1>
 <li>The following must be added to the project: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="display__7seg_8h.html">display_7seg.h</a>&gt;</span></div>
 </div><!-- fragment --></li>
 <li>Add to application initialization: Initialise the driver: <div class="fragment"><div class="line"><span class="comment">// Here the call back function is not needed</span></div>
-<div class="line"><a class="code" href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">display_7seg_init</a>(NULL); </div>
+<div class="line"><a class="code" href="group__display__7seg__driver__creation.html#gaf91408af52fc0db4b857005e535b36a0">display_7seg_initialise</a>(NULL); </div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// Power up the display</span></div>
 <div class="line"><a class="code" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a>();</div>
@@ -113,24 +114,30 @@ Initialise the driver</h1>
 </ol>
 <h1><a class="anchor" id="display_7seg_driver_show_number"></a>
 Show numbers on the display</h1>
-<dl class="section note"><dt>Note</dt><dd>The driver must be initialised <a class="el" href="display_7seg_driver_quickstart.html#display_7seg_driver_initialise">Initialise the driver</a> and powered up <a class="el" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a> before the display can be used. </dd>
-<dd>
-</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The driver must be initialised <a class="el" href="display_7seg_driver_quickstart.html#display_7seg_driver_initialise">Initialise the driver</a> and powered up <a class="el" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a> before the display can be used.</dd></dl>
 <ol type="1">
 <li>Show &Pi; with two decimals on the display. <div class="fragment"><div class="line"><a class="code" href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a>(3.14159265359, 2);</div>
+</div><!-- fragment --></li>
+</ol>
+<h1><a class="anchor" id="display_7seg_driver_show_hex_string"></a>
+Show HEX string on the display</h1>
+<dl class="section note"><dt>Note</dt><dd>The driver must be initialised <a class="el" href="display_7seg_driver_quickstart.html#display_7seg_driver_initialise">Initialise the driver</a> and powered up <a class="el" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a> before the display can be used.</dd></dl>
+<ol type="1">
+<li>Show <em>01234ABCD</em> on the display. <div class="fragment"><div class="line"><a class="code" href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">display_7seg_displayHex</a>(<span class="stringliteral">&quot;01234ABCD&quot;</span>);</div>
 </div><!-- fragment --> </li>
 </ol>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
 <div class="ttc" id="adisplay__7seg_8h_html"><div class="ttname"><a href="display__7seg_8h.html">display_7seg.h</a></div></div>
-<div class="ttc" id="agroup__display__7seg__driver__creation_html_ga6f2610ddb054f96e8b96d77482237a46"><div class="ttname"><a href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">display_7seg_init</a></div><div class="ttdeci">void display_7seg_init(void(*displayDoneCallBack)(void))</div><div class="ttdoc">Create the 7-segment Display driver.</div></div>
-<div class="ttc" id="agroup__display__7seg__driver__function_html_ga2762c76d88c7f42e384f693d58674a7e"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a></div><div class="ttdeci">void display_7seg_display(float value, uint8_t no_of_decimals)</div><div class="ttdoc">Display value on the 7-segment Display.</div></div>
-<div class="ttc" id="agroup__display__7seg__driver__function_html_ga69970dcfab87c3bbb7318ac98d4aa243"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a></div><div class="ttdeci">void display_7seg_powerUp(void)</div><div class="ttdoc">Power up the 7-segment display.</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_gae8e099d068509d4649f3400156965061"><div class="ttname"><a href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">display_7seg_displayHex</a></div><div class="ttdeci">void display_7seg_displayHex(char *hexString)</div><div class="ttdoc">Display a HEX value on the 7-segment Display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:191</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__creation_html_gaf91408af52fc0db4b857005e535b36a0"><div class="ttname"><a href="group__display__7seg__driver__creation.html#gaf91408af52fc0db4b857005e535b36a0">display_7seg_initialise</a></div><div class="ttdeci">void display_7seg_initialise(void(*display_done_call_back)(void))</div><div class="ttdoc">Initialise the 7-segment Display driver.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:80</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_ga2762c76d88c7f42e384f693d58674a7e"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a></div><div class="ttdeci">void display_7seg_display(float value, uint8_t no_of_decimals)</div><div class="ttdoc">Display value on the 7-segment Display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:103</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_ga69970dcfab87c3bbb7318ac98d4aa243"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a></div><div class="ttdeci">void display_7seg_powerUp(void)</div><div class="ttdoc">Power up the 7-segment display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:245</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:12 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

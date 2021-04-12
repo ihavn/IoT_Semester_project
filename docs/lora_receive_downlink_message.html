@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Receive a downlink message</title>
+<title>IoT: Receive a downlink message</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -105,7 +105,7 @@ Down-link Message Setup</h1>
 </div><!-- fragment --></li>
 <li>Wait for a message to be received <div class="fragment"><div class="line"><span class="comment">// this code must be in the loop of a FreeRTOS task!</span></div>
 <div class="line">xMessageBufferReceive(downLinkMessageBufferHandle, &amp;downlinkPayload, <span class="keyword">sizeof</span>(lora_payload_t), portMAX_DELAY);</div>
-<div class="line">printf(<span class="stringliteral">&quot;DOWN LINK: from port: %d with %d bytes received!&quot;</span>, downlinkPayload.<a class="code" href="structlora__driver__payload.html#a200a4cce8b35db4dbc24a6870c80a599">port_no</a>, downlinkPayload.<a class="code" href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">len</a>); <span class="comment">// Just for Debug</span></div>
+<div class="line">printf(<span class="stringliteral">&quot;DOWN LINK: from port: %d with %d bytes received!&quot;</span>, downlinkPayload.port_no, downlinkPayload.<a class="code" href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">len</a>); <span class="comment">// Just for Debug</span></div>
 <div class="line"><span class="keywordflow">if</span> (4 == downlinkPayload.<a class="code" href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">len</a>) <span class="comment">// Check that we have got the expected 4 bytes</span></div>
 <div class="line">{</div>
 <div class="line">       <span class="comment">// decode the payload into our variales</span></div>
@@ -120,12 +120,11 @@ Down-link Message Setup</h1>
 <div class="ttc" id="astructlora__driver__payload_html_af7b0a4019a4701618be70efce3da16e9"><div class="ttname"><a href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">lora_driver_payload::len</a></div><div class="ttdeci">uint8_t len</div><div class="ttdef"><b>Definition:</b> lora_driver.h:52</div></div>
 <div class="ttc" id="astructlora__driver__payload_html_abe98ec3aa25c1696b5ffc9a22ad1a1e0"><div class="ttname"><a href="structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0">lora_driver_payload::bytes</a></div><div class="ttdeci">uint8_t bytes[LORA_MAX_PAYLOAD_LENGTH]</div><div class="ttdef"><b>Definition:</b> lora_driver.h:53</div></div>
 <div class="ttc" id="astructlora__driver__payload_html"><div class="ttname"><a href="structlora__driver__payload.html">lora_driver_payload</a></div><div class="ttdoc">Payload data structure.</div><div class="ttdef"><b>Definition:</b> lora_driver.h:50</div></div>
-<div class="ttc" id="astructlora__driver__payload_html_a200a4cce8b35db4dbc24a6870c80a599"><div class="ttname"><a href="structlora__driver__payload.html#a200a4cce8b35db4dbc24a6870c80a599">lora_driver_payload::port_no</a></div><div class="ttdeci">uint8_t port_no</div><div class="ttdef"><b>Definition:</b> lora_driver.h:51</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="lora_driver_quickstart.html">Quick start guide for RN2483 based LoRa Driver</a></li>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:12 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

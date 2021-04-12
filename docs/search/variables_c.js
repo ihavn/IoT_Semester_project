@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visibleraw_589',['visibleRaw',['../structtsl2591__combined_data__t.html#acba6e343fd1baa9920f7629396369525',1,'tsl2591_combinedData_t']]]
+  ['size_1118',['size',['../structfifo__desc.html#a2bab6539f1633018b8ff6dc41d86c1ad',1,'fifo_desc']]]
 ];

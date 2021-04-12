@@ -1,4 +1,4 @@
 var group__lora__creation =
 [
-    [ "lora_driver_create", "group__lora__creation.html#ga6a95ec044bb15c41e56d3a1fec316971", null ]
+    [ "lora_driver_initialise", "group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9", null ]
 ];

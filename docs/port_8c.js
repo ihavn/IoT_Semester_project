@@ -9,7 +9,10 @@ var port_8c =
     [ "pxPortInitialiseStack", "port_8c.html#a474fbbb58ea661a1557f05adc41120c1", null ],
     [ "vPortEndScheduler", "port_8c.html#af76f3c0b44c5b5c06fc046a4ee1a6423", null ],
     [ "vPortYield", "port_8c.html#add01c927fb689f7ec170e42d47d27927", null ],
+    [ "vPortYieldFromISR", "port_8c.html#afdcc79704f1ce3c8790268b732b7911d", null ],
     [ "vPortYieldFromTick", "port_8c.html#a130213f2e8a8331aaa6dc715f41b6358", null ],
     [ "xPortStartScheduler", "port_8c.html#ade5a8c6666e7413a0355cc252029c5c6", null ],
-    [ "pxCurrentTCB", "port_8c.html#af7b1fc0a36e224b885fb22b9936a03a2", null ]
+    [ "portTickRateHz", "port_8c.html#a81e4a4f4b9e6f15e90f360205e5954d3", null ],
+    [ "pxCurrentTCB", "port_8c.html#af7b1fc0a36e224b885fb22b9936a03a2", null ],
+    [ "ticksRemainingInSec", "port_8c.html#a8a210f6cb1043f728bca16b5cd0488ab", null ]
 ];

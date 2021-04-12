@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['vmessagebufferdelete',['vMessageBufferDelete',['../message__buffer_8h.html#aa29d6c50600a7b0154e4a47e7c981d1a',1,'message_buffer.h']]],
-  ['vqueueaddtoregistry',['vQueueAddToRegistry',['../_a_t_m_e_g_a___free_r_t_o_s_8h.html#a3e103eedd5088f5f30bc55e55820a9e3',1,'ATMEGA_FreeRTOS.h']]],
-  ['vqueueunregisterqueue',['vQueueUnregisterQueue',['../_a_t_m_e_g_a___free_r_t_o_s_8h.html#af007b655ee91c919bad9cd2798195899',1,'ATMEGA_FreeRTOS.h']]],
-  ['vsemaphoredelete',['vSemaphoreDelete',['../semphr_8h.html#acd7d0eda0923d7caeeaaee9202c43eab',1,'semphr.h']]]
+  ['ubrr_5foff_1495',['UBRR_off',['../serial_8c.html#af286e69814ed64302e022e1dd8d77ead',1,'serial.c']]],
+  ['ucsra_5foff_1496',['UCSRA_off',['../serial_8c.html#ac1d78690c4a98780639309b3aab602a3',1,'serial.c']]],
+  ['ucsrb_5foff_1497',['UCSRB_off',['../serial_8c.html#ab4ff9fb3c6ccef3c9df109ca3ee1cc2e',1,'serial.c']]],
+  ['ucsrc_5foff_1498',['UCSRC_off',['../serial_8c.html#a33848a24efed27c07ddaef082f564bbd',1,'serial.c']]],
+  ['uxqueuetype_1499',['uxQueueType',['../queue_8c.html#afe3f7afb2a02c085f2d634003902cbc0',1,'queue.c']]]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: display_7seg.h Source File</title>
+<title>IoT: display_7seg.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -96,29 +96,33 @@ $(document).ready(function(){initNavTree('display__7seg_8h_source.html',''); ini
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define _DISPLAY_7SEG_H_</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">display_7seg_init</a>(<span class="keywordtype">void</span> (*displayDoneCallBack)(<span class="keywordtype">void</span>));</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a>(<span class="keywordtype">float</span> value, uint8_t no_of_decimals);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">   66</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="group__display__7seg__driver__function.html#ga9a64fb8bd8e18688abdc3574604c7d50">   75</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#ga9a64fb8bd8e18688abdc3574604c7d50">display_7seg_powerDown</a>(<span class="keywordtype">void</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _DISPLAY_7SEG_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__creation.html#gaf91408af52fc0db4b857005e535b36a0">display_7seg_initialise</a>(<span class="keywordtype">void</span> (*displayDoneCallBack)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a>(<span class="keywordtype">float</span> value, uint8_t no_of_decimals);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">display_7seg_displayHex</a>(<span class="keywordtype">char</span> * hexString);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">/* ======================================================================================================================= */</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__display__7seg__driver__function.html#ga9a64fb8bd8e18688abdc3574604c7d50">display_7seg_powerDown</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _DISPLAY_7SEG_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__display__7seg__driver__function_html_ga9a64fb8bd8e18688abdc3574604c7d50"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga9a64fb8bd8e18688abdc3574604c7d50">display_7seg_powerDown</a></div><div class="ttdeci">void display_7seg_powerDown(void)</div><div class="ttdoc">Power down the 7-segment display.</div></div>
-<div class="ttc" id="agroup__display__7seg__driver__creation_html_ga6f2610ddb054f96e8b96d77482237a46"><div class="ttname"><a href="group__display__7seg__driver__creation.html#ga6f2610ddb054f96e8b96d77482237a46">display_7seg_init</a></div><div class="ttdeci">void display_7seg_init(void(*displayDoneCallBack)(void))</div><div class="ttdoc">Create the 7-segment Display driver.</div></div>
-<div class="ttc" id="agroup__display__7seg__driver__function_html_ga2762c76d88c7f42e384f693d58674a7e"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a></div><div class="ttdeci">void display_7seg_display(float value, uint8_t no_of_decimals)</div><div class="ttdoc">Display value on the 7-segment Display.</div></div>
-<div class="ttc" id="agroup__display__7seg__driver__function_html_ga69970dcfab87c3bbb7318ac98d4aa243"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a></div><div class="ttdeci">void display_7seg_powerUp(void)</div><div class="ttdoc">Power up the 7-segment display.</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_gae8e099d068509d4649f3400156965061"><div class="ttname"><a href="group__display__7seg__driver__function.html#gae8e099d068509d4649f3400156965061">display_7seg_displayHex</a></div><div class="ttdeci">void display_7seg_displayHex(char *hexString)</div><div class="ttdoc">Display a HEX value on the 7-segment Display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:191</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_ga9a64fb8bd8e18688abdc3574604c7d50"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga9a64fb8bd8e18688abdc3574604c7d50">display_7seg_powerDown</a></div><div class="ttdeci">void display_7seg_powerDown(void)</div><div class="ttdoc">Power down the 7-segment display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:251</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__creation_html_gaf91408af52fc0db4b857005e535b36a0"><div class="ttname"><a href="group__display__7seg__driver__creation.html#gaf91408af52fc0db4b857005e535b36a0">display_7seg_initialise</a></div><div class="ttdeci">void display_7seg_initialise(void(*displayDoneCallBack)(void))</div><div class="ttdoc">Initialise the 7-segment Display driver.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:80</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_ga2762c76d88c7f42e384f693d58674a7e"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga2762c76d88c7f42e384f693d58674a7e">display_7seg_display</a></div><div class="ttdeci">void display_7seg_display(float value, uint8_t no_of_decimals)</div><div class="ttdoc">Display value on the 7-segment Display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:103</div></div>
+<div class="ttc" id="agroup__display__7seg__driver__function_html_ga69970dcfab87c3bbb7318ac98d4aa243"><div class="ttname"><a href="group__display__7seg__driver__function.html#ga69970dcfab87c3bbb7318ac98d4aa243">display_7seg_powerUp</a></div><div class="ttdeci">void display_7seg_powerUp(void)</div><div class="ttdoc">Power up the 7-segment display.</div><div class="ttdef"><b>Definition:</b> display_7seg.c:245</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_6dff7e51a7506716a97b97d6dc5c6ea1.html">include</a></li><li class="navelem"><a class="el" href="display__7seg_8h.html">display_7seg.h</a></li>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:10 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:25 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

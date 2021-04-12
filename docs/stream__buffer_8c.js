@@ -8,7 +8,7 @@ var stream__buffer_8c =
     [ "sbRECEIVE_COMPLETED_FROM_ISR", "stream__buffer_8c.html#ab72c363566113705c021596f90c6eb5a", null ],
     [ "sbSEND_COMPLETE_FROM_ISR", "stream__buffer_8c.html#aadd3cf567c5086402552c463c55dda7c", null ],
     [ "sbSEND_COMPLETED", "stream__buffer_8c.html#aa75273dfbcd92710254df0165ae1da5d", null ],
-    [ "StreamBuffer_t", "stream__buffer_8c.html#a6fb73c13219d9ddc8fe15f0c030cd86d", null ],
+    [ "StreamBuffer_t", "stream__buffer_8c.html#ac30372f81bb381115f91d7daa384db2d", null ],
     [ "vStreamBufferDelete", "stream__buffer_8c.html#a7e66db41c3fd13acf3b9f814d650f77d", null ],
     [ "xStreamBufferBytesAvailable", "stream__buffer_8c.html#a5c473cb971d8a20b0528a1abc890833c", null ],
     [ "xStreamBufferGenericCreate", "stream__buffer_8c.html#a4387e6f3c52bd8755a014673c97aa497", null ],

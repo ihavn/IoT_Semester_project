@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Functions to create and initialize the driver.</title>
+<title>IoT: Functions to initialize the driver.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -90,39 +90,39 @@ $(document).ready(function(){initNavTree('group__led__driver__creation.html','')
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Functions to create and initialize the driver.<div class="ingroups"><a class="el" href="group__led__driver.html">Driver for Status Leds</a></div></div>  </div>
+<div class="title">Functions to initialize the driver.<div class="ingroups"><a class="el" href="group__led__driver.html">Driver for Status Leds</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>How to create the driver.  
+<p>How to initialise the driver.  
 <a href="#details">More...</a></p>
 <div class="dynheader">
-Collaboration diagram for Functions to create and initialize the driver.:</div>
+Collaboration diagram for Functions to initialize the driver.:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__led__driver__creation.png" border="0" usemap="#agroup____led____driver____creation" alt=""/></div>
-<map name="group____led____driver____creation" id="group____led____driver____creation">
-<area shape="rect" title="How to create the driver." alt="" coords="200,5,335,60"/>
-<area shape="rect" href="group__led__driver.html" title="Driver to control the four status leds on the VIA ARDUINO MEGA2560 Shield rev. 2.0." alt="" coords="5,20,152,45"/>
+<map name="group____led____driver____creation" id="agroup____led____driver____creation">
+<area shape="rect" title="How to initialise the driver." alt="" coords="200,5,345,45"/>
+<area shape="rect" href="group__led__driver.html" title="Driver to control the four status leds on the VIA ARDUINO MEGA2560 Shield rev. 2.0." alt="" coords="5,13,152,38"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga9c361c8006834a70050daa6db9deeab3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__led__driver__creation.html#ga9c361c8006834a70050daa6db9deeab3">status_leds_create</a> (UBaseType_t ledTaskPriority)</td></tr>
-<tr class="memdesc:ga9c361c8006834a70050daa6db9deeab3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the led driver.  <a href="group__led__driver__creation.html#ga9c361c8006834a70050daa6db9deeab3">More...</a><br /></td></tr>
-<tr class="separator:ga9c361c8006834a70050daa6db9deeab3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60574e379de34aebe930df502364bd42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__led__driver__creation.html#ga60574e379de34aebe930df502364bd42">status_leds_initialise</a> (UBaseType_t ledTaskPriority)</td></tr>
+<tr class="memdesc:ga60574e379de34aebe930df502364bd42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the led driver.  <a href="group__led__driver__creation.html#ga60574e379de34aebe930df502364bd42">More...</a><br /></td></tr>
+<tr class="separator:ga60574e379de34aebe930df502364bd42"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>How to create the driver. </p>
+<p>How to initialise the driver. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ga9c361c8006834a70050daa6db9deeab3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9c361c8006834a70050daa6db9deeab3">&#9670;&nbsp;</a></span>status_leds_create()</h2>
+<a id="ga60574e379de34aebe930df502364bd42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60574e379de34aebe930df502364bd42">&#9670;&nbsp;</a></span>status_leds_initialise()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void status_leds_create </td>
+          <td class="memname">void status_leds_initialise </td>
           <td>(</td>
           <td class="paramtype">UBaseType_t&#160;</td>
           <td class="paramname"><em>ledTaskPriority</em></td><td>)</td>
@@ -131,8 +131,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create the led driver. </p>
-<p>Creates and initialize the driver.</p>
+<p>Initialise the led driver. </p>
+<p>Initialise the driver.</p>
 <dl class="section note"><dt>Note</dt><dd>The priority must be pretty high to make the LEDs behave smoothly.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -148,7 +148,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:14 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:27 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

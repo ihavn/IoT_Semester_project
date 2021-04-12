@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['infraredraw_522',['infraredRaw',['../structtsl2591__combined_data__t.html#a870b6544e50952162c5a3e5a976f9bc0',1,'tsl2591_combinedData_t']]]
+  ['code_1100',['code',['../history_8txt.html#aefec6ef5d4ea478e9cc1308fde6dd588',1,'history.txt']]],
+  ['cores_1101',['cores',['../history_8txt.html#a7f5426cc4f9a7e58cd809b45a6f6e52f',1,'history.txt']]]
 ];

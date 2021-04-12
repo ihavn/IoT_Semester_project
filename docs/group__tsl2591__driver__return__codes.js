@@ -8,7 +8,7 @@ var group__tsl2591__driver__return__codes =
       [ "TSL2591_UNDERFLOW", "group__tsl2591__driver__return__codes.html#gga059848bb463c4d9107e6b4224f3af749a487cef985b3a6ac886e4a7b08caf2b52", null ],
       [ "TSL2591_BUSY", "group__tsl2591__driver__return__codes.html#gga059848bb463c4d9107e6b4224f3af749a9b4ee9251d2778d48add7254717512eb", null ],
       [ "TSL2591_ERROR", "group__tsl2591__driver__return__codes.html#gga059848bb463c4d9107e6b4224f3af749a6139b06326c89391b7f0aae15f760f3a", null ],
-      [ "TSL2591_DRIVER_NOT_CREATED", "group__tsl2591__driver__return__codes.html#gga059848bb463c4d9107e6b4224f3af749aa3c8cb4c642ada6e52b55da644e7ace1", null ],
+      [ "TSL2591_DRIVER_NOT_INITIALISED", "group__tsl2591__driver__return__codes.html#gga059848bb463c4d9107e6b4224f3af749ad12fb25348611962aaa95b5a065d1576", null ],
       [ "TSL2591_OUT_OF_HEAP", "group__tsl2591__driver__return__codes.html#gga059848bb463c4d9107e6b4224f3af749a846b0b851a01fd2442da52c704fe060d", null ]
     ] ]
 ];

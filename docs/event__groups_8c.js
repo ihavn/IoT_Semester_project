@@ -5,7 +5,7 @@ var event__groups_8c =
     [ "eventUNBLOCKED_DUE_TO_BIT_SET", "event__groups_8c.html#ab451d5ad95813d5ec7ff1784d69e9ec3", null ],
     [ "eventWAIT_FOR_ALL_BITS", "event__groups_8c.html#ae98d5f1271845ad42742aef9659e1568", null ],
     [ "MPU_WRAPPERS_INCLUDED_FROM_API_FILE", "event__groups_8c.html#ab622d8c674f2a417a666a7ed89109e79", null ],
-    [ "EventGroup_t", "event__groups_8c.html#adce72bb1c348ebfe93b8ff77a97d016d", null ],
+    [ "EventGroup_t", "event__groups_8c.html#ae4fc9408a7fab90c6296379ff3cb0f11", null ],
     [ "vEventGroupClearBitsCallback", "event__groups_8c.html#a3bce459038e87064109c8462b1174c29", null ],
     [ "vEventGroupDelete", "event__groups_8c.html#a6939faca89fc4ba52fa8288527042464", null ],
     [ "vEventGroupSetBitsCallback", "event__groups_8c.html#a54db6cc97bbb926aa4b78d5affc257d9", null ],

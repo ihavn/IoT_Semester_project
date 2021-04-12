@@ -38,7 +38,6 @@ var lora__driver_8h =
       [ "LORA_UNKNOWN", "group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a5545b66ac8a66d09d8c818ac2765dbcb", null ]
     ] ],
     [ "lora_driver_configureToEu868", "group__lora__basic__function.html#ga88a60dca5281f2b4aebd01c0445478f2", null ],
-    [ "lora_driver_create", "group__lora__creation.html#ga6a95ec044bb15c41e56d3a1fec316971", null ],
     [ "lora_driver_flushBuffers", "group__lora__advanced__function.html#ga7563bd23845d66320e0c51010eab2aff", null ],
     [ "lora_driver_getAdaptiveDataRate", "group__lora__advanced__function.html#gae7d664fd1d828d19559e584e26cd08a7", null ],
     [ "lora_driver_getAutomaticReply", "group__lora__advanced__function.html#gaab2db7a57f66b25cac70c4cafed141c1", null ],
@@ -46,6 +45,7 @@ var lora__driver_8h =
     [ "lora_driver_getLinkCheckResult", "group__lora__advanced__function.html#ga4c7e914595ecb2595f651b41bada6047", null ],
     [ "lora_driver_getMaxPayloadSize", "group__lora__basic__function.html#ga1fcfbfd517463f0f36bbab9c4b68c4e6", null ],
     [ "lora_driver_getRn2483Hweui", "group__lora__basic__function.html#gaa14be250cb18d3a633629f29c03fcabd", null ],
+    [ "lora_driver_initialise", "group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9", null ],
     [ "lora_driver_join", "group__lora__basic__function.html#ga8a017a740222cdf44b161b152877b771", null ],
     [ "lora_driver_mapReturnCodeToText", "group__lora__basic__function.html#ga2eef37b845fcb0f26d42c2690b9c7c59", null ],
     [ "lora_driver_pauseMac", "group__lora__advanced__function.html#ga1839084b847ff7cd939f1cfa3b191eb2", null ],

@@ -3,7 +3,7 @@ var group__lora__config =
     [ "lora_driver_payload", "structlora__driver__payload.html", [
       [ "bytes", "structlora__driver__payload.html#abe98ec3aa25c1696b5ffc9a22ad1a1e0", null ],
       [ "len", "structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9", null ],
-      [ "port_no", "structlora__driver__payload.html#a200a4cce8b35db4dbc24a6870c80a599", null ]
+      [ "portNo", "structlora__driver__payload.html#a21e209026bdc1679e6923c3338fb10ba", null ]
     ] ],
     [ "lora_driver_adaptiveDataRate_t", "group__lora__config.html#gab8ae74e4fb6f0f231e5519072ee7439e", null ],
     [ "lora_driver_automaticReplyMode_t", "group__lora__config.html#gaf32b631c1d62c6ff4232b7b42e0e3f5b", null ],

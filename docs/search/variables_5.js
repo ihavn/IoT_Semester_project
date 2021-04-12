@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mask_524',['mask',['../structfifo__desc.html#acb5bf0686d569f64ae185f4aeb75b2c3',1,'fifo_desc']]]
+  ['fullspectrumraw_1104',['fullSpectrumRaw',['../structtsl2591__combined_data__t.html#a36d2aea4f5ca139caaab90906f20a099',1,'tsl2591_combinedData_t']]]
 ];

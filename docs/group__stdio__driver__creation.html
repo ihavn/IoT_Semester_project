@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VIA University College 4. Semester IoT Drivers: Functions to create and initialize the driver.</title>
+<title>IoT: Functions to create and initialize the driver.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,8 +29,8 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">VIA University College 4. Semester IoT Drivers
-   &#160;<span id="projectnumber">v3.2.1 (S2021)</span>
+   <div id="projectname">IoT
+   &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -94,35 +94,35 @@ $(document).ready(function(){initNavTree('group__stdio__driver__creation.html','
 </div><!--header-->
 <div class="contents">
 
-<p>How to create the driver.  
+<p>How to initialise the driver.  
 <a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for Functions to create and initialize the driver.:</div>
 <div class="dyncontent">
 <div class="center"><img src="group__stdio__driver__creation.png" border="0" usemap="#agroup____stdio____driver____creation" alt=""/></div>
-<map name="group____stdio____driver____creation" id="group____stdio____driver____creation">
+<map name="group____stdio____driver____creation" id="agroup____stdio____driver____creation">
 <area shape="rect" href="group__stdio__driver.html" title="Driver to connect a USART to standard IO." alt="" coords="5,13,144,53"/>
-<area shape="rect" title="How to create the driver." alt="" coords="192,5,327,60"/>
+<area shape="rect" title="How to initialise the driver." alt="" coords="192,5,327,60"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gade8c10c282441eae6d7c4b8cf150a9cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stdio__driver__creation.html#gade8c10c282441eae6d7c4b8cf150a9cb">stdio_create</a> (uint8_t usartNo)</td></tr>
-<tr class="memdesc:gade8c10c282441eae6d7c4b8cf150a9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the stdio driver.  <a href="group__stdio__driver__creation.html#gade8c10c282441eae6d7c4b8cf150a9cb">More...</a><br /></td></tr>
-<tr class="separator:gade8c10c282441eae6d7c4b8cf150a9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga44c8618d9947d1b842d0744a0a29503c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__stdio__driver__creation.html#ga44c8618d9947d1b842d0744a0a29503c">stdio_initialise</a> (uint8_t usartNo)</td></tr>
+<tr class="memdesc:ga44c8618d9947d1b842d0744a0a29503c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the stdio driver.  <a href="group__stdio__driver__creation.html#ga44c8618d9947d1b842d0744a0a29503c">More...</a><br /></td></tr>
+<tr class="separator:ga44c8618d9947d1b842d0744a0a29503c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>How to create the driver. </p>
+<p>How to initialise the driver. </p>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gade8c10c282441eae6d7c4b8cf150a9cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gade8c10c282441eae6d7c4b8cf150a9cb">&#9670;&nbsp;</a></span>stdio_create()</h2>
+<a id="ga44c8618d9947d1b842d0744a0a29503c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44c8618d9947d1b842d0744a0a29503c">&#9670;&nbsp;</a></span>stdio_initialise()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void stdio_create </td>
+          <td class="memname">void stdio_initialise </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>usartNo</em></td><td>)</td>
@@ -131,14 +131,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Creates the stdio driver. </p>
-<p>Creates and initialize the driver.</p>
+<p>Initialise the stdio driver. </p>
+<p>Initialise the driver.</p>
 <p>Connects stdin and stdout to the usartNo given.</p>
 <p>The USART are setup like this: 57600 baud, 8-bit Data bits, 1 Stop bit and No parity.</p>
 <p>After this function is called, it is possible to use printf(), scanf etc.</p>
 <dl class="section note"><dt>Note</dt><dd>This function must be called before using printf(), scanf etc. </dd>
 <dd>
-Remember to enable global interrupt by calling sei() after the driver is created.</dd></dl>
+Remember to enable global interrupt by calling sei() after the driver is initialised.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">usartNo</td><td>no of the USART to setup and connect to stdin and stdout [0..3]. </td></tr>
@@ -153,7 +153,7 @@ Remember to enable global interrupt by calling sei() after the driver is created
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Feb 1 2021 12:56:14 for VIA University College 4. Semester IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:25:27 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

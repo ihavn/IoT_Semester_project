@@ -1,4 +1,4 @@
 var group__stdio__driver__creation =
 [
-    [ "stdio_create", "group__stdio__driver__creation.html#gade8c10c282441eae6d7c4b8cf150a9cb", null ]
+    [ "stdio_initialise", "group__stdio__driver__creation.html#ga44c8618d9947d1b842d0744a0a29503c", null ]
 ];
