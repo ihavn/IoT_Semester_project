@@ -1,17 +1,15 @@
 var searchData=
 [
-  ['hcsr501_5fcreate_869',['hcsr501_create',['../group__sr501__driver__creation.html#ga6d4e72aa406c9c74b962d144cef23acd',1,'hcsr501_create(volatile uint8_t *port, uint8_t portPin):&#160;hcsr501.c'],['../group__sr501__driver__creation.html#ga6d4e72aa406c9c74b962d144cef23acd',1,'hcsr501_create(volatile uint8_t *port, uint8_t portPin):&#160;hcsr501.c']]],
-  ['hcsr501_5fdestroy_870',['hcsr501_destroy',['../group__sr501__driver__creation.html#gaaf72e4d271b0eda59ace15ca307a83e9',1,'hcsr501_destroy(hcsr501_p instance):&#160;hcsr501.c'],['../group__sr501__driver__creation.html#gaaf72e4d271b0eda59ace15ca307a83e9',1,'hcsr501_destroy(hcsr501_p instance):&#160;hcsr501.c']]],
-  ['hcsr501_5fisdetecting_871',['hcsr501_isDetecting',['../group__sr501__driver__basic__function.html#gad9d962edf1c5f01c3fd6673f61e336c8',1,'hcsr501_isDetecting(hcsr501_p instance):&#160;hcsr501.c'],['../group__sr501__driver__basic__function.html#gad9d962edf1c5f01c3fd6673f61e336c8',1,'hcsr501_isDetecting(hcsr501_p instance):&#160;hcsr501.c']]],
-  ['hcsr501_5ftask_872',['hcsr501_task',['../main_8c.html#a03f3d099213a2341f265467e4e222a68',1,'main.c']]],
-  ['hih8120_5fdestroy_873',['hih8120_destroy',['../group__hih8120__driver__creation.html#gab2505eb533dc3eccad020726d0b3e260',1,'hih8120_destroy(void):&#160;hih8120.c'],['../group__hih8120__driver__creation.html#gab2505eb533dc3eccad020726d0b3e260',1,'hih8120_destroy(void):&#160;hih8120.c']]],
-  ['hih8120_5fgethumidity_874',['hih8120_getHumidity',['../group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874',1,'hih8120_getHumidity(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#gae3ccc620cf44d799ac33c3baacdaf874',1,'hih8120_getHumidity(void):&#160;hih8120.c']]],
-  ['hih8120_5fgethumiditypercent_5fx10_875',['hih8120_getHumidityPercent_x10',['../group__hih8120__driver__function.html#ga696062be73ccf137af64e8d0f81f4949',1,'hih8120_getHumidityPercent_x10(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#ga696062be73ccf137af64e8d0f81f4949',1,'hih8120_getHumidityPercent_x10(void):&#160;hih8120.c']]],
-  ['hih8120_5fgettemperature_876',['hih8120_getTemperature',['../group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35',1,'hih8120_getTemperature(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#gad554fb5be46cf8b41c8fa5d954324e35',1,'hih8120_getTemperature(void):&#160;hih8120.c']]],
-  ['hih8120_5fgettemperature_5fx10_877',['hih8120_getTemperature_x10',['../group__hih8120__driver__function.html#ga7deedd6c326f5f18c7f410dab45c293d',1,'hih8120_getTemperature_x10(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#ga7deedd6c326f5f18c7f410dab45c293d',1,'hih8120_getTemperature_x10(void):&#160;hih8120.c']]],
-  ['hih8120_5finitialise_878',['hih8120_initialise',['../group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960',1,'hih8120_initialise(void):&#160;hih8120.c'],['../group__hih8120__driver__creation.html#ga1cc535a1c62ff6adc53a0de7a1bc6960',1,'hih8120_initialise(void):&#160;hih8120.c']]],
-  ['hih8120_5fisready_879',['hih8120_isReady',['../group__hih8120__driver__function.html#ga85402bb6763eaa6264444d13bd36511c',1,'hih8120_isReady(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#ga85402bb6763eaa6264444d13bd36511c',1,'hih8120_isReady(void):&#160;hih8120.c']]],
-  ['hih8120_5fmeasure_880',['hih8120_measure',['../group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f',1,'hih8120_measure(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f',1,'hih8120_measure(void):&#160;hih8120.c']]],
-  ['hih8120_5ftask_881',['hih8120_task',['../main_8c.html#a32d278240091c7a0013e5774db4fbdc2',1,'main.c']]],
-  ['hih8120_5fwakeup_882',['hih8120_wakeup',['../group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16',1,'hih8120_wakeup(void):&#160;hih8120.c'],['../group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16',1,'hih8120_wakeup(void):&#160;hih8120.c']]]
+  ['sen14262_5fenvelope_302',['sen14262_envelope',['../group__sen14262__driver__basic__function.html#ga1bf180ebe355c6f302a03e080b9d3ef3',1,'sen14262.h']]],
+  ['sen14262_5fgate_303',['sen14262_gate',['../group__sen14262__driver__basic__function.html#gae34b4d3b7cf4cc3db1196c7a788ca5ab',1,'sen14262.h']]],
+  ['sen14262_5finitialise_304',['sen14262_initialise',['../group__sen14262__driver__creation.html#ga36b035fc6da30239733b835208a7c63c',1,'sen14262.h']]],
+  ['status_5fleds_5ffastblink_305',['status_leds_fastBlink',['../group__led__driver__basic__function.html#gadc5a132e8f5c2723d99100e6ccf1631a',1,'status_leds.h']]],
+  ['status_5fleds_5finitialise_306',['status_leds_initialise',['../group__led__driver__creation.html#ga60574e379de34aebe930df502364bd42',1,'status_leds.h']]],
+  ['status_5fleds_5fledoff_307',['status_leds_ledOff',['../group__led__driver__basic__function.html#gadeeee2ea052a34399367d8c073f0b067',1,'status_leds.h']]],
+  ['status_5fleds_5fledon_308',['status_leds_ledOn',['../group__led__driver__basic__function.html#ga3c939113c1fbe777656189c940fe092d',1,'status_leds.h']]],
+  ['status_5fleds_5flongpuls_309',['status_leds_longPuls',['../group__led__driver__basic__function.html#ga654a580e9e1dfa4c5228c9744791a35d',1,'status_leds.h']]],
+  ['status_5fleds_5fshortpuls_310',['status_leds_shortPuls',['../group__led__driver__basic__function.html#gaee3ea14eb8325ba79a3c506a4e179e88',1,'status_leds.h']]],
+  ['status_5fleds_5fslowblink_311',['status_leds_slowBlink',['../group__led__driver__basic__function.html#ga41515063f9b493bfd78690371e37496b',1,'status_leds.h']]],
+  ['stdio_5finitialise_312',['stdio_initialise',['../group__stdio__driver__creation.html#ga44c8618d9947d1b842d0744a0a29503c',1,'stdio_driver.h']]],
+  ['stdio_5finputiswaiting_313',['stdio_inputIsWaiting',['../group__stdio__driver__functions.html#gac8009b46973c1a3bd01fa8ab8c7c4f4c',1,'stdio_driver.h']]]
 ];

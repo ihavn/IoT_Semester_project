@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver to Honeywell HIH8120 Temperature and Humidity sensor found on the <I>VIA ARDUINO MEGA2560 Shield rev. 2.0</I>
 
 \author Ib Havn
 \version 1.0.0

@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('ab__encoder_8c.html',''); initResizabl
 <div class="contents">
 <div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
 <code>#include &lt;avr/interrupt.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="ab__encoder_8h_source.html">ab_encoder.h</a>&gt;</code><br />
+<code>#include &lt;ab_encoder.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ab_encoder.c:</div>
 <div class="dyncontent">
@@ -105,9 +105,7 @@ Include dependency graph for ab_encoder.c:</div>
 <area shape="rect" title=" " alt="" coords="92,5,192,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,68,107"/>
 <area shape="rect" title=" " alt="" coords="92,80,192,107"/>
-<area shape="rect" href="ab__encoder_8h.html" title=" " alt="" coords="216,80,316,107"/>
-<area shape="rect" title=" " alt="" coords="185,155,251,181"/>
-<area shape="rect" title=" " alt="" coords="275,155,350,181"/>
+<area shape="rect" title=" " alt="" coords="216,80,316,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -118,12 +116,10 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gafe063498f994a75f48f82a9e29aa680f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ab__driver__creation.html#gafe063498f994a75f48f82a9e29aa680f">ab_encoder_init</a> (void)</td></tr>
-<tr class="memdesc:gafe063498f994a75f48f82a9e29aa680f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise the AB-Encoder driver.  <a href="group__ab__driver__creation.html#gafe063498f994a75f48f82a9e29aa680f">More...</a><br /></td></tr>
-<tr class="separator:gafe063498f994a75f48f82a9e29aa680f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga719629bff8e6b534692792ba212e0bcd"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__ab__driver__basic__function.html#ga719629bff8e6b534692792ba212e0bcd">ab_encoder_currentPosition</a> (bool reset_after_read)</td></tr>
-<tr class="memdesc:ga719629bff8e6b534692792ba212e0bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the position of AB-Encoder.  <a href="group__ab__driver__basic__function.html#ga719629bff8e6b534692792ba212e0bcd">More...</a><br /></td></tr>
-<tr class="separator:ga719629bff8e6b534692792ba212e0bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf6c8c0fcb761c601d535dc6c6e086b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ab__encoder_8c.html#a1bf6c8c0fcb761c601d535dc6c6e086b">ab_encoder_init</a> (void)</td></tr>
+<tr class="separator:a1bf6c8c0fcb761c601d535dc6c6e086b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a719629bff8e6b534692792ba212e0bcd"><td class="memItemLeft" align="right" valign="top">int16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ab__encoder_8c.html#a719629bff8e6b534692792ba212e0bcd">ab_encoder_currentPosition</a> (bool reset_after_read)</td></tr>
+<tr class="separator:a719629bff8e6b534692792ba212e0bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c4665742c6b6eb1f0bb9dde41f7cba3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ab__encoder_8c.html#a9c4665742c6b6eb1f0bb9dde41f7cba3">ISR</a> (PCINT2_vect)</td></tr>
 <tr class="separator:a9c4665742c6b6eb1f0bb9dde41f7cba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -143,6 +139,42 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a719629bff8e6b534692792ba212e0bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a719629bff8e6b534692792ba212e0bcd">&#9670;&nbsp;</a></span>ab_encoder_currentPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int16_t ab_encoder_currentPosition </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>reset_after_read</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1bf6c8c0fcb761c601d535dc6c6e086b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf6c8c0fcb761c601d535dc6c6e086b">&#9670;&nbsp;</a></span>ab_encoder_init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ab_encoder_init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9c4665742c6b6eb1f0bb9dde41f7cba3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c4665742c6b6eb1f0bb9dde41f7cba3">&#9670;&nbsp;</a></span>ISR()</h2>
 
@@ -167,7 +199,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_a1b4c405cd9522035c77adf4660b616d.html">ab_encoder</a></li><li class="navelem"><a class="el" href="ab__encoder_8c.html">ab_encoder.c</a></li>
-    <li class="footer">Generated on Mon Apr 12 2021 12:51:55 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 15:23:25 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

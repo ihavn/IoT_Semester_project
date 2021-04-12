@@ -98,8 +98,8 @@ $(document).ready(function(){initNavTree('serial_8c.html',''); initResizable(); 
 <div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;avr/interrupt.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="fifo_8h_source.html">fifo.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="serial_8h_source.html">serial.h</a>&gt;</code><br />
+<code>#include &lt;fifo.h&gt;</code><br />
+<code>#include &lt;serial.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for serial.c:</div>
 <div class="dyncontent">
@@ -109,10 +109,8 @@ Include dependency graph for serial.c:</div>
 <area shape="rect" title=" " alt="" coords="5,80,68,107"/>
 <area shape="rect" title=" " alt="" coords="93,80,157,107"/>
 <area shape="rect" title=" " alt="" coords="181,80,281,107"/>
-<area shape="rect" href="fifo_8h.html" title="This file controls the software FIFO management." alt="" coords="395,80,444,107"/>
-<area shape="rect" href="serial_8h.html" title=" " alt="" coords="306,80,370,107"/>
-<area shape="rect" title=" " alt="" coords="299,155,364,181"/>
-<area shape="rect" title=" " alt="" coords="389,155,463,181"/>
+<area shape="rect" title=" " alt="" coords="305,80,355,107"/>
+<area shape="rect" title=" " alt="" coords="379,80,443,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -160,20 +158,20 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga0bfb10e7ab73e807211ee5d0eafa5eb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#ga0bfb10e7ab73e807211ee5d0eafa5eb5">serial_create</a> (<a class="el" href="serial_8h.html#a449a2f5483250f481f4f40126713e547">serial_comPort_t</a> comPort, uint32_t baud, <a class="el" href="serial_8h.html#a2df249c3bb822163061f29b8034d9b42">serial_dataBit_t</a> dataBit, <a class="el" href="serial_8h.html#a3aa596b9f4d8bb66a6db844075b4a5b4">serial_stopBit_t</a> stopBit, <a class="el" href="serial_8h.html#ab0be89a7c5e45f2121518b9748a0a0d8">serial_parity_t</a> parity, uint8_t rxFifoSize, uint8_t txFifoSize, void(*<a class="el" href="mh__z19__test__main_8c.html#a0bc1e56791c6fddf8f7a6d4c5936dac6">callBack</a>)(<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a>, uint8_t))</td></tr>
-<tr class="separator:ga0bfb10e7ab73e807211ee5d0eafa5eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3b2919c4c13e982524bd7a8147d94e82"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4af">serial_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#ga3b2919c4c13e982524bd7a8147d94e82">serial_sendByte</a> (<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a> handle, uint8_t byte)</td></tr>
-<tr class="separator:ga3b2919c4c13e982524bd7a8147d94e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa9345cd0ea1b6645100b24bd9d2a140d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4af">serial_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#gaa9345cd0ea1b6645100b24bd9d2a140d">serial_sendBytes</a> (<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a> handle, const <a class="el" href="structserial__data__t.html">serial_data_t</a> data)</td></tr>
-<tr class="separator:gaa9345cd0ea1b6645100b24bd9d2a140d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4c1b2d461e98e4cbcd4fb5c32531f53a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4af">serial_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#ga4c1b2d461e98e4cbcd4fb5c32531f53a">serial_getByte</a> (<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a> handle, uint8_t *byte)</td></tr>
-<tr class="separator:ga4c1b2d461e98e4cbcd4fb5c32531f53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga78a22b4be939cfa6229c8e04f8b40c3c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4af">serial_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#ga78a22b4be939cfa6229c8e04f8b40c3c">serial_flushRx_Fifo</a> (<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a> handle)</td></tr>
-<tr class="separator:ga78a22b4be939cfa6229c8e04f8b40c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe5e833b06718218e832ab673ec88428"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4af">serial_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#gafe5e833b06718218e832ab673ec88428">serial_flushTxFifo</a> (<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a> handle)</td></tr>
-<tr class="separator:gafe5e833b06718218e832ab673ec88428"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga292f26063ceb5db5553122faabfac0b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="serial_8h.html#a27b8cf9bd82248c0e950183008d1d4af">serial_returnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__serial__driver.html#ga292f26063ceb5db5553122faabfac0b1">serial_emptyRxFifo</a> (<a class="el" href="serial_8h.html#a31948a0e180ca38b04738d742ec50418">serial_p</a> handle, bool *isEmpty)</td></tr>
-<tr class="separator:ga292f26063ceb5db5553122faabfac0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfb10e7ab73e807211ee5d0eafa5eb5"><td class="memItemLeft" align="right" valign="top">serial_p&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a0bfb10e7ab73e807211ee5d0eafa5eb5">serial_create</a> (serial_comPort_t comPort, uint32_t baud, serial_dataBit_t dataBit, serial_stopBit_t stopBit, serial_parity_t parity, uint8_t rxFifoSize, uint8_t txFifoSize, void(*<a class="el" href="mh__z19__test__main_8c.html#a0bc1e56791c6fddf8f7a6d4c5936dac6">callBack</a>)(serial_p, uint8_t))</td></tr>
+<tr class="separator:a0bfb10e7ab73e807211ee5d0eafa5eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b2919c4c13e982524bd7a8147d94e82"><td class="memItemLeft" align="right" valign="top">serial_returnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a3b2919c4c13e982524bd7a8147d94e82">serial_sendByte</a> (serial_p handle, uint8_t byte)</td></tr>
+<tr class="separator:a3b2919c4c13e982524bd7a8147d94e82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9345cd0ea1b6645100b24bd9d2a140d"><td class="memItemLeft" align="right" valign="top">serial_returnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#aa9345cd0ea1b6645100b24bd9d2a140d">serial_sendBytes</a> (serial_p handle, const serial_data_t data)</td></tr>
+<tr class="separator:aa9345cd0ea1b6645100b24bd9d2a140d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c1b2d461e98e4cbcd4fb5c32531f53a"><td class="memItemLeft" align="right" valign="top">serial_returnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a4c1b2d461e98e4cbcd4fb5c32531f53a">serial_getByte</a> (serial_p handle, uint8_t *byte)</td></tr>
+<tr class="separator:a4c1b2d461e98e4cbcd4fb5c32531f53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a22b4be939cfa6229c8e04f8b40c3c"><td class="memItemLeft" align="right" valign="top">serial_returnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a78a22b4be939cfa6229c8e04f8b40c3c">serial_flushRx_Fifo</a> (serial_p handle)</td></tr>
+<tr class="separator:a78a22b4be939cfa6229c8e04f8b40c3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5e833b06718218e832ab673ec88428"><td class="memItemLeft" align="right" valign="top">serial_returnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#afe5e833b06718218e832ab673ec88428">serial_flushTxFifo</a> (serial_p handle)</td></tr>
+<tr class="separator:afe5e833b06718218e832ab673ec88428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a292f26063ceb5db5553122faabfac0b1"><td class="memItemLeft" align="right" valign="top">serial_returnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a292f26063ceb5db5553122faabfac0b1">serial_emptyRxFifo</a> (serial_p handle, bool *isEmpty)</td></tr>
+<tr class="separator:a292f26063ceb5db5553122faabfac0b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a084f0a9cf05b1877bd8a71a90dae7ff8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a084f0a9cf05b1877bd8a71a90dae7ff8">ISR</a> (USART0_RX_vect)</td></tr>
 <tr class="separator:a084f0a9cf05b1877bd8a71a90dae7ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95e67e677722a53e3ad9f1ffce2e7408"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="serial_8c.html#a95e67e677722a53e3ad9f1ffce2e7408">ISR</a> (USART0_UDRE_vect)</td></tr>
@@ -516,13 +514,225 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0bfb10e7ab73e807211ee5d0eafa5eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfb10e7ab73e807211ee5d0eafa5eb5">&#9670;&nbsp;</a></span>serial_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_p serial_create </td>
+          <td>(</td>
+          <td class="paramtype">serial_comPort_t&#160;</td>
+          <td class="paramname"><em>comPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>baud</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">serial_dataBit_t&#160;</td>
+          <td class="paramname"><em>dataBit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">serial_stopBit_t&#160;</td>
+          <td class="paramname"><em>stopBit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">serial_parity_t&#160;</td>
+          <td class="paramname"><em>parity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>rxFifoSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>txFifoSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(serial_p, uint8_t)&#160;</td>
+          <td class="paramname"><em>callBack</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a292f26063ceb5db5553122faabfac0b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a292f26063ceb5db5553122faabfac0b1">&#9670;&nbsp;</a></span>serial_emptyRxFifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_returnCode_t serial_emptyRxFifo </td>
+          <td>(</td>
+          <td class="paramtype">serial_p&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>isEmpty</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78a22b4be939cfa6229c8e04f8b40c3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a22b4be939cfa6229c8e04f8b40c3c">&#9670;&nbsp;</a></span>serial_flushRx_Fifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_returnCode_t serial_flushRx_Fifo </td>
+          <td>(</td>
+          <td class="paramtype">serial_p&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe5e833b06718218e832ab673ec88428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5e833b06718218e832ab673ec88428">&#9670;&nbsp;</a></span>serial_flushTxFifo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_returnCode_t serial_flushTxFifo </td>
+          <td>(</td>
+          <td class="paramtype">serial_p&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4c1b2d461e98e4cbcd4fb5c32531f53a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c1b2d461e98e4cbcd4fb5c32531f53a">&#9670;&nbsp;</a></span>serial_getByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_returnCode_t serial_getByte </td>
+          <td>(</td>
+          <td class="paramtype">serial_p&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>byte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b2919c4c13e982524bd7a8147d94e82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2919c4c13e982524bd7a8147d94e82">&#9670;&nbsp;</a></span>serial_sendByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_returnCode_t serial_sendByte </td>
+          <td>(</td>
+          <td class="paramtype">serial_p&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>byte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa9345cd0ea1b6645100b24bd9d2a140d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9345cd0ea1b6645100b24bd9d2a140d">&#9670;&nbsp;</a></span>serial_sendBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">serial_returnCode_t serial_sendBytes </td>
+          <td>(</td>
+          <td class="paramtype">serial_p&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const serial_data_t&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_4add8d7248e17903521621044f5370f8.html">serial</a></li><li class="navelem"><a class="el" href="serial_8c.html">serial.c</a></li>
-    <li class="footer">Generated on Mon Apr 12 2021 12:51:56 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 15:23:26 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

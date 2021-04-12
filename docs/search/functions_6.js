@@ -1,4 +1,18 @@
 var searchData=
 [
-  ['isr_883',['ISR',['../port_8c.html#abc73b03be25fe1218b80dbe303a56bd2',1,'ISR(portSCHEDULER_ISR, ISR_NAKED):&#160;port.c'],['../ab__encoder_8c.html#a9c4665742c6b6eb1f0bb9dde41f7cba3',1,'ISR(PCINT2_vect):&#160;ab_encoder.c'],['../display__7seg_8c.html#aec43762dc86e029b395d4e5819192c2d',1,'ISR(TIMER0_COMPA_vect):&#160;display_7seg.c'],['../sen14262_8c.html#a05c2e5b588ced1cd7312f5b0edc5b295',1,'ISR(ADC_vect):&#160;sen14262.c'],['../serial_8c.html#a084f0a9cf05b1877bd8a71a90dae7ff8',1,'ISR(USART0_RX_vect):&#160;serial.c'],['../serial_8c.html#a95e67e677722a53e3ad9f1ffce2e7408',1,'ISR(USART0_UDRE_vect):&#160;serial.c'],['../serial_8c.html#ae6e8a8009a9ae0c59f25a496d1cf5a84',1,'ISR(USART1_RX_vect):&#160;serial.c'],['../serial_8c.html#ad6441110baf548d12ae53fcbed8075c5',1,'ISR(USART1_UDRE_vect):&#160;serial.c'],['../spi__iha_8c.html#af9cad97352f5ba9bbd800446131125a6',1,'ISR(SPI_STC_vect):&#160;spi_iha.c'],['../twi_8c.html#a474f42eedbdc093683fdb4b88be3c48f',1,'ISR(TWI_vect):&#160;twi.c']]]
+  ['tsl2591_5fdestroy_314',['tsl2591_destroy',['../group__tsl2591__driver__creation.html#ga53d9464785629739d3e2be59a8818f97',1,'tsl2591.h']]],
+  ['tsl2591_5fdisable_315',['tsl2591_disable',['../group__tsl2591__driver__basic__function.html#ga9ecb3d95b1333568fb5d62faf64fb19c',1,'tsl2591.h']]],
+  ['tsl2591_5fenable_316',['tsl2591_enable',['../group__tsl2591__driver__basic__function.html#gac7cb29a9b5b6e36d1949bedc8f9406ed',1,'tsl2591.h']]],
+  ['tsl2591_5ffetchdata_317',['tsl2591_fetchData',['../group__tsl2591__driver__basic__function.html#gabb02157165e09a6b088268c178e54eda',1,'tsl2591.h']]],
+  ['tsl2591_5ffetchdeviceid_318',['tsl2591_fetchDeviceId',['../group__tsl2591__driver__basic__function.html#gad951f133babf3730faabd0bacbfdc130',1,'tsl2591.h']]],
+  ['tsl2591_5fgetcombineddataraw_319',['tsl2591_getCombinedDataRaw',['../group__tsl2591__driver__basic__function.html#ga2a431d3401d3606e7dca318dba34d90b',1,'tsl2591.h']]],
+  ['tsl2591_5fgetdeviceid_320',['tsl2591_getDeviceId',['../group__tsl2591__driver__basic__function.html#ga23f141a75c19d09089110d5e60ed23a8',1,'tsl2591.h']]],
+  ['tsl2591_5fgetfullspectrumraw_321',['tsl2591_getFullSpectrumRaw',['../group__tsl2591__driver__basic__function.html#gad34fe2c4912f88a8c07adc3253e79311',1,'tsl2591.h']]],
+  ['tsl2591_5fgetgain_322',['tsl2591_getGain',['../group__tsl2591__driver__basic__function.html#gae377d0630e766a7dc772d9fb11b1ddf7',1,'tsl2591.h']]],
+  ['tsl2591_5fgetinfraredraw_323',['tsl2591_getInfraredRaw',['../group__tsl2591__driver__basic__function.html#ga4e535e7b77497dcd80c7452f037a5e80',1,'tsl2591.h']]],
+  ['tsl2591_5fgetintegrationtime_324',['tsl2591_getIntegrationTime',['../group__tsl2591__driver__basic__function.html#gafbcba92b6878bcb165255ffde5e7ca80',1,'tsl2591.h']]],
+  ['tsl2591_5fgetlux_325',['tsl2591_getLux',['../group__tsl2591__driver__basic__function.html#ga1d73e10db0ebce74d1bd1e90bd76f24d',1,'tsl2591.h']]],
+  ['tsl2591_5finitialise_326',['tsl2591_initialise',['../group__tsl2591__driver__creation.html#ga0a65b2d5b43c21039d7e022f2f61a306',1,'tsl2591.h']]],
+  ['tsl2591_5fsetgainandintegrationtime_327',['tsl2591_setGainAndIntegrationTime',['../group__tsl2591__driver__basic__function.html#gaccddb3896e155d4534400a5f42712194',1,'tsl2591.h']]],
+  ['tsl259_5fgetvisibleraw_328',['tsl259_getVisibleRaw',['../group__tsl2591__driver__basic__function.html#gac6d37354e1865df7527809221e2b43e7',1,'tsl2591.h']]]
 ];

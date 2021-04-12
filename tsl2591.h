@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver for a TSL2591 Light sensor
 
 \author Ib Havn
 \version 1.0.0

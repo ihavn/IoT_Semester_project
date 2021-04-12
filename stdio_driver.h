@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver for connecting standard IO to a serial port
 
 \author Ib Havn
 \version 1.0.0

@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['spi_20driver_1550',['SPI Driver',['../group__spi.html',1,'']]],
-  ['spi_20configuration_1551',['SPI Configuration',['../group__spi__config.html',1,'']]],
-  ['spi_20functions_1552',['SPI Functions',['../group__spi__function.html',1,'']]],
-  ['spi_20return_20codes_1553',['SPI Return codes',['../group__spi__return__codes.html',1,'']]],
-  ['stdio_20driver_20common_20functions_2e_1554',['Stdio driver common functions.',['../group__stdio__driver__functions.html',1,'']]]
+  ['tsl2591_20driver_20return_20codes_444',['TSL2591 driver Return codes',['../group__tsl2591__driver__return__codes.html',1,'']]]
 ];

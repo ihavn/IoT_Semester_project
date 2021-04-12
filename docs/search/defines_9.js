@@ -1,13 +1,10 @@
 var searchData=
 [
-  ['port2ddr_1428',['PORT2DDR',['../status__leds_8c.html#aec30454f6cd9e9cbde79dbc9d4b47656',1,'status_leds.c']]],
-  ['port2pin_1429',['PORT2PIN',['../status__leds_8c.html#a9e62a16a18c2477fa3f62c607da12d9e',1,'status_leds.c']]],
-  ['portflags_5fint_5fenabled_1430',['portFLAGS_INT_ENABLED',['../port_8c.html#ad05c7a8ee45c5190627f9a49c95e7538',1,'port.c']]],
-  ['portreset_5fready_5fpriority_1431',['portRESET_READY_PRIORITY',['../tasks_8c.html#a27f854590fc6fcb8b4c7955b5f13b98e',1,'tasks.c']]],
-  ['portrestore_5fcontext_1432',['portRESTORE_CONTEXT',['../port_8c.html#a8d3a167375b5b57944a57df23d45b39e',1,'port.c']]],
-  ['portsave_5fcontext_1433',['portSAVE_CONTEXT',['../port_8c.html#a798f37b250502b49763c54a56b3aa4b0',1,'port.c']]],
-  ['portscheduler_5fisr_1434',['portSCHEDULER_ISR',['../port_8c.html#a33ffd9cd38655f47facc5b46f44d1f76',1,'port.c']]],
-  ['prvaddtasktoreadylist_1435',['prvAddTaskToReadyList',['../tasks_8c.html#a94afc7269fff7c906c5eb0d9d315624b',1,'tasks.c']]],
-  ['prvgettcbfromhandle_1436',['prvGetTCBFromHandle',['../tasks_8c.html#ad910f5e908283f1dfabd642fe1b11c6b',1,'tasks.c']]],
-  ['prvlockqueue_1437',['prvLockQueue',['../queue_8c.html#ae4efd14c0f4dee7f189ef2e4d9ce1f1b',1,'queue.c']]]
+  ['queueint8_5fmax_1237',['queueINT8_MAX',['../queue_8c.html#a76bf57b1b161b1e0c3ee8454c565446d',1,'queue.c']]],
+  ['queuelocked_5funmodified_1238',['queueLOCKED_UNMODIFIED',['../queue_8c.html#a60a95aa91f84782416755f38616231fd',1,'queue.c']]],
+  ['queuemutex_5fgive_5fblock_5ftime_1239',['queueMUTEX_GIVE_BLOCK_TIME',['../queue_8c.html#a166c89c5c3a213c7e52283e024bb1d50',1,'queue.c']]],
+  ['queuequeue_5fis_5fmutex_1240',['queueQUEUE_IS_MUTEX',['../queue_8c.html#a0799077a434aea43f5cca3cda3625aa8',1,'queue.c']]],
+  ['queuesemaphore_5fqueue_5fitem_5flength_1241',['queueSEMAPHORE_QUEUE_ITEM_LENGTH',['../queue_8c.html#adfb14d07644ad4da4bd2303105884227',1,'queue.c']]],
+  ['queueunlocked_1242',['queueUNLOCKED',['../queue_8c.html#acdb781ba6b38714cf41f7417de8fe6bf',1,'queue.c']]],
+  ['queueyield_5fif_5fusing_5fpreemption_1243',['queueYIELD_IF_USING_PREEMPTION',['../queue_8c.html#adb4472163ac5b0e8ad72183d69387b81',1,'queue.c']]]
 ];

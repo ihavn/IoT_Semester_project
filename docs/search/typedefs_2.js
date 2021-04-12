@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fifo_5fdesc_5ft_1130',['fifo_desc_t',['../group__fifo__group.html#ga3fbd9cdfb7a592ca717b9994055bd7c5',1,'fifo.h']]]
+  ['hcsr501_5fp_1001',['hcsr501_p',['../hcsr501_8h.html#a73386fdc676d32ed5eed6863048fa7b0',1,'hcsr501.h']]],
+  ['hih8120_5fdriverreturncode_5ft_1002',['hih8120_driverReturnCode_t',['../group__hih8120__driver__return__codes.html#ga431a184b91e88584df8159743c29f9ea',1,'hih8120.h']]]
 ];

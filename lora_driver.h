@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver to MicroChip RN2483 LoRaWAN module
 
 \author Ib Havn
 

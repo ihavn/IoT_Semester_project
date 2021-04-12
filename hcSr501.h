@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver to PIR Motion Detector Module
 
 \author Ib Havn
 \version 1.0.0

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['cmd_1171',['CMD',['../mh__z19_8c.html#a042fb226238e4f644f8ef88732bbb97ba3ab34dd50405af2d5a62627d572f7860',1,'mh_z19.c']]],
-  ['crc_1172',['CRC',['../mh__z19_8c.html#a042fb226238e4f644f8ef88732bbb97baadc75f07a97300078de1c92bf6414827',1,'mh_z19.c']]]
+  ['hih8120_5fdriver_5fnot_5finitialised_352',['HIH8120_DRIVER_NOT_INITIALISED',['../group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52ababb31f4e1afe44c69800db49579836de6',1,'hih8120.h']]],
+  ['hih8120_5fok_353',['HIH8120_OK',['../group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2d4f6cf2910709802d47079df0425258',1,'hih8120.h']]],
+  ['hih8120_5fout_5fof_5fheap_354',['HIH8120_OUT_OF_HEAP',['../group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba2a8ffa76271364141ea266661aa75796',1,'hih8120.h']]],
+  ['hih8120_5ftwi_5fbusy_355',['HIH8120_TWI_BUSY',['../group__hih8120__driver__return__codes.html#gga12a2e6b676a350164b7671d73bda52aba10903cde5f22ead917c66ee64d1a3137',1,'hih8120.h']]]
 ];

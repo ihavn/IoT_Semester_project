@@ -95,7 +95,7 @@ $(document).ready(function(){initNavTree('vnh7100as_8c.html',''); initResizable(
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="vnh7100as_8h_source.html">vnh7100as.h</a>&gt;</code><br />
+<code>#include &lt;vnh7100as.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for vnh7100as.c:</div>
 <div class="dyncontent">
@@ -103,8 +103,7 @@ Include dependency graph for vnh7100as.c:</div>
 <map name="vnh7100as_8c" id="vnh7100as_8c">
 <area shape="rect" title=" " alt="" coords="40,5,135,32"/>
 <area shape="rect" title=" " alt="" coords="5,80,68,107"/>
-<area shape="rect" href="vnh7100as_8h.html" title=" " alt="" coords="92,80,187,107"/>
-<area shape="rect" title=" " alt="" coords="107,155,172,181"/>
+<area shape="rect" title=" " alt="" coords="92,80,187,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -181,12 +180,10 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:ab847f327be7aaa0eddee27e21ec4dd83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vnh7100as_8c.html#ab847f327be7aaa0eddee27e21ec4dd83">vnh7100as_init</a> (void)</td></tr>
 <tr class="separator:ab847f327be7aaa0eddee27e21ec4dd83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa2e4690142a6d80c092759de1d2d1f40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___v_n_h7100_a_s__driver__basic__function.html#gaa2e4690142a6d80c092759de1d2d1f40">vnh7100as_setSpeed</a> (int8_t percent)</td></tr>
-<tr class="memdesc:gaa2e4690142a6d80c092759de1d2d1f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set speed of the motor connected to the H-Bridge.  <a href="group___v_n_h7100_a_s__driver__basic__function.html#gaa2e4690142a6d80c092759de1d2d1f40">More...</a><br /></td></tr>
-<tr class="separator:gaa2e4690142a6d80c092759de1d2d1f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a87ced342046fb13982d60ef2e10f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___v_n_h7100_a_s__driver__basic__function.html#ga1a87ced342046fb13982d60ef2e10f5a">vnh7100as_setBrake</a> (uint8_t percent)</td></tr>
-<tr class="memdesc:ga1a87ced342046fb13982d60ef2e10f5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Brake the motor connected to the H-Bridge.  <a href="group___v_n_h7100_a_s__driver__basic__function.html#ga1a87ced342046fb13982d60ef2e10f5a">More...</a><br /></td></tr>
-<tr class="separator:ga1a87ced342046fb13982d60ef2e10f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e4690142a6d80c092759de1d2d1f40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vnh7100as_8c.html#aa2e4690142a6d80c092759de1d2d1f40">vnh7100as_setSpeed</a> (int8_t percent)</td></tr>
+<tr class="separator:aa2e4690142a6d80c092759de1d2d1f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a87ced342046fb13982d60ef2e10f5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="vnh7100as_8c.html#a1a87ced342046fb13982d60ef2e10f5a">vnh7100as_setBrake</a> (uint8_t percent)</td></tr>
+<tr class="separator:a1a87ced342046fb13982d60ef2e10f5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a74fe611b0a07cf522903dcd23d9a6b33"></a>
@@ -670,13 +667,49 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a1a87ced342046fb13982d60ef2e10f5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a87ced342046fb13982d60ef2e10f5a">&#9670;&nbsp;</a></span>vnh7100as_setBrake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vnh7100as_setBrake </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa2e4690142a6d80c092759de1d2d1f40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2e4690142a6d80c092759de1d2d1f40">&#9670;&nbsp;</a></span>vnh7100as_setSpeed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void vnh7100as_setSpeed </td>
+          <td>(</td>
+          <td class="paramtype">int8_t&#160;</td>
+          <td class="paramname"><em>percent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_14741bd42822f3e978a5b38a7dcbb079.html">vnh7100as</a></li><li class="navelem"><a class="el" href="vnh7100as_8c.html">vnh7100as.c</a></li>
-    <li class="footer">Generated on Mon Apr 12 2021 12:51:56 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 15:23:26 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

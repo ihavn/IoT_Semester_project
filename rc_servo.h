@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver to two PWM controlled RC-Servos
 
 \author Ib Havn
 \version 1.0.0

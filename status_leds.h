@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver to the four Status leds that are found on the <I>VIA ARDUINO MEGA2560 Shield rev. 2.0</I>
 
 \author Ib Havn
 \version 2.0.0

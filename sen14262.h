@@ -1,5 +1,6 @@
 /**
 \file
+\brief Driver to a SEN-14262 sound sensor
 
 \author Ib Havn
 \version 1.0.0

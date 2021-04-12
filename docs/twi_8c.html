@@ -100,19 +100,19 @@ $(document).ready(function(){initNavTree('twi_8c.html',''); initResizable(); });
 <code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &lt;avr/io.h&gt;</code><br />
 <code>#include &lt;avr/interrupt.h&gt;</code><br />
-<code>#include &lt;<a class="el" href="twi_8h_source.html">twi.h</a>&gt;</code><br />
+<code>#include &lt;twi.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for twi.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="twi_8c__incl.png" border="0" usemap="#atwi_8c" alt=""/></div>
 <map name="twi_8c" id="twi_8c">
-<area shape="rect" title=" " alt="" coords="176,5,225,32"/>
-<area shape="rect" title=" " alt="" coords="5,155,71,181"/>
-<area shape="rect" title=" " alt="" coords="47,80,111,107"/>
-<area shape="rect" title=" " alt="" coords="259,155,334,181"/>
-<area shape="rect" title=" " alt="" coords="209,80,272,107"/>
-<area shape="rect" title=" " alt="" coords="296,80,396,107"/>
-<area shape="rect" href="twi_8h.html" title=" " alt="" coords="136,80,185,107"/>
+<area shape="rect" title=" " alt="" coords="243,5,292,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,71,107"/>
+<area shape="rect" title=" " alt="" coords="95,80,159,107"/>
+<area shape="rect" title=" " alt="" coords="183,80,258,107"/>
+<area shape="rect" title=" " alt="" coords="283,80,345,107"/>
+<area shape="rect" title=" " alt="" coords="369,80,469,107"/>
+<area shape="rect" title=" " alt="" coords="493,80,543,107"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -128,58 +128,53 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5a440eb2305fad120d18d26c8f505159">GET_DEV_ID</a> = 1, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba917aee4228fcfb733636f9ded488b581">GET_DEV_ID_RESULT</a>, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55baf493c6fed9d10982e7b47f30be2dead2">GET_MEASURING</a>, 
+&#160;&#160;<a class="el" href="tsl2591_8c.html#a06fc87d81c62e9abb8790b6e5713c55bac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a>, 
+<a class="el" href="tsl2591_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5a440eb2305fad120d18d26c8f505159">GET_DEV_ID</a> = 1, 
+<a class="el" href="tsl2591_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba917aee4228fcfb733636f9ded488b581">GET_DEV_ID_RESULT</a>, 
+<a class="el" href="tsl2591_8c.html#a06fc87d81c62e9abb8790b6e5713c55baf493c6fed9d10982e7b47f30be2dead2">GET_MEASURING</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55baf33a31f2a69b76ffd39080309739f60c">GET_MEASURING_RESULT</a>, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba0fc97723167cf90034974e1f2541d433">TWI_START</a> = 0x08, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba6967226ea0f7a65665e97847a69164ad">TWI_REP_START</a> = 0x10, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba6f0447eb58c7358f85b61985a3e5f200">TWI_ARB_LOST</a> = 0x38, 
+&#160;&#160;<a class="el" href="tsl2591_8c.html#a06fc87d81c62e9abb8790b6e5713c55baf33a31f2a69b76ffd39080309739f60c">GET_MEASURING_RESULT</a>, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba0fc97723167cf90034974e1f2541d433">TWI_START</a> = 0x08, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6967226ea0f7a65665e97847a69164ad">TWI_REP_START</a> = 0x10, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba6f0447eb58c7358f85b61985a3e5f200">TWI_ARB_LOST</a> = 0x38, 
 <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bab45f23705567099a3023711e3ae1771c">TWI_MTX_ADR_ACK</a> = 0x18, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bae61edc5dafc4247d27548f917bcd1d4c">TWI_MTX_DATA_ACK</a> = 0x28, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba11b5f5e13de75ce97695abfd592b37a1">TWI_MRX_ADR_ACK</a> = 0x40, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba66a82cc46d81ac4ea9e472374f3398c2">TWI_MRX_DATA_ACK</a> = 0x50, 
+&#160;&#160;<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab45f23705567099a3023711e3ae1771c">TWI_MTX_ADR_ACK</a> = 0x18, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae61edc5dafc4247d27548f917bcd1d4c">TWI_MTX_DATA_ACK</a> = 0x28, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba11b5f5e13de75ce97695abfd592b37a1">TWI_MRX_ADR_ACK</a> = 0x40, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba66a82cc46d81ac4ea9e472374f3398c2">TWI_MRX_DATA_ACK</a> = 0x50, 
 <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba61b321ec5c8c88842b5de2d64c67e39d">TWI_MRX_DATA_NACK</a> = 0x58, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bab69c37fb248b9e334981cd2990410548">TWI_STX_ADR_ACK</a> = 0xA8, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5e7f23993b588ace6c5134113d4ddbff">TWI_STX_ADR_ACK_M_ARB_LOST</a> = 0xB0, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba9178c4719aa85ffc84f8c66e8e61c857">TWI_STX_DATA_ACK</a> = 0xB8, 
+&#160;&#160;<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba61b321ec5c8c88842b5de2d64c67e39d">TWI_MRX_DATA_NACK</a> = 0x58, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55bab69c37fb248b9e334981cd2990410548">TWI_STX_ADR_ACK</a> = 0xA8, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba5e7f23993b588ace6c5134113d4ddbff">TWI_STX_ADR_ACK_M_ARB_LOST</a> = 0xB0, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba9178c4719aa85ffc84f8c66e8e61c857">TWI_STX_DATA_ACK</a> = 0xB8, 
 <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55babb27d5179b96778dc5eba5c161fe8cfe">TWI_STX_DATA_NACK</a> = 0xC0, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba97ff973ed0cda2f424da129cf1913e41">TWI_STX_DATA_ACK_LAST_BYTE</a> = 0xC8, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba089494b6faad704f8b418749b48dfe01">TWI_SRX_ADR_ACK</a> = 0x60, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba00f21eed2b8d551fcd38b162d05b602f">TWI_SRX_ADR_ACK_M_ARB_LOST</a> = 0x68, 
+&#160;&#160;<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55babb27d5179b96778dc5eba5c161fe8cfe">TWI_STX_DATA_NACK</a> = 0xC0, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba97ff973ed0cda2f424da129cf1913e41">TWI_STX_DATA_ACK_LAST_BYTE</a> = 0xC8, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba089494b6faad704f8b418749b48dfe01">TWI_SRX_ADR_ACK</a> = 0x60, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba00f21eed2b8d551fcd38b162d05b602f">TWI_SRX_ADR_ACK_M_ARB_LOST</a> = 0x68, 
 <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba7d19b8ccac117c75fa1dbfce311d39dd">TWI_SRX_GEN_ACK</a> = 0x70, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba08a451aeb613693ed5ba81e2c43d38eb">TWI_SRX_GEN_ACK_M_ARB_LOST</a> = 0x78, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bae9c43bf65942edbfabbf0d41ebdc8ed2">TWI_SRX_ADR_DATA_ACK</a> = 0x80, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba098156d853f9e2f58b8eae7dff4bbd65">TWI_SRX_ADR_DATA_NACK</a> = 0x88, 
+&#160;&#160;<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba7d19b8ccac117c75fa1dbfce311d39dd">TWI_SRX_GEN_ACK</a> = 0x70, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba08a451aeb613693ed5ba81e2c43d38eb">TWI_SRX_GEN_ACK_M_ARB_LOST</a> = 0x78, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55bae9c43bf65942edbfabbf0d41ebdc8ed2">TWI_SRX_ADR_DATA_ACK</a> = 0x80, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba098156d853f9e2f58b8eae7dff4bbd65">TWI_SRX_ADR_DATA_NACK</a> = 0x88, 
 <br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba65005373978f163c15dfcd227a5702a0">TWI_SRX_GEN_DATA_ACK</a> = 0x90, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55bafc11d8d985e4ee2022840e416e882564">TWI_SRX_GEN_DATA_NACK</a> = 0x98, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba4699ecaaa30c172e906ac0dc0f5bb70d">TWI_SRX_STOP_RESTART</a> = 0xA0, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba581c7d25f8003886848e4d14b42ea4e7">TWI_NO_RELEVANT_STATE</a> = 0xF8, 
-<br />
-&#160;&#160;<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2d9fad7af67c62cb1b5cde8f9cc448be">FIFO_OK</a> = 0, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba5a070aa46880ebd844b2693a70a85a18">FIFO_ERROR_OVERFLOW</a>, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba2363544136dcbbd1b09f8b47a1d36e40">FIFO_ERROR_UNDERFLOW</a>, 
-<a class="el" href="group__fifo__group.html#gga06fc87d81c62e9abb8790b6e5713c55ba4f580d761a3077f81f08f7cef8c2e814">FIFO_ERROR</a>
+&#160;&#160;<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba65005373978f163c15dfcd227a5702a0">TWI_SRX_GEN_DATA_ACK</a> = 0x90, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55bafc11d8d985e4ee2022840e416e882564">TWI_SRX_GEN_DATA_NACK</a> = 0x98, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba4699ecaaa30c172e906ac0dc0f5bb70d">TWI_SRX_STOP_RESTART</a> = 0xA0, 
+<a class="el" href="twi_8c.html#a06fc87d81c62e9abb8790b6e5713c55ba581c7d25f8003886848e4d14b42ea4e7">TWI_NO_RELEVANT_STATE</a> = 0xF8
 <br />
  }</td></tr>
 <tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ada850e842080deb9582f0f093f6963d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#ada850e842080deb9582f0f093f6963d1">twiCreate</a> (uint8_t slaveAddr, <a class="el" href="twi_8h.html#a8f113c663b8cae34e6a17c5533dd5ae4">twiClock_t</a> speed, uint32_t f_cpu, void(*handlerCallback)(<a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a>, <a class="el" href="twi_8h.html#a1701a7a8afdb8e7883ac2b036b7e53fd">twiReturnCode_t</a>, uint8_t *, uint8_t))</td></tr>
+<tr class="memitem:ada850e842080deb9582f0f093f6963d1"><td class="memItemLeft" align="right" valign="top">twi_p&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#ada850e842080deb9582f0f093f6963d1">twiCreate</a> (uint8_t slaveAddr, twiClock_t speed, uint32_t f_cpu, void(*handlerCallback)(twi_p, twiReturnCode_t, uint8_t *, uint8_t))</td></tr>
 <tr class="separator:ada850e842080deb9582f0f093f6963d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5628b986b7872397092bbe194b3a82f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#ae5628b986b7872397092bbe194b3a82f">twiDestroy</a> (<a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a> twiHandler)</td></tr>
+<tr class="memitem:ae5628b986b7872397092bbe194b3a82f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#ae5628b986b7872397092bbe194b3a82f">twiDestroy</a> (twi_p twiHandler)</td></tr>
 <tr class="separator:ae5628b986b7872397092bbe194b3a82f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0d10f9b0069921393360f5dcca5dcbc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="twi_8h.html#a1701a7a8afdb8e7883ac2b036b7e53fd">twiReturnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#a0d10f9b0069921393360f5dcca5dcbc6">twiTransmit</a> (<a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a> twiHandler, uint8_t *bytes, uint8_t noOfBytes)</td></tr>
+<tr class="memitem:a0d10f9b0069921393360f5dcca5dcbc6"><td class="memItemLeft" align="right" valign="top">twiReturnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#a0d10f9b0069921393360f5dcca5dcbc6">twiTransmit</a> (twi_p twiHandler, uint8_t *bytes, uint8_t noOfBytes)</td></tr>
 <tr class="separator:a0d10f9b0069921393360f5dcca5dcbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4bd34ace393b077d8fd81cd3e66a1c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="twi_8h.html#a1701a7a8afdb8e7883ac2b036b7e53fd">twiReturnCode_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#ac4bd34ace393b077d8fd81cd3e66a1c2">twiReceive</a> (<a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a> twiHandler, uint8_t noOfBytes)</td></tr>
+<tr class="memitem:ac4bd34ace393b077d8fd81cd3e66a1c2"><td class="memItemLeft" align="right" valign="top">twiReturnCode_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#ac4bd34ace393b077d8fd81cd3e66a1c2">twiReceive</a> (twi_p twiHandler, uint8_t noOfBytes)</td></tr>
 <tr class="separator:ac4bd34ace393b077d8fd81cd3e66a1c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba51781fda008ef39652ccac08cd07af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="twi_8c.html#aba51781fda008ef39652ccac08cd07af">twiIsBusy</a> (void)</td></tr>
 <tr class="separator:aba51781fda008ef39652ccac08cd07af"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,42 +237,34 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bac157bdf0b85a40d2619cbc8bc1ae5fe2"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba5a440eb2305fad120d18d26c8f505159"></a>GET_DEV_ID&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba917aee4228fcfb733636f9ded488b581"></a>GET_DEV_ID_RESULT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55baf493c6fed9d10982e7b47f30be2dead2"></a>GET_MEASURING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55baf33a31f2a69b76ffd39080309739f60c"></a>GET_MEASURING_RESULT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba0fc97723167cf90034974e1f2541d433"></a>TWI_START&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba6967226ea0f7a65665e97847a69164ad"></a>TWI_REP_START&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba6f0447eb58c7358f85b61985a3e5f200"></a>TWI_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bab45f23705567099a3023711e3ae1771c"></a>TWI_MTX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bae61edc5dafc4247d27548f917bcd1d4c"></a>TWI_MTX_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba11b5f5e13de75ce97695abfd592b37a1"></a>TWI_MRX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba66a82cc46d81ac4ea9e472374f3398c2"></a>TWI_MRX_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba61b321ec5c8c88842b5de2d64c67e39d"></a>TWI_MRX_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bab69c37fb248b9e334981cd2990410548"></a>TWI_STX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba5e7f23993b588ace6c5134113d4ddbff"></a>TWI_STX_ADR_ACK_M_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba9178c4719aa85ffc84f8c66e8e61c857"></a>TWI_STX_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55babb27d5179b96778dc5eba5c161fe8cfe"></a>TWI_STX_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba97ff973ed0cda2f424da129cf1913e41"></a>TWI_STX_DATA_ACK_LAST_BYTE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba089494b6faad704f8b418749b48dfe01"></a>TWI_SRX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba00f21eed2b8d551fcd38b162d05b602f"></a>TWI_SRX_ADR_ACK_M_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba7d19b8ccac117c75fa1dbfce311d39dd"></a>TWI_SRX_GEN_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba08a451aeb613693ed5ba81e2c43d38eb"></a>TWI_SRX_GEN_ACK_M_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bae9c43bf65942edbfabbf0d41ebdc8ed2"></a>TWI_SRX_ADR_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba098156d853f9e2f58b8eae7dff4bbd65"></a>TWI_SRX_ADR_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba65005373978f163c15dfcd227a5702a0"></a>TWI_SRX_GEN_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55bafc11d8d985e4ee2022840e416e882564"></a>TWI_SRX_GEN_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba4699ecaaa30c172e906ac0dc0f5bb70d"></a>TWI_SRX_STOP_RESTART&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba581c7d25f8003886848e4d14b42ea4e7"></a>TWI_NO_RELEVANT_STATE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba2d9fad7af67c62cb1b5cde8f9cc448be"></a>FIFO_OK&#160;</td><td class="fielddoc"><p>Normal operation. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba5a070aa46880ebd844b2693a70a85a18"></a>FIFO_ERROR_OVERFLOW&#160;</td><td class="fielddoc"><p>Attempt to push something in a FIFO that is full. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba2363544136dcbbd1b09f8b47a1d36e40"></a>FIFO_ERROR_UNDERFLOW&#160;</td><td class="fielddoc"><p>Attempt to pull something from a FIFO that is empty. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga06fc87d81c62e9abb8790b6e5713c55ba4f580d761a3077f81f08f7cef8c2e814"></a>FIFO_ERROR&#160;</td><td class="fielddoc"><p>Error condition during FIFO initialization. </p>
-</td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac157bdf0b85a40d2619cbc8bc1ae5fe2"></a>NONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5a440eb2305fad120d18d26c8f505159"></a>GET_DEV_ID&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba917aee4228fcfb733636f9ded488b581"></a>GET_DEV_ID_RESULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf493c6fed9d10982e7b47f30be2dead2"></a>GET_MEASURING&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baf33a31f2a69b76ffd39080309739f60c"></a>GET_MEASURING_RESULT&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba0fc97723167cf90034974e1f2541d433"></a>TWI_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6967226ea0f7a65665e97847a69164ad"></a>TWI_REP_START&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba6f0447eb58c7358f85b61985a3e5f200"></a>TWI_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab45f23705567099a3023711e3ae1771c"></a>TWI_MTX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae61edc5dafc4247d27548f917bcd1d4c"></a>TWI_MTX_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba11b5f5e13de75ce97695abfd592b37a1"></a>TWI_MRX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba66a82cc46d81ac4ea9e472374f3398c2"></a>TWI_MRX_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba61b321ec5c8c88842b5de2d64c67e39d"></a>TWI_MRX_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bab69c37fb248b9e334981cd2990410548"></a>TWI_STX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba5e7f23993b588ace6c5134113d4ddbff"></a>TWI_STX_ADR_ACK_M_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9178c4719aa85ffc84f8c66e8e61c857"></a>TWI_STX_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55babb27d5179b96778dc5eba5c161fe8cfe"></a>TWI_STX_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba97ff973ed0cda2f424da129cf1913e41"></a>TWI_STX_DATA_ACK_LAST_BYTE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba089494b6faad704f8b418749b48dfe01"></a>TWI_SRX_ADR_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba00f21eed2b8d551fcd38b162d05b602f"></a>TWI_SRX_ADR_ACK_M_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba7d19b8ccac117c75fa1dbfce311d39dd"></a>TWI_SRX_GEN_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba08a451aeb613693ed5ba81e2c43d38eb"></a>TWI_SRX_GEN_ACK_M_ARB_LOST&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae9c43bf65942edbfabbf0d41ebdc8ed2"></a>TWI_SRX_ADR_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba098156d853f9e2f58b8eae7dff4bbd65"></a>TWI_SRX_ADR_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba65005373978f163c15dfcd227a5702a0"></a>TWI_SRX_GEN_DATA_ACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bafc11d8d985e4ee2022840e416e882564"></a>TWI_SRX_GEN_DATA_NACK&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba4699ecaaa30c172e906ac0dc0f5bb70d"></a>TWI_SRX_STOP_RESTART&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba581c7d25f8003886848e4d14b42ea4e7"></a>TWI_NO_RELEVANT_STATE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -308,7 +295,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a> twiCreate </td>
+          <td class="memname">twi_p twiCreate </td>
           <td>(</td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>slaveAddr</em>, </td>
@@ -316,7 +303,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="twi_8h.html#a8f113c663b8cae34e6a17c5533dd5ae4">twiClock_t</a>&#160;</td>
+          <td class="paramtype">twiClock_t&#160;</td>
           <td class="paramname"><em>speed</em>, </td>
         </tr>
         <tr>
@@ -328,7 +315,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a>, <a class="el" href="twi_8h.html#a1701a7a8afdb8e7883ac2b036b7e53fd">twiReturnCode_t</a>, uint8_t *, uint8_t)&#160;</td>
+          <td class="paramtype">void(*)(twi_p, twiReturnCode_t, uint8_t *, uint8_t)&#160;</td>
           <td class="paramname"><em>handlerCallback</em>&#160;</td>
         </tr>
         <tr>
@@ -350,7 +337,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void twiDestroy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a>&#160;</td>
+          <td class="paramtype">twi_p&#160;</td>
           <td class="paramname"><em>twiHandler</em></td><td>)</td>
           <td></td>
         </tr>
@@ -384,9 +371,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="twi_8h.html#a1701a7a8afdb8e7883ac2b036b7e53fd">twiReturnCode_t</a> twiReceive </td>
+          <td class="memname">twiReturnCode_t twiReceive </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a>&#160;</td>
+          <td class="paramtype">twi_p&#160;</td>
           <td class="paramname"><em>twiHandler</em>, </td>
         </tr>
         <tr>
@@ -412,9 +399,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="twi_8h.html#a1701a7a8afdb8e7883ac2b036b7e53fd">twiReturnCode_t</a> twiTransmit </td>
+          <td class="memname">twiReturnCode_t twiTransmit </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="twi_8h.html#a25fd8c1a2e07e5c4de39e416fabe0527">twi_p</a>&#160;</td>
+          <td class="paramtype">twi_p&#160;</td>
           <td class="paramname"><em>twiHandler</em>, </td>
         </tr>
         <tr>
@@ -445,7 +432,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_52c912f73dac9c4c0e442232e1b2bd80.html">hal</a></li><li class="navelem"><a class="el" href="dir_22d7998687b8130a0d3a8e7456689a70.html">twi</a></li><li class="navelem"><a class="el" href="twi_8c.html">twi.c</a></li>
-    <li class="footer">Generated on Mon Apr 12 2021 12:51:56 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 15:23:26 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

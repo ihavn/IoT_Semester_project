@@ -105,10 +105,10 @@ Initialise the driver</h1>
 <li>The following must be added to the project: <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="mh__z19_8h.html">mh_z19.h</a>&gt;</span></div>
 </div><!-- fragment --></li>
 <li>Add to application initialization: Initialise the driver: <div class="fragment"><div class="line"><span class="comment">// The parameter is the USART port the MH-Z19 sensor is connected to - in this case USART3</span></div>
-<div class="line"><a class="code" href="group__mh__z19__driver__creation.html#gac1c9c9bdb753a193ea3762fb13455959">mh_z19_initialise</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da">ser_USART3</a>); </div>
+<div class="line"><a class="code" href="group__mh__z19__driver__creation.html#gac1c9c9bdb753a193ea3762fb13455959">mh_z19_initialise</a>(ser_USART3); </div>
 </div><!-- fragment --></li>
 </ol>
-<dl class="section note"><dt>Note</dt><dd>If FreeRTOS is used then the initialise function <a class="el" href="mh_z19_driver_quick_start.html#mh_z19_initialise">Initialise the driver</a> must be called before <pre><a class="el" href="tasks_8c.html#a598661cdd2a6af95a077245d11e3d142">vTaskStartScheduler()</a></pre> is called.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If FreeRTOS is used then the initialise function <a class="el" href="mh_z19_driver_quick_start.html#mh_z19_initialise">Initialise the driver</a> must be called before <pre>vTaskStartScheduler()</pre> is called.</dd></dl>
 <p>If it is wanted to inject a call-back function, then it must be done like this</p>
 <ol type="1">
 <li>Create a call back function: <div class="fragment"><div class="line"><span class="keywordtype">void</span> myCo2CallBack(uint16_t ppm)</div>
@@ -139,16 +139,15 @@ Perform a CO2 measuring</h1>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="agroup__mh__z19__driver__basic__function_html_ga403a674be4d4dc74691956333bcc14fa"><div class="ttname"><a href="group__mh__z19__driver__basic__function.html#ga403a674be4d4dc74691956333bcc14fa">mh_z19_takeMeassuring</a></div><div class="ttdeci">mh_z19_returnCode_t mh_z19_takeMeassuring(void)</div><div class="ttdoc">Perform a new CO2 meassuring.</div><div class="ttdef"><b>Definition:</b> mh_z19.c:40</div></div>
-<div class="ttc" id="agroup__mh__z19__driver__creation_html_ga45ca59130219621b0933cbce471ea89d"><div class="ttname"><a href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">mh_z19_injectCallBack</a></div><div class="ttdeci">void mh_z19_injectCallBack(void(*mh_z19_callBack)(uint16_t))</div><div class="ttdoc">Inject a call-back function to the driver.</div><div class="ttdef"><b>Definition:</b> mh_z19.c:35</div></div>
-<div class="ttc" id="aserial_8h_html_a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da"><div class="ttname"><a href="serial_8h.html#a449a2f5483250f481f4f40126713e547a5cbc608e3856bcd5f43168824cf780da">ser_USART3</a></div><div class="ttdeci">@ ser_USART3</div><div class="ttdef"><b>Definition:</b> serial.h:40</div></div>
+<div class="ttc" id="agroup__mh__z19__driver__basic__function_html_ga403a674be4d4dc74691956333bcc14fa"><div class="ttname"><a href="group__mh__z19__driver__basic__function.html#ga403a674be4d4dc74691956333bcc14fa">mh_z19_takeMeassuring</a></div><div class="ttdeci">mh_z19_returnCode_t mh_z19_takeMeassuring(void)</div><div class="ttdoc">Perform a new CO2 meassuring.</div></div>
+<div class="ttc" id="agroup__mh__z19__driver__creation_html_ga45ca59130219621b0933cbce471ea89d"><div class="ttname"><a href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">mh_z19_injectCallBack</a></div><div class="ttdeci">void mh_z19_injectCallBack(void(*mh_z19_callBack)(uint16_t))</div><div class="ttdoc">Inject a call-back function to the driver.</div></div>
 <div class="ttc" id="agroup__mh__z19__driver__driver__return__codes_html_gaf9400fe2eb57edfe1986f5481862f479"><div class="ttname"><a href="group__mh__z19__driver__driver__return__codes.html#gaf9400fe2eb57edfe1986f5481862f479">mh_z19_returnCode_t</a></div><div class="ttdeci">mh_z19_returnCode_t</div><div class="ttdoc">MH-Z19 Driver return codes.</div><div class="ttdef"><b>Definition:</b> mh_z19.h:52</div></div>
 <div class="ttc" id="amh__z19_8h_html"><div class="ttname"><a href="mh__z19_8h.html">mh_z19.h</a></div><div class="ttdoc">Driver to CO2 using the Intelligent Infrared CO2 Module MH-Z19.</div></div>
-<div class="ttc" id="agroup__mh__z19__driver__creation_html_gac1c9c9bdb753a193ea3762fb13455959"><div class="ttname"><a href="group__mh__z19__driver__creation.html#gac1c9c9bdb753a193ea3762fb13455959">mh_z19_initialise</a></div><div class="ttdeci">void mh_z19_initialise(serial_comPort_t com_port)</div><div class="ttdoc">Initialise the driver.</div><div class="ttdef"><b>Definition:</b> mh_z19.c:29</div></div>
+<div class="ttc" id="agroup__mh__z19__driver__creation_html_gac1c9c9bdb753a193ea3762fb13455959"><div class="ttname"><a href="group__mh__z19__driver__creation.html#gac1c9c9bdb753a193ea3762fb13455959">mh_z19_initialise</a></div><div class="ttdeci">void mh_z19_initialise(serial_comPort_t com_port)</div><div class="ttdoc">Initialise the driver.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 12 2021 12:51:56 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 15:44:07 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

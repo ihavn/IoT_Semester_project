@@ -109,32 +109,30 @@ Initialise the driver</h1>
 </div><!-- fragment --></li>
 </ul>
 <p>Add to application initialization:</p><ul>
-<li>Initialise the driver without down-link possibility: <div class="fragment"><div class="line"><a class="code" href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a>, NULL); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
+<li>Initialise the driver without down-link possibility: <div class="fragment"><div class="line"><a class="code" href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a>(ser_USART1, NULL); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
 </div><!-- fragment --></li>
 <li>Alternatively initialise the driver with down-link possibility: <div class="fragment"><div class="line">MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(<span class="keyword">sizeof</span>(lora_payload_t)*2); <span class="comment">// Here I make room for two downlink messages in the message buffer</span></div>
-<div class="line"><a class="code" href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a>(<a class="code" href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a>, downLinkMessageBufferHandle); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
+<div class="line"><a class="code" href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a>(ser_USART1, downLinkMessageBufferHandle); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
 </div><!-- fragment --></li>
 </ul>
 <p>Then the LoRaWAN transceiver needs to be hardware reset. </p><dl class="section note"><dt>Note</dt><dd>This must be done from a FreeRTOS task!! <div class="fragment"><div class="line"><a class="code" href="group__lora__advanced__function.html#ga3dcb5f264ad78b69425cac41ec8c8821">lora_driver_resetRn2483</a>(1); <span class="comment">// Activate reset line</span></div>
-<div class="line"><a class="code" href="tasks_8c.html#a9917b05abb77e75e959151ae67065dce">vTaskDelay</a>(2);</div>
+<div class="line">vTaskDelay(2);</div>
 <div class="line"><a class="code" href="group__lora__advanced__function.html#ga3dcb5f264ad78b69425cac41ec8c8821">lora_driver_resetRn2483</a>(0); <span class="comment">// Release reset line</span></div>
-<div class="line"><a class="code" href="tasks_8c.html#a9917b05abb77e75e959151ae67065dce">vTaskDelay</a>(150); <span class="comment">// Wait for tranceiver module to wake up after reset</span></div>
+<div class="line">vTaskDelay(150); <span class="comment">// Wait for tranceiver module to wake up after reset</span></div>
 <div class="line"><a class="code" href="group__lora__advanced__function.html#ga7563bd23845d66320e0c51010eab2aff">lora_driver_flushBuffers</a>(); <span class="comment">// get rid of first version string from module after reset!</span></div>
 </div><!-- fragment --></dd></dl>
 <p>Now you are ready to use the LoRaWAN module :) </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
-<div class="ttc" id="alora__driver_8h_html"><div class="ttname"><a href="lora__driver_8h.html">lora_driver.h</a></div></div>
-<div class="ttc" id="agroup__lora__advanced__function_html_ga7563bd23845d66320e0c51010eab2aff"><div class="ttname"><a href="group__lora__advanced__function.html#ga7563bd23845d66320e0c51010eab2aff">lora_driver_flushBuffers</a></div><div class="ttdeci">void lora_driver_flushBuffers(void)</div><div class="ttdoc">Flush the internal buffers in the driver.</div><div class="ttdef"><b>Definition:</b> lora_driver.c:77</div></div>
-<div class="ttc" id="agroup__lora__creation_html_ga3977dcfaa17485e4dc624ac0e39693d9"><div class="ttname"><a href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a></div><div class="ttdeci">void lora_driver_initialise(serial_comPort_t comPort, MessageBufferHandle_t downlinkMessageBuffer)</div><div class="ttdoc">Initialise the LoRa driver..</div><div class="ttdef"><b>Definition:</b> lora_driver.c:84</div></div>
-<div class="ttc" id="agroup__lora__advanced__function_html_ga3dcb5f264ad78b69425cac41ec8c8821"><div class="ttname"><a href="group__lora__advanced__function.html#ga3dcb5f264ad78b69425cac41ec8c8821">lora_driver_resetRn2483</a></div><div class="ttdeci">void lora_driver_resetRn2483(uint8_t state)</div><div class="ttdoc">Controls the reset pin on the RN2483 Module.</div><div class="ttdef"><b>Definition:</b> lora_driver.c:103</div></div>
-<div class="ttc" id="aserial_8h_html_a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9"><div class="ttname"><a href="serial_8h.html#a449a2f5483250f481f4f40126713e547ac011d61c31d1b396c3fc46be203473b9">ser_USART1</a></div><div class="ttdeci">@ ser_USART1</div><div class="ttdef"><b>Definition:</b> serial.h:38</div></div>
-<div class="ttc" id="atasks_8c_html_a9917b05abb77e75e959151ae67065dce"><div class="ttname"><a href="tasks_8c.html#a9917b05abb77e75e959151ae67065dce">vTaskDelay</a></div><div class="ttdeci">void vTaskDelay(const TickType_t xTicksToDelay)</div><div class="ttdef"><b>Definition:</b> tasks.c:1331</div></div>
+<div class="ttc" id="alora__driver_8h_html"><div class="ttname"><a href="lora__driver_8h.html">lora_driver.h</a></div><div class="ttdoc">Driver to MicroChip RN2483 LoRaWAN module.</div></div>
+<div class="ttc" id="agroup__lora__advanced__function_html_ga7563bd23845d66320e0c51010eab2aff"><div class="ttname"><a href="group__lora__advanced__function.html#ga7563bd23845d66320e0c51010eab2aff">lora_driver_flushBuffers</a></div><div class="ttdeci">void lora_driver_flushBuffers(void)</div><div class="ttdoc">Flush the internal buffers in the driver.</div></div>
+<div class="ttc" id="agroup__lora__creation_html_ga3977dcfaa17485e4dc624ac0e39693d9"><div class="ttname"><a href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a></div><div class="ttdeci">void lora_driver_initialise(serial_comPort_t comPort, MessageBufferHandle_t downlinkMessageBuffer)</div><div class="ttdoc">Initialise the LoRa driver..</div></div>
+<div class="ttc" id="agroup__lora__advanced__function_html_ga3dcb5f264ad78b69425cac41ec8c8821"><div class="ttname"><a href="group__lora__advanced__function.html#ga3dcb5f264ad78b69425cac41ec8c8821">lora_driver_resetRn2483</a></div><div class="ttdeci">void lora_driver_resetRn2483(uint8_t state)</div><div class="ttdoc">Controls the reset pin on the RN2483 Module.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Apr 12 2021 12:51:56 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 15:44:07 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>
