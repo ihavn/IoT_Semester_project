@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IoT: OTAA setup steps</title>
+<title>IoT Drivers: OTAA setup steps</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">IoT
+   <div id="projectname">IoT Drivers
    &#160;<span id="projectnumber">v3.2.3 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
@@ -101,9 +101,12 @@ Example code</h1>
 Workflow</h1>
 <ol type="1">
 <li>Define the necessary app identification for OTAA join: <div class="fragment"><div class="line"><span class="comment">// Parameters for OTAA join</span></div>
-<div class="line"><span class="preprocessor">#define LORA_appEUI &quot;E81068FC10812076&quot;</span></div>
-<div class="line"><span class="preprocessor">#define LORA_appKEY &quot;3894B87078D8A38B56E419ABCA16043E&quot;</span></div>
+<div class="line"><span class="preprocessor">#define LORA_appEUI &quot;????????????????&quot;</span></div>
+<div class="line"><span class="preprocessor">#define LORA_appKEY &quot;????????????????????????????????&quot;</span></div>
 </div><!-- fragment --></li>
+</ol>
+<dl class="section note"><dt>Note</dt><dd>The parameters depends on the setup of the LoRaWAN network server and will be given to you.</dd></dl>
+<ol type="1">
 <li>Set the module to factory set defaults: <div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code" href="group__lora__basic__function.html#ga614b0764c3700d0d948fadb9cebc5454">lora_driver_rn2483FactoryReset</a>() != <a class="code" href="group__lora__driver__return__codes.html#ggae8873a4b0283525974b1dcab1a039f15a4b55d0da89bdc2f9bd3dfb86854f055a">LORA_OK</a>)</div>
 <div class="line">{</div>
 <div class="line">       <span class="comment">// Something went wrong</span></div>
@@ -157,7 +160,7 @@ Workflow</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="lora_driver_quickstart.html">Quick start guide for RN2483 based LoRa Driver</a></li>
-    <li class="footer">Generated on Mon Apr 12 2021 12:25:26 for IoT by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 12 2021 12:51:56 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "IoT", "index.html", [
+  [ "IoT Drivers", "index.html", [
     [ "IoT Driver documentation", "index.html", null ],
     [ "VIA_FreeRTOS_ATMEGA", "md__free_r_t_o_s_readme.html", null ],
     [ "Quick start guide for 7-segment Display Driver", "display_7seg_driver_quickstart.html", [

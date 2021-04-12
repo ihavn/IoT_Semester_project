@@ -619,7 +619,7 @@ The following must be added to the project:
 Add to application initialization:
 - Initialise the driver without down-link possibility:
 \code
-lora_driver_(ser_USART1, NULL); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
+lora_driver_initialise(ser_USART1, NULL); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode
 - Alternatively initialise the driver with down-link possibility:
 \code
@@ -653,9 +653,11 @@ In this use case, the driver is setup to Over The Air Activation (OTAA).
 -# Define the necessary app identification for OTAA join:
 \code
 // Parameters for OTAA join
-#define LORA_appEUI "E81068FC10812076"
-#define LORA_appKEY "3894B87078D8A38B56E419ABCA16043E"
+#define LORA_appEUI "????????????????"
+#define LORA_appKEY "????????????????????????????????"
 \endcode
+
+\note The parameters depends on the setup of the LoRaWAN network server and will be given to you.
 
 -# Set the module to factory set defaults:
 \code
@@ -723,10 +725,12 @@ if (lora_driver_join(LORA_OTAA) == LORA_ACCEPTED)
  -# Define the necessary app identification for ABP join:
  \code
 // Parameters for ABP join
-#define LORA_appAddr "02AF853A"
-#define LORA_nwkskey "B9C26F5B1E717D7A73A48DB4B928774F"
-#define LORA_appskey "86AAC887A5F891A1A442CD0085A6E44B"
+#define LORA_appAddr "????????"
+#define LORA_nwkskey "????????????????????????????????"
+#define LORA_appskey "????????????????????????????????"
  \endcode
+  
+ \note The parameters depends on the setup of the LoRaWAN network server and will be given to you.
 
  -# Set the module to factory set defaults:
  \code
