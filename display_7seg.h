@@ -24,6 +24,8 @@ Here you you will find the functions you will need to work with the driver.
 #ifndef _DISPLAY_7SEG_H_
 #define _DISPLAY_7SEG_H_
 
+#include <stdint.h>
+
 /* ======================================================================================================================= */
 /**
 \ingroup display_7seg_driver_creation
