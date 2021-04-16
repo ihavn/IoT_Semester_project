@@ -23,7 +23,6 @@ Here you you will find the functions you will need to work with the driver.
 */
 #ifndef _DISPLAY_7SEG_H_
 #define _DISPLAY_7SEG_H_
-#include <stdint.h>
 
 /* ======================================================================================================================= */
 /**
@@ -73,6 +72,17 @@ Will display a HEX string on the display. If the HEX string has more than four h
 \param[in] hexString to be shown on the display.
 */
 void display_7seg_displayHex(char * hexString);
+
+/* ======================================================================================================================= */
+/**
+\ingroup display_7seg_driver_function
+\brief Display Err on the 7-segment Display.
+
+Will display Err on the display.
+
+\note When the driver is initialised the display will be in power-down mode \see display_7seg_power_up and \see display_7seg_power_down.
+*/
+void display_7seg_displayErr(void);
 
 /* ======================================================================================================================= */
 /**
