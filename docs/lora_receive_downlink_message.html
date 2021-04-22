@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IoT Drivers
-   &#160;<span id="projectnumber">v3.2.4 (S2021)</span>
+   &#160;<span id="projectnumber">v3.2.5 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -91,7 +91,7 @@ $(document).ready(function(){initNavTree('lora_receive_downlink_message.html',''
 <div class="title">Receive a downlink message </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>In this use case, a downlink link message will be received. A downlink message is received in a lora_payload_t variable.</p>
+<div class="textblock"><p>In this use case, a downlink link message will be received. A downlink message is received in a lora_driver_payload_t variable.</p>
 <dl class="section note"><dt>Note</dt><dd>The driver must be initialised <a class="el" href="lora_driver_quickstart.html#lora_setup_use_case">Initialise the driver</a> and must be setup to OTAA <a class="el" href="lora_setup_to__o_t_a_a.html">OTAA setup steps</a> or ABP <a class="el" href="lora_setup_to__o_t_a_a.html">OTAA setup steps</a>. </dd>
 <dd>
 To be able to receive any downlink messages you may specify a FreeRTOS message buffer during the initialisation of the driver. In this message buffer the received messages will be delivered by the driver (<a class="el" href="lora_driver_quickstart.html#lora_setup_use_case">Initialise the driver</a>).</dd></dl>
@@ -104,7 +104,7 @@ Down-link Message Setup</h1>
 <li>Define a payload struct variable Create a payload variable to receive the down-link message in <div class="fragment"><div class="line"><a class="code" href="structlora__driver__payload.html">lora_driver_payload_t</a> downlinkPayload;</div>
 </div><!-- fragment --></li>
 <li>Wait for a message to be received <div class="fragment"><div class="line"><span class="comment">// this code must be in the loop of a FreeRTOS task!</span></div>
-<div class="line">xMessageBufferReceive(downLinkMessageBufferHandle, &amp;downlinkPayload, <span class="keyword">sizeof</span>(lora_payload_t), portMAX_DELAY);</div>
+<div class="line">xMessageBufferReceive(downLinkMessageBufferHandle, &amp;downlinkPayload, <span class="keyword">sizeof</span>(<a class="code" href="structlora__driver__payload.html">lora_driver_payload_t</a>), portMAX_DELAY);</div>
 <div class="line">printf(<span class="stringliteral">&quot;DOWN LINK: from port: %d with %d bytes received!&quot;</span>, downlinkPayload.port_no, downlinkPayload.<a class="code" href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">len</a>); <span class="comment">// Just for Debug</span></div>
 <div class="line"><span class="keywordflow">if</span> (4 == downlinkPayload.<a class="code" href="structlora__driver__payload.html#af7b0a4019a4701618be70efce3da16e9">len</a>) <span class="comment">// Check that we have got the expected 4 bytes</span></div>
 <div class="line">{</div>
@@ -124,7 +124,7 @@ Down-link Message Setup</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="lora_driver_quickstart.html">Quick start guide for RN2483 based LoRa Driver</a></li>
-    <li class="footer">Generated on Fri Apr 16 2021 15:17:06 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Thu Apr 22 2021 15:32:40 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

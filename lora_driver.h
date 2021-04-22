@@ -624,7 +624,7 @@ lora_driver_initialise(ser_USART1, NULL); // The parameter is the USART port the
 \endcode
 - Alternatively initialise the driver with down-link possibility:
 \code
-MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(sizeof(lora_payload_t)*2); // Here I make room for two downlink messages in the message buffer
+MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(sizeof(lora_driver_payload_t)*2); // Here I make room for two downlink messages in the message buffer
 lora_driver_initialise(ser_USART1, downLinkMessageBufferHandle); // The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined
 \endcode
 
@@ -828,7 +828,7 @@ The following must be added to a FreeRTOS task in the project:
 \page lora_receive_downlink_message Receive a downlink message
 
 In this use case, a downlink link message will be received.
-A downlink message is received in a lora_payload_t variable.
+A downlink message is received in a lora_driver_payload_t variable.
 
 \note The driver must be initialised \ref lora_setup_use_case and must be setup to OTAA \ref lora_setup_to_OTAA or ABP \ref lora_setup_to_OTAA.
 \note To be able to receive any downlink messages you may specify a FreeRTOS message buffer during the initialisation of the driver. In this message buffer the received messages will be delivered by the driver (\ref lora_setup_use_case).
@@ -853,7 +853,7 @@ Create a payload variable to receive the down-link message in
 -# Wait for a message to be received
 \code 
 	// this code must be in the loop of a FreeRTOS task!
-	xMessageBufferReceive(downLinkMessageBufferHandle, &downlinkPayload, sizeof(lora_payload_t), portMAX_DELAY);
+	xMessageBufferReceive(downLinkMessageBufferHandle, &downlinkPayload, sizeof(lora_driver_payload_t), portMAX_DELAY);
 	printf("DOWN LINK: from port: %d with %d bytes received!", downlinkPayload.port_no, downlinkPayload.len); // Just for Debug
 	if (4 == downlinkPayload.len) // Check that we have got the expected 4 bytes
 	{

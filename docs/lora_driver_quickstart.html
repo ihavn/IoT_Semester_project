@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IoT Drivers
-   &#160;<span id="projectnumber">v3.2.4 (S2021)</span>
+   &#160;<span id="projectnumber">v3.2.5 (S2021)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -111,7 +111,7 @@ Initialise the driver</h1>
 <p>Add to application initialization:</p><ul>
 <li>Initialise the driver without down-link possibility: <div class="fragment"><div class="line"><a class="code" href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a>(ser_USART1, NULL); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
 </div><!-- fragment --></li>
-<li>Alternatively initialise the driver with down-link possibility: <div class="fragment"><div class="line">MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(<span class="keyword">sizeof</span>(lora_payload_t)*2); <span class="comment">// Here I make room for two downlink messages in the message buffer</span></div>
+<li>Alternatively initialise the driver with down-link possibility: <div class="fragment"><div class="line">MessageBufferHandle_t downLinkMessageBufferHandle = xMessageBufferCreate(<span class="keyword">sizeof</span>(<a class="code" href="structlora__driver__payload.html">lora_driver_payload_t</a>)*2); <span class="comment">// Here I make room for two downlink messages in the message buffer</span></div>
 <div class="line"><a class="code" href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a>(ser_USART1, downLinkMessageBufferHandle); <span class="comment">// The parameter is the USART port the RN2483 module is connected to - in this case USART1 - here no message buffer for down-link messages are defined</span></div>
 </div><!-- fragment --></li>
 </ul>
@@ -129,10 +129,11 @@ Initialise the driver</h1>
 <div class="ttc" id="agroup__lora__advanced__function_html_ga7563bd23845d66320e0c51010eab2aff"><div class="ttname"><a href="group__lora__advanced__function.html#ga7563bd23845d66320e0c51010eab2aff">lora_driver_flushBuffers</a></div><div class="ttdeci">void lora_driver_flushBuffers(void)</div><div class="ttdoc">Flush the internal buffers in the driver.</div></div>
 <div class="ttc" id="agroup__lora__creation_html_ga3977dcfaa17485e4dc624ac0e39693d9"><div class="ttname"><a href="group__lora__creation.html#ga3977dcfaa17485e4dc624ac0e39693d9">lora_driver_initialise</a></div><div class="ttdeci">void lora_driver_initialise(serial_comPort_t comPort, MessageBufferHandle_t downlinkMessageBuffer)</div><div class="ttdoc">Initialise the LoRa driver..</div></div>
 <div class="ttc" id="agroup__lora__advanced__function_html_ga3dcb5f264ad78b69425cac41ec8c8821"><div class="ttname"><a href="group__lora__advanced__function.html#ga3dcb5f264ad78b69425cac41ec8c8821">lora_driver_resetRn2483</a></div><div class="ttdeci">void lora_driver_resetRn2483(uint8_t state)</div><div class="ttdoc">Controls the reset pin on the RN2483 Module.</div></div>
+<div class="ttc" id="astructlora__driver__payload_html"><div class="ttname"><a href="structlora__driver__payload.html">lora_driver_payload</a></div><div class="ttdoc">Payload data structure.</div><div class="ttdef"><b>Definition:</b> lora_driver.h:51</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Apr 16 2021 15:17:06 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Thu Apr 22 2021 15:32:40 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>
