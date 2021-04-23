@@ -16,8 +16,6 @@
 #define LORA_appEUI "XXXXXXXXXXXXXXX"
 #define LORA_appKEY "YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY"
 
-static char _out_buf[100];
-
 void lora_handler_task( void *pvParameters );
 
 static lora_driver_payload_t _uplink_payload;
@@ -35,6 +33,7 @@ void lora_handler_initialise(UBaseType_t lora_handler_task_priority)
 
 static void _lora_setup(void)
 {
+	char _out_buf[20];
 	lora_driver_returnCode_t rc;
 	status_leds_slowBlink(led_ST2); // OPTIONAL: Led the green led blink slowly while we are setting up LoRa
 
