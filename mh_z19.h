@@ -186,6 +186,7 @@ Initialise the driver:
 	 // Here you can use the CO2 ppm value
  }
  \endcode
+ \note The call-back function will called from an Interrupt Service Routine (ISR), so it must be very short and efficient!!
 
  The call-back function will be called by the driver when a new CO2 value is returned by the sensor.
 

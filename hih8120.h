@@ -91,6 +91,7 @@ bool hih8120_isReady(void);
 \brief Wakes up the HIH8180 sensor.
 
 \note After this call it is necessary to wait minimum 50 ms before a measuring can be done \see hih8120_measure.
+\note The sensor goes automatically into sleep mode after each measuring, so this function hih8120_wakeup() must be called before each measuring!
 
 \return hih8120DriverReturnCode_t
 \retval HIH8120_OK Wake up command send to the sensor.
@@ -104,8 +105,8 @@ hih8120_driverReturnCode_t hih8120_wakeup(void);
 \ingroup hih8120_driver_function
 \brief Fetch the latest results from the HIH8180 sensor.
 
-\note
-After this call it is necessary to wait minimum 1 ms before the results can be retrieved with:
+\note The sensor goes automatically into sleep mode after each measuring, so it must be waked up by calling \see hih8120_wakeup before hih8120_measure is called! And remember the delay between the two calls!
+\note After this call it is necessary to wait minimum 1 ms before the results can be retrieved with:
 \see hih8120_getHumidityPercent_x10 
 \see hih8120_getTemperature_x10 
 \see hih8120_getHumidity 
@@ -201,7 +202,7 @@ In this example these two variables will be used to store the results in
 \endcode
 
 \subsection hih8120_make_measuring2 Perform the measuring
-The following must be added to the application code:
+The following must be added to the application code and executed for each new measuring:
 -# Wake up the sensor from power down:
 \code
 	if ( HIH8120_OK != hih8120_wakeup() )

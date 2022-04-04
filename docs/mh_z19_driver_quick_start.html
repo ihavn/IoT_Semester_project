@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IoT Drivers
-   &#160;<span id="projectnumber">v3.2.5 (S2021)</span>
+   &#160;<span id="projectnumber">v3.3.0 (S2022)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -115,9 +115,9 @@ Initialise the driver</h1>
 <div class="line">{</div>
 <div class="line">       <span class="comment">// Here you can use the CO2 ppm value</span></div>
 <div class="line">}</div>
-</div><!-- fragment --></li>
+</div><!-- fragment --> <dl class="section note"><dt>Note</dt><dd>The call-back function will called from an Interrupt Service Routine (ISR), so it must be very short and efficient!!</dd></dl>
+The call-back function will be called by the driver when a new CO2 value is returned by the sensor.</li>
 </ol>
-<p>The call-back function will be called by the driver when a new CO2 value is returned by the sensor.</p>
 <p>The call-back function is injected like this </p><div class="fragment"><div class="line"><a class="code" href="group__mh__z19__driver__creation.html#ga45ca59130219621b0933cbce471ea89d">mh_z19_injectCallBack</a>(myCo2CallBack)</div>
 </div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>The call-back function will called from an Interrupt Service Routine (ISR), so it must be very short and efficient!!</dd></dl>
 <h1><a class="anchor" id="mh_z19_perform_co2_meassuring"></a>
@@ -147,7 +147,7 @@ Perform a CO2 measuring</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 22 2021 15:32:40 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 4 2022 15:25:11 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>

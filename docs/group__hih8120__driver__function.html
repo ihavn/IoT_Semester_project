@@ -30,7 +30,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">IoT Drivers
-   &#160;<span id="projectnumber">v3.2.5 (S2021)</span>
+   &#160;<span id="projectnumber">v3.3.0 (S2022)</span>
    </div>
    <div id="projectbrief">Engineering in Software Technology</div>
   </td>
@@ -262,6 +262,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Fetch the latest results from the HIH8180 sensor. </p>
+<dl class="section note"><dt>Note</dt><dd>The sensor goes automatically into sleep mode after each measuring, so it must be waked up by calling </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16" title="Wakes up the HIH8180 sensor.">hih8120_wakeup</a> before <a class="el" href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f" title="Fetch the latest results from the HIH8180 sensor.">hih8120_measure</a> is called! And remember the delay between the two calls! </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>After this call it is necessary to wait minimum 1 ms before the results can be retrieved with: </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group__hih8120__driver__function.html#ga696062be73ccf137af64e8d0f81f4949" title="Get latest measured relative humidity percent in tenths of %.">hih8120_getHumidityPercent_x10</a> </dd>
 <dd>
@@ -300,7 +302,8 @@ Functions</h2></td></tr>
 
 <p>Wakes up the HIH8180 sensor. </p>
 <dl class="section note"><dt>Note</dt><dd>After this call it is necessary to wait minimum 50 ms before a measuring can be done </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f" title="Fetch the latest results from the HIH8180 sensor.">hih8120_measure</a>.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="group__hih8120__driver__function.html#gac68ddcf3008e7ec487e1c75c14817f2f" title="Fetch the latest results from the HIH8180 sensor.">hih8120_measure</a>. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The sensor goes automatically into sleep mode after each measuring, so this function <a class="el" href="group__hih8120__driver__function.html#ga2095308e78f6535311301f28a3a26a16" title="Wakes up the HIH8180 sensor.">hih8120_wakeup()</a> must be called before each measuring!</dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>hih8120DriverReturnCode_t </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
@@ -318,7 +321,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 22 2021 15:32:41 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
+    <li class="footer">Generated on Mon Apr 4 2022 15:25:11 for IoT Drivers by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>
 </body>
